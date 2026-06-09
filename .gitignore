@@ -1,0 +1,47 @@
+.vercel
+.env*
+
+# dependencies
+/node_modules
+project/node_modules
+/.pnp
+.pnp.js
+
+# build output
+project/dist
+
+# testing
+/coverage
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# typescript
+*.tsbuildinfo
+
+# large archives / non-deploy assets
+*.zip
+AISample/
+AIStylePage/
+BloomBrewMockups/
+Folds/
+GraphicDesignSample/
+Hero Video/
+HeroSection/
+Icons/
+IllustrationsSample/
+Logos/
+Print&BrandPage/
+SocialMediaSample/
+WorksHero/
+service-screenshots/
+AIImageStory.jpeg
+WhatsApp Video 2025-11-22 at 3.35.29 AM.mp4
+laptop-screen.png
+list_drive.py

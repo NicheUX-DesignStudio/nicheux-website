@@ -1,0 +1,307 @@
+/* src/globals/ios-only.css - COMPLETE FIXED VERSION */
+
+/* iOS Safari-specific fixes */
+
+/* 1. Prevent elastic scrolling on body - FIXED SCROLLING */
+html {
+  height: 100%;
+  width: 100%;
+  overscroll-behavior: none;
+}
+
+body {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  position: relative;
+}
+
+/* 2. Fix 100vh issue on iOS */
+.min-h-screen-ios {
+  min-height: -webkit-fill-available;
+  min-height: 100vh;
+}
+
+.h-screen-ios {
+  height: -webkit-fill-available;
+  height: 100vh;
+}
+
+/* 3. Fix input zoom on focus */
+@media screen and (max-width: 767px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* 4. Fix sticky hover states on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .hover-effect:hover,
+  .hover-scale-105:hover,
+  .hover-shadow-lg:hover,
+  .hover-text-gold:hover,
+  .hover-bg-gray-100:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    color: inherit !important;
+    background-color: inherit !important;
+  }
+}
+
+/* 5. Fix button active states */
+button:active,
+a:active {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+/* 6. PAGINATION DOT FIX - UNIVERSAL 4PX */
+.pagination-dot-4px,
+.pagination-dot-tiny,
+button.pagination-dot-4px,
+button.pagination-dot-tiny,
+button[class*="pagination"][class*="dot"] {
+  width: 4px !important;
+  height: 4px !important;
+  min-width: 4px !important;
+  min-height: 4px !important;
+  max-width: 4px !important;
+  max-height: 4px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  display: inline-block !important;
+  flex-shrink: 0 !important;
+  border-radius: 50% !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Prevent transform on pagination dots */
+.pagination-dot-4px:active,
+.pagination-dot-tiny:active,
+button.pagination-dot-4px:active,
+button.pagination-dot-tiny:active {
+  transform: none !important;
+  -webkit-transform: none !important;
+  scale: 1 !important;
+  opacity: 1 !important;
+}
+
+/* 7. Fix fast clicks */
+a,
+button,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* 8. Fix position: fixed elements on iOS */
+.fixed-ios {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* 9. Fix scroll snapping on iOS */
+.snap-x,
+.snap-y {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 10. Fix backdrop blur on iOS */
+.backdrop-blur-ios {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/* 11. Fix image rendering */
+img {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* 12. Fix form elements */
+input[type="search"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input,
+textarea {
+  border-radius: 0;
+}
+
+/* 13. Fix overflow scrolling */
+.scroll-container {
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
+
+/* 14. Fix safe area insets */
+.safe-area-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.safe-area-left {
+  padding-left: env(safe-area-inset-left);
+}
+
+.safe-area-right {
+  padding-right: env(safe-area-inset-right);
+}
+
+/* 15. Fix modal scrolling */
+.modal-open {
+  position: fixed;
+  width: 100%;
+}
+
+/* 16. Fix animation performance */
+.performance-fix {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+
+/* 17. Fix font rendering */
+.text-rendering-fix {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 18. Fix select dropdown arrow */
+select {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* 19. Fix video autoplay */
+video {
+  -webkit-playsinline: true;
+}
+
+/* 20. Fix momentum scrolling */
+.momentum-scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}
+
+/* 21. Fix viewport height on iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .full-height-ios {
+    height: -webkit-fill-available;
+  }
+}
+
+/* 22. Fix smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* 23. Fix image loading */
+img.loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* 24. Fix tap highlight color */
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 25. Fix overscroll behavior */
+.overscroll-contain {
+  overscroll-behavior: contain;
+}
+
+/* 26. Fix modal backdrop */
+.modal-backdrop {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* 27. Fix carousel/slider on iOS */
+.carousel-container {
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-slide {
+  scroll-snap-align: start;
+}
+
+/* 28. Fix input shadows */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(137, 177, 204, 0.5);
+}
+
+/* 29. Fix button press effect */
+.button-press:active {
+  transform: scale(0.96);
+}
+
+/* 30. Fix text selection */
+::selection {
+  background-color: rgba(137, 177, 204, 0.3);
+  color: #121212;
+}
+
+/* 31. Fix scrollbar appearance */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(137, 177, 204, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(137, 177, 204, 0.7);
+}

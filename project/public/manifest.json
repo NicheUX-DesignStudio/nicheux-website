@@ -1,0 +1,29 @@
+{
+  "name": "NicheUX Studio",
+  "short_name": "NicheUX",
+  "description": "UK design studio. Strategy, web development, brand identity, motion, illustration.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#131313",
+  "theme_color": "#131313",
+  "orientation": "portrait-primary",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/images/LogoFavicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/LogoFavicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    { "name": "Contact Us", "url": "/contact", "description": "Start a project" },
+    { "name": "Our Work", "url": "/featured-work", "description": "View portfolio" }
+  ]
+}

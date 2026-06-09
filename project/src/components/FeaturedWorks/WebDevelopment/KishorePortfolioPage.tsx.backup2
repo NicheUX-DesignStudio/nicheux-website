@@ -1,0 +1,113 @@
+﻿import { useEffect, useRef, useState, useCallback } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, ExternalLink, ArrowUp, History, BarChart3, Layers, Award, Mail, Home, Monitor, Smartphone, ChevronLeft, ChevronRight } from 'lucide-react';
+import { AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+
+function BackToTopArrow() {
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const toggle = () => setIsVisible(window.pageYOffset > 300);
+    window.addEventListener('scroll', toggle);
+    return () => window.removeEventListener('scroll', toggle);
+  }, []);
+  if (!isVisible) return null;
+  return (
+    <button
+      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      className="fixed bottom-8 right-8 z-50 p-4 rounded-full bg-[#1a1a1a] border border-[#E9C672]/30 hover:border-[#E9C672] transition-all shadow-xl"
+      aria-label="Back to top"
+    >
+      <ArrowUp size={20} className="text-[#E9C672]" />
+    </button>
+  );
+}
+
+// The building navigation concept. illustrative interactive element
+// K29 site sections. six-point radial structure mirroring the nav wheel
+const K29_SECTIONS = [
+  { label: 'HOME', desc: 'The GaugeMeter entry. K29 performance architecture as a headline statement.' },
+  { label: 'CAREERS', desc: 'Service cards for all three career phases: squash player, coach, designer.' },
+  { label: 'TIMELINE', desc: 'Career progression across three disciplines. athlete to coach to designer.' },
+  { label: 'IMPACT', desc: 'Dual-domain metrics dashboard: coaching results + design case studies side by side.' },
+  { label: 'SEALS', desc: 'Verification credentials. WSF, IOC, educational certifications displayed as badge seals.' },
+  { label: 'CONTACT', desc: 'Entry point for coaching enquiries and design commissions.' },
+];
+
+// Live K29 nav wheel. adapted from original NavigationWheel.tsx for display
+const K29_NAV = [
+  { id: "home",    label: "HOME",     Icon: Home,     color: "#E8204A" },
+  { id: "careers", label: "CAREERS",  Icon: Layers,   color: "#00DFEF" },
+  { id: "timeline",label: "TIMELINE", Icon: History,  color: "#FFAA00" },
+  { id: "impact",  label: "IMPACT",   Icon: BarChart3, color: "#44CC66" },
+  { id: "seals",   label: "SEALS",    Icon: Award,    color: "#E8204A" },
+  { id: "contact", label: "CONTACT",  Icon: Mail,     color: "#00DFEF" },
+];
+
+function K29NavWheelDisplay() {
+  const [rotation, setRotation] = useState(0);
+  const [activeLabel, setActiveLabel] = useState("HOME");
+  const wheelRef = useRef<HTMLDivElement>(null);
+  const isDraggingRef = useRef(false);
+  const startAngleRef = useRef(0);
+  const accumulatedRef = useRef(0);
+
+  const getAngle = useCallback((cx: number, cy: number, rect: DOMRect) =>
+    Math.atan2(cy - rect.top - rect.height / 2, cx - rect.left - rect.width / 2) * (180 / Math.PI), []);
+
+  const getSectionFromRot = (r: number) => {
+    const p = ((r % 360) + 360) % 360;
+    if (p >= 330 || p < 30) return 0;
+    if (p < 90) return 5;
+    if (p < 150) return 4;
+    if (p < 210) return 3;
+    if (p < 270) return 2;
+    return 1;
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+
+    if (!wheelRef.current) return;
+
+    e.preventDefault();
+
+    isDraggingRef.current = true;
+
+    const rect = wheelRef.current.getBoundingClientRect();
+
+    startAngleRef.current = getAngle(e.clientX, e.clientY, rect);
+
+    const onMove = (ev: MouseEvent) => {
+
+      if (!isDraggingRef.current || !wheelRef.current) return;
+
+      const diff = getAngle(ev.clientX, ev.clientY, wheelRef.current.getBoundingClientRect()) - startAngleRef.current;
+
+      const nr = accumulatedRef.current + diff;
+
+      setRotation(nr);
+
+      setActiveLabel(K29_NAV[getSectionFromRot(nr)].label);
+
+    };
+
+    const onUp = () => {
+      isDraggingRef.current = false;
+      const idx = getSectionFromRot(rotation);
+      const snap = -idx * 60;
+      setRotation(snap); accumulatedRef.current = snap;
+      setActiveLabel(K29_NAV[idx].label);
+      document.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mouseup", onUp);
+    };
+    document.addEventListener("mousemove", onMove);
+    document.addEventListener("mouseup", onUp);
+  };
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 20, padding: "24px 0" }}>
+      {/* Wheel */}
+      <div
+        ref={wheelRef}
+        onTouchStart={handleMouseDown}

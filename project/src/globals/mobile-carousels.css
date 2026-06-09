@@ -1,0 +1,143 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   MOBILE CAROUSELS — max-width: 767px only
+   Every grid section becomes a horizontal swipe carousel.
+   Desktop (768px+) is completely untouched.
+   About page components don't use these class names — untouched by design.
+═══════════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 767px) {
+
+  /* ── Base carousel container ───────────────────────────────────────────── */
+  #portfolio-grid,
+  #why-us-grid,
+  #testimonials-grid,
+  #studio-grid-fw,
+  .why-strat, .why-webdev, .why-print, .why-social, .why-motion, .why-illus,
+  .pr-strat,  .pr-webdev,  .pr-print,  .pr-social,  .pr-motion,  .pr-illus,
+  .tiers-strat, .tiers-webdev, .tiers-social,
+  .pkgs-illus, .pkgs-motion, .pkgs-print,
+  .cta-steps-strat, .cta-steps-webdev, .cta-steps-print,
+  .cta-steps-social, .cta-steps-motion, .cta-steps-illus,
+  .care-webdev,
+  .dual-motion {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    background: transparent !important;
+    gap: 14px !important;
+    padding-bottom: 24px !important;
+    /* Remove grid props that would interfere */
+    grid-template-columns: unset !important;
+  }
+
+  /* ── Hide scrollbar chrome ─────────────────────────────────────────────── */
+  #portfolio-grid::-webkit-scrollbar,
+  #why-us-grid::-webkit-scrollbar,
+  #testimonials-grid::-webkit-scrollbar,
+  #studio-grid-fw::-webkit-scrollbar,
+  .why-strat::-webkit-scrollbar, .why-webdev::-webkit-scrollbar, .why-print::-webkit-scrollbar,
+  .why-social::-webkit-scrollbar, .why-motion::-webkit-scrollbar, .why-illus::-webkit-scrollbar,
+  .pr-strat::-webkit-scrollbar, .pr-webdev::-webkit-scrollbar, .pr-print::-webkit-scrollbar,
+  .pr-social::-webkit-scrollbar, .pr-motion::-webkit-scrollbar, .pr-illus::-webkit-scrollbar,
+  .tiers-strat::-webkit-scrollbar, .tiers-webdev::-webkit-scrollbar, .tiers-social::-webkit-scrollbar,
+  .pkgs-illus::-webkit-scrollbar, .pkgs-motion::-webkit-scrollbar, .pkgs-print::-webkit-scrollbar,
+  .cta-steps-strat::-webkit-scrollbar, .cta-steps-webdev::-webkit-scrollbar, .cta-steps-print::-webkit-scrollbar,
+  .cta-steps-social::-webkit-scrollbar, .cta-steps-motion::-webkit-scrollbar, .cta-steps-illus::-webkit-scrollbar,
+  .care-webdev::-webkit-scrollbar,
+  .dual-motion::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* ── Standard card width — 72vw so next card peeks ~40-50px ──────────── */
+  #portfolio-grid > *,
+  #why-us-grid > *,
+  #studio-grid-fw > *,
+  .why-strat > *, .why-webdev > *, .why-print > *,
+  .why-social > *, .why-motion > *, .why-illus > *,
+  .pr-strat > *, .pr-webdev > *, .pr-print > *,
+  .pr-social > *, .pr-motion > *, .pr-illus > *,
+  .cta-steps-strat > *, .cta-steps-webdev > *, .cta-steps-print > *,
+  .cta-steps-social > *, .cta-steps-motion > *, .cta-steps-illus > *,
+  .dual-motion > * {
+    flex: 0 0 72vw !important;
+    width: 72vw !important;
+    max-width: 72vw !important;
+    min-width: 0 !important;
+    scroll-snap-align: start !important;
+  }
+
+  /* ── Testimonials: slightly wider, quotes need breathing room ──────────── */
+  #testimonials-grid > * {
+    flex: 0 0 80vw !important;
+    width: 80vw !important;
+    max-width: 80vw !important;
+    min-width: 0 !important;
+    scroll-snap-align: start !important;
+  }
+
+  /* ── Pricing tiers and care plans: wider for feature lists ────────────── */
+  .tiers-strat > *, .tiers-webdev > *, .tiers-social > *,
+  .pkgs-illus > *, .pkgs-motion > *, .pkgs-print > *,
+  .care-webdev > * {
+    flex: 0 0 78vw !important;
+    width: 78vw !important;
+    max-width: 78vw !important;
+    min-width: 0 !important;
+    scroll-snap-align: start !important;
+  }
+
+  /* ── Gallery: keep 2-column masonry (override component's 1-col breakpoint) */
+  #gallery-grid {
+    column-count: 2 !important;
+    display: block !important;
+    overflow-x: visible !important;
+    background: transparent !important;
+  }
+
+  /* ── Swipe hints via CSS :has() — no markup changes needed ────────────── */
+  /* Dark section carousels */
+  div:has(> .why-strat)::after, div:has(> .why-webdev)::after,
+  div:has(> .why-print)::after, div:has(> .why-social)::after,
+  div:has(> .why-motion)::after, div:has(> .why-illus)::after,
+  div:has(> .tiers-strat)::after, div:has(> .tiers-webdev)::after,
+  div:has(> .tiers-social)::after, div:has(> .pkgs-illus)::after,
+  div:has(> .pkgs-motion)::after, div:has(> .pkgs-print)::after,
+  div:has(> .care-webdev)::after, div:has(> .dual-motion)::after,
+  div:has(> #studio-grid-fw)::after {
+    content: 'Swipe to explore \203A';
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.28);
+    margin-top: 10px;
+    user-select: none;
+  }
+
+  /* Light (parchment) section carousels */
+  div:has(> .pr-strat)::after, div:has(> .pr-webdev)::after,
+  div:has(> .pr-print)::after, div:has(> .pr-social)::after,
+  div:has(> .pr-motion)::after, div:has(> .pr-illus)::after,
+  div:has(> .cta-steps-strat)::after, div:has(> .cta-steps-webdev)::after,
+  div:has(> .cta-steps-print)::after, div:has(> .cta-steps-social)::after,
+  div:has(> .cta-steps-motion)::after, div:has(> .cta-steps-illus)::after {
+    content: 'Swipe to explore \203A';
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(26, 26, 26, 0.28);
+    margin-top: 10px;
+    user-select: none;
+  }
+
+}

@@ -1,0 +1,502 @@
+﻿/* src/index.css - COMPLETE FIXED VERSION */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  /* No italic in any heading — browser default makes <em> italic even without inline style */
+  h1 em, h1 span, h2 em, h2 span, h3 em, h3 span, h4 em, h4 span {
+    font-style: normal !important;
+  }
+
+  :root {
+    --strip-h: 41px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    height: 100%;
+    width: 100%;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #121212;
+    color: #ffffff;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+  }
+
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;
+    color: #ffffff;
+  }
+
+  h1 {
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  ::selection {
+    background-color: rgba(137, 177, 204, 0.2);
+    color: #121212;
+  }
+
+  /* ── Light section theme (parchment sections on service pages) ── */
+  [data-light] h1,
+  [data-light] h2,
+  [data-light] h3,
+  [data-light] h4 { color: #1a1a1a !important; }
+
+  [data-light] p { color: rgba(26,26,26,0.68) !important; }
+
+  [data-light] button h4,
+  [data-light] button > h4 { color: #1a1a1a !important; }
+
+  [data-light] [style*="rgba(255,255,255,0.06)"] { border-color: rgba(26,26,26,0.1) !important; }
+
+  section {
+    padding-top: clamp(80px, 10vw, 120px);
+    padding-bottom: clamp(80px, 10vw, 120px);
+    position: relative;
+  }
+  
+  /* Prevent zoom on input focus in iOS */
+  input, select, textarea, button {
+    font-size: 16px;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+
+  /* Fix for all buttons to prevent tap highlight */
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* ============================================================================
+     GLOBAL PAGINATION DOTS FIX - APPLIES TO ALL PAGES
+     ============================================================================ */
+  
+  /* Exception FIRST: Large navigation buttons (chevrons) should stay normal */
+  button.rounded-full:has(svg),
+  button.rounded-full svg,
+  .flex > button.rounded-full:has(svg) {
+    width: auto !important;
+    height: auto !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    max-width: none !important;
+    max-height: none !important;
+  }
+
+  /* Target ONLY tiny pagination dots - must NOT contain SVG */
+  .flex > button.rounded-full:not(:has(svg)) {
+    width: 4px !important;
+    height: 4px !important;
+    min-width: 4px !important;
+    min-height: 4px !important;
+    max-width: 4px !important;
+    max-height: 4px !important;
+    padding: 0 !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    flex-shrink: 0 !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  /* Prevent expansion on active/hover - keep them tiny */
+  .flex > button.rounded-full:not(:has(svg)):active,
+  .flex > button.rounded-full:not(:has(svg)):hover {
+    transform: none !important;
+    scale: 1 !important;
+    width: 4px !important;
+    height: 4px !important;
+  }
+  
+  /* Active state: slight scale while maintaining 4px base */
+  .flex > button.rounded-full:not(:has(svg)).bg-\[\#89B1CC\],
+  .flex > button.rounded-full:not(:has(svg))[class*="bg-blue"],
+  .flex > button.rounded-full:not(:has(svg))[class*="bg-\["] {
+    transform: scale(1.25) !important;
+    transform-origin: center !important;
+  }
+}
+
+/* iOS Specific Fixes */
+@supports (-webkit-touch-callout: none) {
+  /* Fix for 100vh issue on iOS */
+  .min-h-screen {
+    min-height: -webkit-fill-available;
+  }
+  
+  .h-screen {
+    height: -webkit-fill-available;
+  }
+  
+  /* Remove sticky hover states on touch devices */
+  @media (hover: none) and (pointer: coarse) {
+    .hover\:scale-105:hover,
+    .hover\:shadow-lg:hover,
+    .hover\:text-gold:hover {
+      transform: none !important;
+      box-shadow: none !important;
+      color: inherit !important;
+    }
+  }
+
+  /* iOS scrolling fix */
+  .scroll-container {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@layer utilities {
+  /* Font weight utilities */
+  .font-sans-normal {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+  }
+  
+  .font-sans-normal {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+  }
+  
+  .font-sans-medium {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+  }
+  
+  .font-serif-light {
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;
+  }
+  
+  .font-serif-normal {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+  }
+
+  /* Color utilities */
+  .text-gold {
+    color: #E9C672;
+  }
+  
+  .text-lavender {
+    color: #B097BE;
+  }
+  
+  .text-blue {
+    color: #89B1CC;
+  }
+  
+  .bg-gold {
+    background-color: #E9C672;
+  }
+  
+  .bg-lavender {
+    background-color: #B097BE;
+  }
+  
+  .bg-blue {
+    background-color: #89B1CC;
+  }
+  
+  .bg-black {
+    background-color: #121212;
+  }
+
+  /* Custom text sizes */
+  .text-hero {
+    font-size: clamp(3rem, 8vw, 5rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
+  
+  .text-section-heading {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+  
+  .text-subheading {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    line-height: 1.2;
+  }
+  
+  .text-body-xl {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    line-height: 1.7;
+  }
+  
+  .text-body-lg {
+    font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+    line-height: 1.8;
+  }
+  
+  .text-body {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.8;
+  }
+
+  /* Mobile container fixes */
+  .container-mobile {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-mobile {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container-mobile {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-mobile {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container-mobile {
+      max-width: 1280px;
+    }
+  }
+
+  /* Mobile overflow fixes */
+  .mobile-scroll-fix {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
+  /* Safe area padding */
+  .px-safe {
+    padding-left: max(env(safe-area-inset-left), 1rem);
+    padding-right: max(env(safe-area-inset-right), 1rem);
+  }
+
+  /* Hide scrollbar */
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(137, 177, 204, 0.3);
+  border-radius: 5px;
+  border: 2px solid #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(137, 177, 204, 0.5);
+}
+
+/* Custom scrollbar for fold explainer */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #89B1CC;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #7aa1bb;
+}
+
+/* Vertical text for scroll indicator */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  /* Ensure tap targets are large enough on mobile */
+  button, 
+  a[role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Exception for pagination dots - they should stay tiny */
+  button.rounded-full[class*="w-"] {
+    min-height: 4px !important;
+    min-width: 4px !important;
+  }
+
+  /* Mobile overflow fixes */
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+/* Image fixes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fix for broken image fallbacks */
+img[src*=".webp"] {
+  background: transparent;
+}
+
+/* Font fixes for currency symbols */
+@font-face {
+  font-family: 'CurrencyFont';
+  src: local('Arial'), local('Helvetica'), local('sans-serif');
+  unicode-range: U+00A3, U+0024, U+20AC, U+20B9, U+20A9, U+00A5, U+20BA, U+20BD;
+}
+
+/* Apply currency font as fallback */
+.currency-fallback {
+  font-family: 'CurrencyFont', 'Source Sans Pro', sans-serif;
+}
+
+/* iOS fix class */
+.ios-fix {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+
+/* ============================================================================
+   ACCESSIBILITY — Respect prefers-reduced-motion
+   Stops continuous animations (marquee bulbs, scrolling tickers, pulsing dots)
+   and shortens transitions so the site stays usable for vestibular sensitivity.
+   ============================================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0ms !important;
+  }
+  html { scroll-behavior: auto !important; }
+
+  /* Hide purely decorative continuous-motion elements */
+  [aria-hidden="true"][data-decorative-motion] { opacity: 0.5 !important; }
+}
+
+/* ── Light section overrides (outside @layer for maximum cascade priority) ── */
+[data-light] h1,
+[data-light] h2,
+[data-light] h3,
+[data-light] h4 { color: #1a1a1a !important; }
+
+[data-light] p { color: rgba(26,26,26,0.68) !important; }
+
+[data-light] button h4,
+[data-light] button > h4 { color: #1a1a1a !important; }
+
+[data-light] .faq-q { color: #1a1a1a !important; }
+[data-light] .faq-a { color: rgba(26,26,26,0.65) !important; }
+[data-light] .faq-border { border-bottom-color: rgba(26,26,26,0.1) !important; }
+[data-light] .process-border { border-bottom-color: rgba(26,26,26,0.1) !important; }
+[data-light] .artifact-tag { color: rgba(26,26,26,0.6) !important; }
+
+/* ── Keyboard accessibility: visible focus ring ── */
+:focus-visible {
+  outline: 2px solid #EBC773;
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── Respect reduced-motion preference ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+[data-light] .step-label { color: rgba(26,26,26,0.45) !important; }

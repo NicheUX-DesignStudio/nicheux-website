@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Form Submission</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        button { margin: 10px; padding: 10px 20px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        pre { background: #f5f5f5; padding: 10px; border-radius: 4px; overflow-x: auto; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Debug Form Submission</h1>
+    <p>This page helps you test if your frontend can talk to the backend.</p>
+    
+    <div>
+        <button onclick="testBackend()">1. Test Backend Connection</button>
+        <button onclick="testFormSubmit()">2. Test Form Submission</button>
+        <button onclick="checkFrontendCode()">3. Check Frontend Code</button>
+    </div>
+    
+    <div id="result"></div>
+    
+    <script>
+        async function testBackend() {
+            try {
+                const response = await fetch('http://localhost:3001/api/test');
+                const data = await response.json();
+                showResult('✅ Backend is running!', 'success');
+                showResult(`Response: ${JSON.stringify(data, null, 2)}`, 'info');
+            } catch (error) {
+                showResult(`❌ Backend error: ${error.message}`, 'error');
+            }
+        }
+        
+        async function testFormSubmit() {
+            const formData = {
+                name: "Debug Test " + new Date().toLocaleTimeString(),
+                email: "debug@test.com",
+                phone: "+441234567890",
+                company: "Debug Company",
+                timeline: "ASAP (1-2 weeks)",
+                source: "Debug Tool",
+                message: "Testing from debug page",
+                services: ["Logo Design"],
+                country: "United Kingdom",
+                currency: "£",
+                estimateAmount: 450
+            };
+            
+            showResult('Sending data...', 'info');
+            showResult(JSON.stringify(formData, null, 2), 'info');
+            
+            try {
+                const response = await fetch('http://localhost:3001/api/submit-to-notion', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                const data = await response.json();
+                if (data.success) {
+                    showResult('✅ Form submitted successfully!', 'success');
+                    showResult(`Response: ${JSON.stringify(data, null, 2)}`, 'info');
+                } else {
+                    showResult(`❌ Submission failed: ${data.message}`, 'error');
+                }
+            } catch (error) {
+                showResult(`❌ Error: ${error.message}`, 'error');
+            }
+        }
+        
+        function checkFrontendCode() {
+            showResult('Checking your frontend code...', 'info');
+            
+            // Check if the frontend is calling the right endpoint
+            fetch('/src/services/notionService.ts')
+                .then(response => response.text())
+                .then(text => {
+                    if (text.includes('localhost:3001')) {
+                        showResult('✅ notionService.ts points to correct backend', 'success');
+                    } else {
+                        showResult('❌ notionService.ts does NOT point to localhost:3001', 'error');
+                    }
+                })
+                .catch(() => {
+                    showResult('⚠️ Could not check notionService.ts', 'warning');
+                });
+        }
+        
+        function showResult(message, type = 'info') {
+            const resultDiv = document.getElementById('result');
+            const pre = document.createElement('pre');
+            pre.className = type;
+            pre.textContent = message;
+            resultDiv.appendChild(pre);
+        }
+    </script>
+</body>
+</html>

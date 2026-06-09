@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Updated 2026-06-09 -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Core -->
+  <url><loc>https://nicheux.com/</loc><lastmod>2026-06-09</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://nicheux.com/about</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://nicheux.com/contact</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- Services -->
+  <url><loc>https://nicheux.com/strategy-design</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://nicheux.com/web-development-ecommerce</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://nicheux.com/print-brand-design</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://nicheux.com/motion-design-ai-visuals</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://nicheux.com/social-media-marketing</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://nicheux.com/illustration-character-design</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- Featured Work -->
+  <url><loc>https://nicheux.com/featured-work</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://nicheux.com/featured-work/bloom-brew</loc><lastmod>2026-06-09</lastmod><changefreq>yearly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://nicheux.com/featured-work/nandhinidc</loc><lastmod>2026-06-09</lastmod><changefreq>yearly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://nicheux.com/featured-work/kishore-portfolio</loc><lastmod>2026-06-09</lastmod><changefreq>yearly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://nicheux.com/featured-work/ssjc-tournament</loc><lastmod>2026-06-09</lastmod><changefreq>yearly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://nicheux.com/featured-work/sooraj-linkedin</loc><lastmod>2026-06-09</lastmod><changefreq>yearly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://nicheux.com/featured-work/sooraj-wanted</loc><lastmod>2026-06-09</lastmod><changefreq>yearly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://nicheux.com/featured-work/sooraj-candy-merch</loc><lastmod>2026-06-09</lastmod><changefreq>yearly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://nicheux.com/featured-work/ai-canvas</loc><lastmod>2026-06-09</lastmod><changefreq>yearly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://nicheux.com/featured-work/visual-communication</loc><lastmod>2026-06-09</lastmod><changefreq>yearly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://nicheux.com/featured-work/conceptual-art</loc><lastmod>2026-06-09</lastmod><changefreq>yearly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://nicheux.com/featured-work/sequential-art</loc><lastmod>2026-06-09</lastmod><changefreq>yearly</changefreq><priority>0.65</priority></url>
+
+  <!-- Blog index -->
+  <url><loc>https://nicheux.com/blog</loc><lastmod>2026-06-09</lastmod><changefreq>weekly</changefreq><priority>0.75</priority></url>
+
+  <!-- Blog articles -->
+  <url><loc>https://nicheux.com/blog/where-design-meets-storytelling</loc><lastmod>2026-05-01</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://nicheux.com/blog/bloom-brew-how-we-built-it</loc><lastmod>2026-05-15</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://nicheux.com/blog/ssjc-gaming-identity-junior-squash</loc><lastmod>2026-05-10</lastmod><changefreq>yearly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://nicheux.com/blog/nandhinidc-website-architecture-storytelling</loc><lastmod>2026-05-10</lastmod><changefreq>yearly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://nicheux.com/blog/eight-slides-by-4am</loc><lastmod>2026-05-08</lastmod><changefreq>yearly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://nicheux.com/blog/what-ai-actually-cant-do-for-your-brand</loc><lastmod>2026-05-12</lastmod><changefreq>yearly</changefreq><priority>0.65</priority></url>
+
+  <!-- Other -->
+  <url><loc>https://nicheux.com/gallery</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nicheux.com/merch</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+
+  <!-- Legal -->
+  <url><loc>https://nicheux.com/privacy</loc><lastmod>2026-06-09</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://nicheux.com/terms</loc><lastmod>2026-06-09</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://nicheux.com/cookies</loc><lastmod>2026-06-09</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+
+</urlset>
