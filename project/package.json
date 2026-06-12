@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev:frontend": "vite",
-    "dev:backend": "nodemon server.js",
+    "dev:backend": "nodemon dev-server.js",
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "node server.js",
+    "start": "node dev-server.js",
     "serve": "npm run build && npm start"
   },
   "dependencies": {
