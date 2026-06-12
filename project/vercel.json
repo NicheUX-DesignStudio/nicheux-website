@@ -5,7 +5,7 @@
   "functions": {
     "api/server.js": {
       "maxDuration": 30,
-      "excludeFiles": "{node_modules/{lucide-react,typescript,@img,@esbuild,@babel,web-streams-polyfill,rxjs,tailwindcss,tailwindcss-animate,rollup,@rollup,react-dom,caniuse-lite,react-router,@types,vite,@vitejs,framer-motion,terser,jiti,sucrase,csstype,motion-dom,@jridgewell,source-map,sharp,concurrently,acorn,nodemon,react,react-simple-maps,cobe,prop-types,react-helmet-async,postcss,autoprefixer,eslint*,@eslint*}/**,dist/**,src/**,public/**}"
+      "excludeFiles": "node_modules/{lucide-react,typescript,@img,@esbuild,@babel,web-streams-polyfill,rxjs,tailwindcss,rollup,@rollup,react-dom,caniuse-lite,vite}/**"
     }
   },
   "rewrites": [
