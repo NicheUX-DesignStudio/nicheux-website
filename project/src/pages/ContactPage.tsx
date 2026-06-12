@@ -207,7 +207,7 @@ export default function ContactPage() {
       <Helmet>
         <title>Start a Project | NicheUX</title>
         <meta name="description" content="Tell us what you need. Get a custom proposal within 24 hours." />
-        <link rel="canonical" href="https://nicheux.com/contact" />
+        <link rel="canonical" href="https://www.nicheux.com/contact" />
       </Helmet>
 
       {/* ── DARK HERO ── */}

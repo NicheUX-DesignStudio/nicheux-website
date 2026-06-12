@@ -605,8 +605,8 @@ export default function AboutPage() {
         <meta name="description" content="Meet the NicheUX ensemble. Six designers, developers, and strategists under one roof. No account managers. The person who builds your brand is the person you talk to." />
         <meta property="og:title" content="About NicheUX | The Ensemble Behind the Work" />
         <meta property="og:description" content="Six disciplines. Zero compromise. Meet the team that builds digital stages for brands that want to be impossible to ignore." />
-        <meta property="og:url" content="https://nicheux.com/about" />
-        <link rel="canonical" href="https://nicheux.com/about" />
+        <meta property="og:url" content="https://www.nicheux.com/about" />
+        <link rel="canonical" href="https://www.nicheux.com/about" />
       </Helmet>
 
       {/* ── THE EXPERIENCE: void → noise → empty seats → curtain + logo ── */}

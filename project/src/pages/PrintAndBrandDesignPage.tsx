@@ -254,7 +254,7 @@ export default function PrintAndBrandDesignPage() {
       <Helmet>
         <title>Print and Brand Design | NicheUX. Professional Print & Brand Design</title>
         <meta name="description" content="Professional print designs that make your brand tangible. From brochures to banners, we create digital files that print perfectly everywhere." />
-        <link rel="canonical" href="https://nicheux.com/print-brand-design" />
+        <link rel="canonical" href="https://www.nicheux.com/print-brand-design" />
       </Helmet>      <main id="main-content">
 
         {/* ── HERO ── */}

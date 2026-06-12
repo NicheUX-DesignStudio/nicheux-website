@@ -139,7 +139,7 @@ function ServiceCard({ service }: any) {
 export default function ServicesPage() {
   const metaDescription =
     "NicheUX services: UI/UX strategy & design, custom web development, and e-commerce solutions. Research-led, conversion-focused, hand-built.";
-  const canonicalUrl = "https://nicheux.com/services";
+  const canonicalUrl = "https://www.nicheux.com/services";
 
   return (
     <div style={{ backgroundColor: BLACK, color: "#fff" }}>
@@ -159,7 +159,7 @@ export default function ServicesPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://nicheux.com",
+                "item": "https://www.nicheux.com",
               },
               {
                 "@type": "ListItem",

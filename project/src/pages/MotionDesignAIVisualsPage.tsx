@@ -129,7 +129,7 @@ export default function MotionDesignAIVisualsPage() {
       <Helmet>
         <title>Motion Design & AI Visuals | NicheUX</title>
         <meta name="description" content="Traditional motion graphics excellence and cutting-edge AI innovation. Both approaches deliver exceptional results for different needs and goals." />
-        <link rel="canonical" href="https://nicheux.com/motion-design-ai-visuals" />
+        <link rel="canonical" href="https://www.nicheux.com/motion-design-ai-visuals" />
       </Helmet>      <main id="main-content">
 
         {/* ── HERO ── */}

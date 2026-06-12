@@ -138,7 +138,7 @@ export default function IllustrationCharacterDesignPage() {
       <Helmet>
         <title>Illustration & Character Design | NicheUX</title>
         <meta name="description" content="Professional character design, illustration, and visual storytelling. From children's books to concept art, we create artwork that captivates and communicates." />
-        <link rel="canonical" href="https://nicheux.com/illustration-character-design" />
+        <link rel="canonical" href="https://www.nicheux.com/illustration-character-design" />
       </Helmet>      <main id="main-content">
 
         {/* ── HERO ── */}

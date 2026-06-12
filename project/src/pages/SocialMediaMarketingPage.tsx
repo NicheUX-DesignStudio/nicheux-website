@@ -176,7 +176,7 @@ export default function SocialMediaMarketingPage() {
       <Helmet>
         <title>Social Media Marketing | NicheUX. Strategic Social Media Management</title>
         <meta name="description" content="Transform your social media from random posting to strategic growth engine. Building communities that drive real business results." />
-        <link rel="canonical" href="https://nicheux.com/social-media-marketing" />
+        <link rel="canonical" href="https://www.nicheux.com/social-media-marketing" />
       </Helmet>      <main id="main-content">
 
         {/* ── HERO ── */}

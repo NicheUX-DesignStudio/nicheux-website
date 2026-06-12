@@ -104,7 +104,7 @@ export default function StrategyAndDesignPage() {
       <Helmet>
         <title>UI/UX Strategy & Design | NicheUX</title>
         <meta name="description" content="UI/UX strategy and design from NicheUX. Research-led, pixel-perfect interfaces engineered to convert. UX audits, complete design systems, and interfaces that turn visitors into customers." />
-        <link rel="canonical" href="https://nicheux.com/strategy-design" />
+        <link rel="canonical" href="https://www.nicheux.com/strategy-design" />
       </Helmet>
 
       <main id="main-content">

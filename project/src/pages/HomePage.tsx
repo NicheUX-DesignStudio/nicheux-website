@@ -24,16 +24,16 @@ export default function HomePage() {
           content="NicheUX is a UK-based design studio. UI/UX strategy, web development, brand identity, motion design, illustration. We build digital experiences that get you clients."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nicheux.com" />
-        <link rel="canonical" href="https://nicheux.com" />
+        <meta property="og:url" content="https://www.nicheux.com" />
+        <link rel="canonical" href="https://www.nicheux.com" />
 
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "NicheUX",
           "alternateName": "NicheUX Studio",
-          "url": "https://nicheux.com",
-          "logo": "https://nicheux.com/images/NicheUXLogo.jpg",
+          "url": "https://www.nicheux.com",
+          "logo": "https://www.nicheux.com/images/NicheUXLogo.jpg",
           "description": "UK-based design studio crafting strategy, brand, web, motion, illustration, and print. Every story deserves a stage.",
           "slogan": "Every story deserves a stage.",
           "foundingDate": "2020",
@@ -66,11 +66,11 @@ export default function HomePage() {
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "NicheUX",
-          "url": "https://nicheux.com",
+          "url": "https://www.nicheux.com",
           "publisher": { "@type": "Organization", "name": "NicheUX" },
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://nicheux.com/?q={search_term_string}",
+            "target": "https://www.nicheux.com/?q={search_term_string}",
             "query-input": "required name=search_term_string"
           }
         })}</script>

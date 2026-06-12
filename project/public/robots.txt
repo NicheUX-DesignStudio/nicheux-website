@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-Sitemap: https://nicheux.com/sitemap.xml
+Sitemap: https://www.nicheux.com/sitemap.xml

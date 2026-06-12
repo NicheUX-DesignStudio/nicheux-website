@@ -110,7 +110,7 @@ export default function WebDevelopmentAndECommercePage() {
       <Helmet>
         <title>Fully Coded Web Development & E-Commerce | NicheUX</title>
         <meta name="description" content="Fully coded websites and Shopify stores built from scratch in React and custom code. No templates, no drag-and-drop, no shortcuts. Fast, secure, and built to scale." />
-        <link rel="canonical" href="https://nicheux.com/web-development-ecommerce" />
+        <link rel="canonical" href="https://www.nicheux.com/web-development-ecommerce" />
       </Helmet>      <main id="main-content">
 
         {/* ── HERO ── */}
