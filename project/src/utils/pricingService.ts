@@ -128,9 +128,9 @@ const createUKPricing = (): PricingServices => ({
   'Print Design Project': { min: 500, max: 3500, pricingType: 'fixed', complexityLevel: 'standard', valueTier: 'professional' },
 
   // ========== SOCIAL MEDIA (per month) ==========
-  'Social Media Starter Plan': { min: 450, max: 1000, pricingType: 'fixed', complexityLevel: 'simple', valueTier: 'essential' },
-  'Social Media Professional Plan': { min: 900, max: 2200, pricingType: 'fixed', complexityLevel: 'standard', valueTier: 'professional' },
-  'Social Media Enterprise Plan': { min: 2000, max: 5000, pricingType: 'fixed', complexityLevel: 'complex', valueTier: 'enterprise' },
+  'Social Media Starter Plan': { min: 1200, max: 1600, pricingType: 'fixed', complexityLevel: 'simple', valueTier: 'essential' },
+  'Social Media Professional Plan': { min: 2000, max: 3200, pricingType: 'fixed', complexityLevel: 'standard', valueTier: 'professional' },
+  'Social Media Enterprise Plan': { min: 4500, max: 7000, pricingType: 'fixed', complexityLevel: 'complex', valueTier: 'enterprise' },
 
   // ========== MOTION GRAPHICS ==========
   '30s Explainer Video': { min: 2000, max: 6000, pricingType: 'fixed', complexityLevel: 'standard', valueTier: 'professional' },

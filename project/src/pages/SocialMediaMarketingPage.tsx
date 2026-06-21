@@ -25,10 +25,10 @@ const COMPARISONS: ComparisonPair[] = [
   { label: "Conversion", beforeSrc: "/images/diagnostics/social-conversion-before.png", afterSrc: "/images/diagnostics/social-conversion-after.png", beforeCaption: "Likes but no leads. Engagement that never translates to business.", afterCaption: "Content engineered to move followers from passive audience to paying clients." },
 ];
 const SERVICE_STATS: [ServiceStat, ServiceStat, ServiceStat, ServiceStat] = [
-  { display: "3×", label: "Average\nengagement growth" },
-  { display: "20+", numericTarget: 20, label: "Posts per month\non Professional" },
-  { display: "100%", label: "Original content,\nno stock templates" },
-  { display: "30", numericTarget: 30, label: "Days to\nfirst traction" },
+  { display: "3×", label: "Average engagement\nincrease by month 3" },
+  { display: "16", numericTarget: 16, label: "Posts per month\non Professional" },
+  { display: "100%", label: "Original, designed\ncontent every tier" },
+  { display: "30", numericTarget: 30, label: "Days to measurable\ntraction" },
 ];
 const go = (path: string) => { window.location.href = path; };
 
@@ -59,86 +59,87 @@ const TIERS = [
   {
     name: "Social Media Starter Plan",
     serviceId: "Social Media Starter Plan",
-    tagline: "Build a consistent presence",
+    tagline: "Build a designed presence",
     billing: "Monthly rolling",
     platforms: "2 platforms",
-    bestFor: "Small businesses and startups who need a professional, consistent presence without the chaos of doing it themselves",
+    bestFor: "Small businesses and startups who need a professional, consistent presence with design quality that sets them apart",
     features: [
       "2 platforms (Instagram + Facebook or Instagram + LinkedIn)",
-      "12 posts per month (8 static + 4 carousel)",
-      "6 Instagram Stories per month",
-      "4 Reels or TikToks per month (15 to 30 seconds)",
-      "Caption copywriting with hashtag strategy",
+      "10 posts per month (8 static + 2 carousel)",
+      "4 Instagram Stories per month",
+      "2 AI-enhanced Reels per month (30–45 seconds, branded design overlay)",
+      "Strategic caption copywriting with hashtag research",
       "Content calendar planned 2 weeks ahead",
       "3 branded Story Highlight covers",
-      "Graphics built to your brand guidelines",
-      "Comment and basic DM management",
-      "Monthly performance report (reach, engagement, follower growth)",
+      "All graphics built to your exact brand guidelines",
+      "Comment monitoring and basic community support",
+      "Monthly performance report (reach, engagement, growth trajectory)",
     ],
-    youGet: "A professional feed that looks intentional, posts that go out on time, and a team handling it so you never have to think about it",
+    youGet: "A designed feed that reflects your brand. Every post intentional. Content that goes out on schedule. A team so you can focus on running your business.",
     accent: GOLD,
   },
   {
     name: "Social Media Professional Plan",
     serviceId: "Social Media Professional Plan",
-    tagline: "Grow, engage, convert",
+    tagline: "Design-driven growth",
     billing: "Monthly rolling",
     platforms: "3 platforms",
-    bestFor: "Growing businesses ready to build real engagement, turn followers into customers, and compound month on month",
+    bestFor: "Growing businesses ready to build real engagement, turn followers into customers, and compound growth month on month",
     features: [
       "3 platforms (Instagram, LinkedIn, and Facebook or TikTok)",
-      "20 posts per month (static, carousel, and mixed media)",
-      "10 Stories per month",
-      "6 Reels or short-form videos per month (up to 60 seconds)",
+      "16 posts per month (static, carousel, and mixed media)",
+      "8 Stories per month",
+      "4 AI-enhanced Reels per month (45–60 seconds, custom design treatment)",
       "4 LinkedIn-optimised thought leadership posts",
-      "Caption copywriting with SEO-optimised hashtag sets",
+      "SEO-rich caption copywriting and hashtag strategy",
       "Content calendar planned 3 weeks ahead",
       "Community management and DM response within 24 hours",
-      "1 monthly strategy call (45 minutes)",
+      "1 monthly strategy call (30 minutes)",
       "Weekly performance snapshot + monthly deep analytics report",
       "Interactive Story content (polls, quizzes, countdowns)",
-      "Competitor monitoring across top 3 brands monthly",
+      "Competitor monitoring across your top 3 brands",
     ],
-    youGet: "Content that gets saved, shared, and acted on. A strategy that builds compounding momentum and visibility every month",
+    youGet: "Content that gets saved, shared, and acted on. A strategic approach that builds momentum. Visibility that compounds every month.",
     accent: LAVENDER,
     highlighted: true,
   },
   {
     name: "Social Media Enterprise Plan",
     serviceId: "Social Media Enterprise Plan",
-    tagline: "Full-scale social operation",
+    tagline: "Full creative operation",
     billing: "Monthly rolling",
     platforms: "All major platforms",
-    bestFor: "Established brands and growing companies that need a complete content team without the overhead of hiring one",
+    bestFor: "Established brands and growing companies that need a complete creative team without the overhead of hiring in-house",
     features: [
       "All major platforms (Instagram, LinkedIn, TikTok, Facebook, X, YouTube Shorts)",
-      "30 posts per month (static, carousel, produced video, and mixed media)",
-      "20 Stories per month across platforms",
-      "8 Reels or short-form videos per month (produced by our motion team)",
-      "4 custom illustrations per month (original artwork, not stock)",
-      "4 branded motion graphics per month",
-      "2 LinkedIn articles or newsletters per month",
-      "Full caption copywriting and tone-of-voice management",
-      "Dedicated account manager with direct messaging access",
-      "Full community management across all platforms (under 2 hours business hours)",
-      "Weekly strategy call (30 minutes)",
-      "Monthly deep analytics and competitor intelligence report",
-      "A/B testing on content formats, CTAs, and post timing",
+      "24 posts per month (static, carousel, and mixed media)",
+      "14 Stories per month across platforms",
+      "6 hand-crafted Reels per month (45–60 seconds, produced by our motion team)",
+      "2 custom illustrations per month (original artwork, exclusively for you)",
+      "2 branded motion graphics per month (in-house design team)",
+      "4 LinkedIn-optimised thought leadership posts + 1 monthly article",
+      "Full caption copywriting and brand voice management",
+      "Dedicated account manager with direct access",
+      "Full community management (response under 2 hours during business hours)",
+      "Bi-weekly strategy calls (30 minutes each)",
+      "Monthly deep analytics report + competitor intelligence",
+      "A/B testing on content formats, CTAs, and timing",
       "Campaign planning for up to 2 launches or promotions per month",
-      "Ad creative production for paid campaigns (up to 4 creatives, ad spend not included)",
+      "Paid social ad creative production (up to 4 variations, ad spend separate)",
     ],
-    youGet: "A complete in-house social team without the hiring. Every piece of content is original, on-brand, and built to perform at every stage of your funnel",
+    youGet: "Your complete in-house social team. Every piece is original and on-brand. Content engineered to perform at every stage of your customer journey.",
     accent: BLUE,
   },
 ];
 
 const FAQS = [
-  { q: "What's included in your social media management?", a: "Every plan includes strategy, content creation (graphics, captions, Reels), scheduling, community management, and monthly performance reporting. The Professional plan adds thought leadership posts and competitor monitoring. Enterprise adds motion graphics, custom illustrations, LinkedIn articles, and ad creative production." },
-  { q: "How many Reels or videos do you produce per month?", a: "The Starter plan includes 4 Reels or TikToks per month. Professional includes 6 (up to 60 seconds each). Enterprise includes 8 produced by our in-house motion team, plus 4 branded motion graphics. No stock footage, no templates." },
-  { q: "Do you manage LinkedIn as well as Instagram?", a: "Yes. Every plan covers LinkedIn. The Professional plan includes 4 LinkedIn-optimised thought leadership posts per month. Enterprise includes 2 LinkedIn articles or newsletters monthly, written in your voice." },
-  { q: "How do you measure results?", a: "We track engagement rate, reach, follower growth, website clicks, and lead generation, not impressions and likes. The Professional plan includes a weekly snapshot and monthly deep report. Enterprise adds competitor intelligence and A/B testing results." },
-  { q: "Can I cancel or change my plan anytime?", a: "Yes. All plans are month-to-month with no lock-in. You can upgrade, downgrade, or pause with 30 days notice. Most clients start on Starter to test the relationship, then move to Professional within 2 to 3 months." },
-  { q: "How quickly will I see results?", a: "Initial traction typically shows in the first 30 to 60 days. Consistent growth compounds over 3 to 6 months. We set clear monthly benchmarks so you know exactly what you're getting and when." },
+  { q: "What makes your approach different from other agencies?", a: "We design your social presence, not just post content. Every Reel gets a branded design layer. Every caption is strategically written. Even Starter plans get AI-enhanced videos with your brand treatment. We're a design studio first, content mill second." },
+  { q: "How many Reels do you produce per month?", a: "Starter includes 2 AI-enhanced Reels (30–45 seconds). Professional includes 4 (45–60 seconds with custom design). Enterprise includes 6 hand-crafted Reels produced by our motion team, plus 2 custom illustrations and 2 branded motion graphics monthly. No generic content, no stock footage." },
+  { q: "What's the difference between Starter and Professional Reels?", a: "Starter: AI-generated base + branded lower thirds and colour grading. Professional: AI-generated + custom transitions, animation overlays, and design elements. Enterprise: Hand-crafted motion design in After Effects, fully original, premium polish." },
+  { q: "Do you manage LinkedIn as well as Instagram?", a: "Yes. Every plan covers LinkedIn. Starter has organic reach focus. Professional includes 4 thought leadership posts optimised for your audience. Enterprise includes 4 posts plus 1 article per month, written entirely in your voice." },
+  { q: "How do you measure what actually works?", a: "We track engagement rate, reach, follower growth, website clicks, and lead generation, not vanity metrics. Starter gets monthly reports. Professional gets weekly snapshots plus monthly deep analysis. Enterprise adds A/B testing results and competitor intelligence." },
+  { q: "Can I switch plans or cancel?", a: "Yes. Month-to-month, no lock-in. Upgrade, downgrade, or pause anytime with 30 days notice. Most start on Professional, some test Starter first. Enterprise clients typically commit 3+ months to see motion graphics and strategy pay off." },
+  { q: "What if I don't have the content or assets you need?", a: "We handle it. We create content from scratch using AI tools (Starter/Professional) or hand-craft it (Enterprise). You don't need to provide anything except brand guidelines and your voice/tone preferences." },
 ];
 
 function FAQItem({ faq, index }: { faq: { q: string; a: string }; index: number }) {
@@ -191,7 +192,7 @@ export default function SocialMediaMarketingPage() {
                 <span style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.32em", textTransform: "uppercase", color: ACCENT, display: "flex", alignItems: "center", gap: 14 }}>
                   <span style={{ width: 8, height: 8, borderRadius: "50%", background: ACCENT }} />Social Media Marketing
                 </span>
-                <span style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontWeight: 400, fontSize: "clamp(12px,1.1vw,14px)", color: "rgba(255,255,255,0.35)" }}>Strategy · Creation · Growth</span>
+                <span style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontWeight: 400, fontSize: "clamp(12px,1.1vw,14px)", color: "rgba(255,255,255,0.35)" }}>Design · Strategy · Growth</span>
               </motion.div>
               <motion.h1 initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.1, delay: 0.15, ease: EASE }} style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(48px,9vw,160px)", lineHeight: 0.95, letterSpacing: "-0.04em", color: "#fff", margin: 0 }}>
                 Elevate Your Social.<br /><em style={{ color: ACCENT }}>Start Connecting.</em>
@@ -200,7 +201,7 @@ export default function SocialMediaMarketingPage() {
                 <style>{`@media(max-width:768px){.hero-social{grid-template-columns:1fr!important}}`}</style>
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.35, ease: EASE }}>
                   <p style={{ fontFamily: "'Source Sans Pro', sans-serif", fontWeight: 400, fontSize: "clamp(17px,1.6vw,22px)", lineHeight: 1.7, color: "rgba(255,255,255,0.7)", margin: "0 0 clamp(32px,4vw,48px) 0", maxWidth: 640 }}>
-                    We transform your social media from random posting to strategic growth engine. Building communities that drive real business results.
+                    We design your social presence, not just post content. Every Reel, every caption, every story is strategically crafted to build communities that drive real business results.
                   </p>
                   <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
                     <PrimaryButton onClick={() => go("/contact?selection=Social+Media+Marketing")}>Start Your Project</PrimaryButton>
