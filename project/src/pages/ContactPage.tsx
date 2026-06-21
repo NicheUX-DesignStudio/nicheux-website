@@ -63,9 +63,9 @@ const CATEGORIES = [
     accent: LAVENDER,
     path: '/social-media-marketing',
     items: [
-      'Social Media Starter Plan (from £450/month)',
-      'Social Media Professional Plan (from £900/month)',
-      'Social Media Enterprise Plan (from £2,000/month)',
+      'Social Media Starter Plan (from £1,200/month)',
+      'Social Media Professional Plan (from £2,000/month)',
+      'Social Media Enterprise Plan (from £4,500/month)',
       'Social Media Consultation (free)',
     ],
   },
