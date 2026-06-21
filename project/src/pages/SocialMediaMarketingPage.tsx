@@ -84,7 +84,7 @@ const TIERS = [
     tagline: "Design-driven growth",
     billing: "Monthly rolling",
     platforms: "3 platforms",
-    bestFor: "Growing businesses ready to build real engagement, turn followers into customers, and compound growth month on month",
+    bestFor: "Growing businesses ready to build real engagement and grow their presence month on month with strategic content and data-driven decisions",
     features: [
       "3 platforms (Instagram, LinkedIn, and Facebook or TikTok)",
       "16 posts per month (static, carousel, and mixed media)",
@@ -99,7 +99,7 @@ const TIERS = [
       "Interactive Story content (polls, quizzes, countdowns)",
       "Competitor monitoring across your top 3 brands",
     ],
-    youGet: "Content that gets saved, shared, and acted on. A strategic approach that builds momentum. Visibility that compounds every month.",
+    youGet: "Strategic content built to perform. Consistent posting on schedule. Real data showing what's working month on month.",
     accent: LAVENDER,
     highlighted: true,
   },
