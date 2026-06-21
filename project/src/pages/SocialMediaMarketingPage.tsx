@@ -22,20 +22,20 @@ const ACCENT = GOLD;
 const COMPARISONS: ComparisonPair[] = [
   { label: "Content Strategy", beforeSrc: "/images/diagnostics/social-strategy-before.png", afterSrc: "/images/diagnostics/social-strategy-after.png", beforeCaption: "Random posting with no plan. Inconsistent message, zero momentum.", afterCaption: "Data-driven strategy where every post serves a clear business objective." },
   { label: "Brand Consistency", beforeSrc: "/images/diagnostics/social-consistency-before.png", afterSrc: "/images/diagnostics/social-consistency-after.png", beforeCaption: "Mismatched visuals across posts. Followers can't recognise the brand.", afterCaption: "A unified visual identity that builds instant recognition in every scroll." },
-  { label: "Conversion", beforeSrc: "/images/diagnostics/social-conversion-before.png", afterSrc: "/images/diagnostics/social-conversion-after.png", beforeCaption: "Likes but no leads. Engagement that never translates to business.", afterCaption: "Content engineered to move followers from passive audience to paying clients." },
+  { label: "Conversion", beforeSrc: "/images/diagnostics/social-conversion-before.png", afterSrc: "/images/diagnostics/social-conversion-after.png", beforeCaption: "Likes but no leads. Engagement that never translates to business.", afterCaption: "Strategic content with clear calls-to-action. Every post designed to move followers toward your business goal." },
 ];
 const SERVICE_STATS: [ServiceStat, ServiceStat, ServiceStat, ServiceStat] = [
-  { display: "3×", label: "Average engagement\nincrease by month 3" },
+  { display: "12+", label: "Hours of dedicated\nwork per week" },
   { display: "16", numericTarget: 16, label: "Posts per month\non Professional" },
   { display: "100%", label: "Original, designed\ncontent every tier" },
-  { display: "30", numericTarget: 30, label: "Days to measurable\ntraction" },
+  { display: "30", numericTarget: 30, label: "Days to first\nstrategy report" },
 ];
 const go = (path: string) => { window.location.href = path; };
 
 const PAIN_POINTS = [
-  { title: "Purpose-Driven Strategy", desc: "Every post serves a business objective. No more random content. Just strategic messaging that converts followers into customers." },
+  { title: "Purpose-Driven Strategy", desc: "Every post serves a business objective. No more random content. Just strategic messaging designed to move followers toward action." },
   { title: "Scroll-Stopping Content", desc: "We create content that makes people stop scrolling. Motion graphics, custom illustrations, and platform-optimised videos that capture attention." },
-  { title: "Data-Driven Optimisation", desc: "We track what works and double down on it. Real analytics that show ROI, not just vanity metrics that look good on paper." },
+  { title: "Data-Driven Optimisation", desc: "We track what works and double down on it. Real analytics showing engagement, reach, and performance so you see exactly what's driving results." },
 ];
 const PROBLEM_BULLETS = ["Posting without purpose or strategy", "No audience analysis or targeting", "Inconsistent visual identity across posts", "No measurement of what's actually working", "Content that doesn't drive action"];
 const QUOTE = "Your social media isn't just about posting. It's your direct line to customers. It should build relationships that drive your business forward.";
@@ -47,12 +47,12 @@ const PROCESS = [
 ];
 
 const PRINCIPLES = [
-  { title: "Strategy-Driven Approach", desc: "We don't just post content. We create strategic narratives that align with your business goals and drive meaningful results." },
-  { title: "Visual Excellence", desc: "Our in-house motion graphics and design team creates scroll-stopping content that captures attention and converts." },
-  { title: "Data-First Decisions", desc: "We track what matters: engagement, conversions, ROI. No vanity metrics, just actionable insights that fuel growth." },
-  { title: "Brand Protection", desc: "Professional crisis management and reputation protection ensure your brand stays strong through challenges." },
-  { title: "Consistent Excellence", desc: "We deliver quality content on schedule, every time. Your social presence is always active and effective." },
-  { title: "Community Building", desc: "We don't just grow followers. We build engaged communities that become brand advocates and loyal customers." },
+  { title: "Strategy-Driven Approach", desc: "We don't just post content. We create strategic narratives that align with your business goals and are built to perform." },
+  { title: "Visual Excellence", desc: "Our in-house motion graphics and design team creates scroll-stopping content that captures attention and drives engagement." },
+  { title: "Data-First Decisions", desc: "We track engagement, reach, and performance. No vanity metrics, just actionable insights you can measure and act on." },
+  { title: "Brand Protection", desc: "Professional community management and reputation monitoring ensure your brand voice stays consistent and strong." },
+  { title: "Consistent Excellence", desc: "We deliver quality content on schedule, every time. Your social presence is always active and intentional." },
+  { title: "Community Building", desc: "We don't just grow followers. We build engaged communities and foster real relationships with your audience." },
 ];
 
 const TIERS = [
