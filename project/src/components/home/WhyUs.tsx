@@ -17,8 +17,8 @@ const PROMISES = [
   },
   {
     numeral: "II",
-    title: "Senior Talent Only",
-    detail: "No juniors learning on your budget. Every discipline runs with our best practitioners, from first brief to final launch.",
+    title: "Experienced Practitioners",
+    detail: "Every discipline runs with skilled, practiced hands. From first brief to final launch. No learning curves at your expense.",
     accent: LAVENDER,
   },
   {
