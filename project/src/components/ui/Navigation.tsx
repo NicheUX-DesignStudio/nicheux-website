@@ -343,12 +343,12 @@ export default function Navigation() {
                 </MobileAccordion>
 
                 <MobileAccordion label="Work" isActive={isWorkActive(location.pathname)} open={mobileWork} toggle={() => setMobileWork(p => !p)}>
-                  <MobileSub label="All Works" onClick={() => go("/featured-work")} active={false} gold />
+                  <MobileSub label="All Works" onClick={() => go("/featured-work")} active={active("/featured-work")} />
                   {WORKS.map(w => <MobileSub key={w.path} label={w.title} onClick={() => go(w.path)} active={active(w.path)} />)}
                 </MobileAccordion>
 
                 <MobileAccordion label="Shop" isActive={isShopActive(location.pathname)} open={mobileShop} toggle={() => setMobileShop(p => !p)}>
-                  <MobileSub label="Browse All Artifacts" onClick={() => go("/shop")} active={false} gold />
+                  <MobileSub label="Browse All Artifacts" onClick={() => go("/shop")} active={isShopActive(location.pathname)} />
                   {SHOP_CATEGORIES.map(cat => cat.items.map(item => (
                     <MobileSub key={item.name} label={item.name} onClick={() => go(`/shop#${item.id}`)} active={false} />
                   )))}

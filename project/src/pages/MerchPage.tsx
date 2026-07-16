@@ -847,7 +847,6 @@ export default function merchPage() {
             {[
               { icon: '❖', title: 'Six designers', body: 'A full studio behind every commission: illustration, typography, print, motion, web, brand.' },
               { icon: '❖', title: '1 year of client work', body: 'We have built identities for businesses across the UK, Ireland, Canada, and Malaysia.' },
-              { icon: '❖', title: 'No payment before approval', body: 'You approve the creative direction first. Payment follows confirmation, never the other way.' },
               { icon: '❖', title: 'Production-ready files', body: 'Every file is built to print specification. Bleeds, CMYK, correct resolution. No reprints.' },
             ].map(w => (
               <div key={w.title} style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
