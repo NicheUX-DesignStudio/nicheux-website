@@ -194,11 +194,11 @@ export default function AboutStrip() {
               }}>
                 H
               </span>
-              and-picked specialists &mdash; no bloat, no junior staff learning on
-              your budget. Expert craftspeople, perfectly orchestrated to tell
-              your story. Each project is staged by people who have spent years
-              mastering their craft, and we treat your brand like a performance
-              that deserves its own spotlight.
+              and-picked specialists &mdash; no bloat, no shortcuts.
+              Skilled craftspeople, perfectly orchestrated to tell your story.
+              Each project is staged by people who have spent years mastering
+              their craft, and we treat your brand like a performance that
+              deserves its own spotlight.
             </p>
 
             {/* Inline facts */}
