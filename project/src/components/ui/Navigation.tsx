@@ -78,7 +78,7 @@ const NAV_LINKS = [
 
 function isServiceActive(p: string) { return SERVICES.some(s => p === s.path); }
 function isWorkActive(p: string)    { return p.startsWith("/featured-work"); }
-function isShopActive(p: string)    { return p === "/shop" || p === "/merch"; }
+function isShopActive(p: string)    { return p === "/shop" || p === "/shop"; }
 
 export default function Navigation() {
   const [scrolled, setScrolled]             = useState(false);
@@ -263,7 +263,7 @@ export default function Navigation() {
                         <div style={{ width: 20, height: 1, background: GOLD }} />
                         <span style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontWeight: 400, fontSize: 16, color: "rgba(255,255,255,0.55)" }}>We make memories you can hold.</span>
                         <div style={{ flex: 1 }} />
-                        <button onClick={() => go("/merch")} style={{ background: "none", border: "none", cursor: "pointer", fontFamily: "'Source Sans Pro', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: GOLD, display: "flex", alignItems: "center", gap: 5 }}>
+                        <button onClick={() => go("/shop")} style={{ background: "none", border: "none", cursor: "pointer", fontFamily: "'Source Sans Pro', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: GOLD, display: "flex", alignItems: "center", gap: 5 }}>
                           Browse the Artifact Studio <ArrowRight size={10} />
                         </button>
                       </div>
@@ -276,7 +276,7 @@ export default function Navigation() {
                             </div>
                             <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
                               {cat.items.map(item => (
-                                <button key={item.name} onClick={() => go(`/merch#${item.id}`)}
+                                <button key={item.name} onClick={() => go(`/shop#${item.id}`)}
                                   style={{ background: "none", border: "none", borderLeft: `2px solid transparent`, cursor: "pointer", textAlign: "left", padding: "9px 0 9px 12px", transition: "border-color 0.15s, background 0.15s" }}
                                   onMouseEnter={e => { e.currentTarget.style.borderLeftColor = cat.accent; e.currentTarget.style.background = "rgba(255,255,255,0.02)"; }}
                                   onMouseLeave={e => { e.currentTarget.style.borderLeftColor = "transparent"; e.currentTarget.style.background = "none"; }}>
@@ -343,14 +343,14 @@ export default function Navigation() {
                 </MobileAccordion>
 
                 <MobileAccordion label="Work" isActive={isWorkActive(location.pathname)} open={mobileWork} toggle={() => setMobileWork(p => !p)}>
-                  <MobileSub label="All Work" onClick={() => go("/featured-work")} active={active("/featured-work")} gold />
+                  <MobileSub label="All Works" onClick={() => go("/featured-work")} active={false} gold />
                   {WORKS.map(w => <MobileSub key={w.path} label={w.title} onClick={() => go(w.path)} active={active(w.path)} />)}
                 </MobileAccordion>
 
                 <MobileAccordion label="Shop" isActive={isShopActive(location.pathname)} open={mobileShop} toggle={() => setMobileShop(p => !p)}>
-                  <MobileSub label="Browse All Artifacts" onClick={() => go("/shop")} active={isShopActive(location.pathname)} gold />
+                  <MobileSub label="Browse All Artifacts" onClick={() => go("/shop")} active={false} gold />
                   {SHOP_CATEGORIES.map(cat => cat.items.map(item => (
-                    <MobileSub key={item.name} label={item.name} onClick={() => go(`/merch#${item.id}`)} active={false} />
+                    <MobileSub key={item.name} label={item.name} onClick={() => go(`/shop#${item.id}`)} active={false} />
                   )))}
                 </MobileAccordion>
 
