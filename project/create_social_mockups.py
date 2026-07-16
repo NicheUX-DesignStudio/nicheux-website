@@ -1,175 +1,192 @@
 #!/usr/bin/env python3
-"""
-Generate before/after mockup images for Social Media Marketing page
-Creates 3 pairs: Strategy, Design Consistency, Analytics
-"""
-
+"""Generate elegant diagnostic mockups matching other service pages"""
 from PIL import Image, ImageDraw, ImageFont
 import os
 
-# Create images directory if it doesn't exist
 os.makedirs('public/images/diagnostics', exist_ok=True)
 
-# Color scheme (NicheUX brand)
 BLACK = '#131313'
 GOLD = '#EBC773'
 LAVENDER = '#B097BE'
 BLUE = '#89B0CC'
 WHITE = '#FFFFFF'
 GRAY = '#3A3A3A'
+DARK_GRAY = '#2A2A2A'
 
-def create_mockup(width=1200, height=800):
-    """Create a blank mockup canvas"""
+def create_mockup(width=800, height=600):
     return Image.new('RGB', (width, height), color=BLACK)
 
-def add_text(img, text, position, font_size=32, color=WHITE, bold=False):
-    """Add text to image"""
-    draw = ImageDraw.Draw(img)
+def get_font(size, bold=False):
     try:
-        font = ImageFont.truetype("arial.ttf", font_size)
+        name = "arialbd.ttf" if bold else "arial.ttf"
+        return ImageFont.truetype(name, size)
     except:
-        font = ImageFont.load_default()
-    draw.text(position, text, fill=color, font=font)
-    return img
+        return ImageFont.load_default()
 
-# ============================================================================
-# MOCKUP 1: STRATEGY/PLANNING BEFORE VS AFTER
-# ============================================================================
+# ===== STRATEGY BEFORE: Chaotic =====
+img = create_mockup()
+draw = ImageDraw.Draw(img)
 
-img1 = create_mockup(1400, 800)
-draw = ImageDraw.Draw(img1)
+# Border frame
+draw.rectangle([(40, 60), (760, 540)], outline=GRAY, width=2)
 
-# Split line down middle
-draw.line([(700, 0), (700, 800)], fill=GRAY, width=2)
+# Title
+draw.text((180, 80), "Random Posting", fill=GOLD, font=get_font(36, bold=True))
 
-# BEFORE SIDE (Left)
-draw.rectangle([(50, 50), (650, 150)], outline=GOLD, width=3)
-draw.text((250, 80), "BEFORE", fill=GOLD, font=ImageFont.load_default())
+# Scattered tasks
+draw.rectangle([(80, 160), (280, 220)], outline=LAVENDER, width=1)
+draw.text((100, 175), "Post #1?", fill=LAVENDER, font=get_font(20))
 
-# Draw chaotic elements on left
-draw.rectangle([(100, 200), (250, 280)], fill=GRAY)
-draw.text((120, 220), "Sticky Notes", fill=WHITE, font=ImageFont.load_default())
+draw.rectangle([(320, 140), (520, 200)], outline=LAVENDER, width=1)
+draw.text((340, 155), "Post #2?", fill=LAVENDER, font=get_font(20))
 
-draw.rectangle([(300, 200), (450, 280)], fill=GRAY)
-draw.text((320, 220), "Random Ideas", fill=WHITE, font=ImageFont.load_default())
+draw.rectangle([(560, 180), (730, 240)], outline=LAVENDER, width=1)
+draw.text((580, 195), "Post #3?", fill=LAVENDER, font=get_font(20))
 
-draw.rectangle([(550, 200), (620, 280)], fill=GRAY)
-draw.text((560, 220), "???", fill=WHITE, font=ImageFont.load_default())
+# Random question marks
+draw.text((150, 280), "?", fill=LAVENDER, font=get_font(60))
+draw.text((400, 320), "?", fill=LAVENDER, font=get_font(60))
+draw.text((650, 260), "?", fill=LAVENDER, font=get_font(60))
 
-draw.text((150, 350), "No Strategy", fill=LAVENDER, font=ImageFont.load_default())
-draw.text((150, 400), "Random Posting", fill=LAVENDER, font=ImageFont.load_default())
-draw.text((150, 450), "No Planning", fill=LAVENDER, font=ImageFont.load_default())
+# Caption
+draw.text((150, 450), "No strategy. No direction.", fill=LAVENDER, font=get_font(24))
+draw.text((150, 490), "Posts come and go.", fill=LAVENDER, font=get_font(24))
 
-# AFTER SIDE (Right)
-draw.rectangle([(750, 50), (1350, 150)], outline=GOLD, width=3)
-draw.text((1000, 80), "AFTER NICHEUX", fill=GOLD, font=ImageFont.load_default())
+img.save('public/images/diagnostics/social-strategy-before.png')
+print("[OK] Strategy BEFORE created")
 
-# Draw organized calendar elements on right
-draw.rectangle([(800, 200), (1300, 650)], outline=BLUE, width=2)
-draw.text((900, 220), "3-WEEK CONTENT CALENDAR", fill=BLUE, font=ImageFont.load_default())
+# ===== STRATEGY AFTER: Organized =====
+img = create_mockup()
+draw = ImageDraw.Draw(img)
 
-draw.rectangle([(820, 270), (1280, 320)], fill=BLUE)
-draw.text((840, 280), "MON: Strategy Insights", fill=BLACK, font=ImageFont.load_default())
+# Border frame
+draw.rectangle([(40, 60), (760, 540)], outline=GOLD, width=2)
 
-draw.rectangle([(820, 340), (1280, 390)], fill=LAVENDER)
-draw.text((840, 350), "WED: Behind-The-Scenes", fill=BLACK, font=ImageFont.load_default())
+# Title
+draw.text((100, 80), "Strategic Planning", fill=GOLD, font=get_font(36, bold=True))
 
-draw.rectangle([(820, 410), (1280, 460)], fill=GOLD)
-draw.text((840, 420), "FRI: Call-To-Action", fill=BLACK, font=ImageFont.load_default())
+# Calendar structure
+draw.rectangle([(80, 160), (720, 220)], outline=BLUE, width=2)
+draw.text((100, 175), "WEEK 1: Brand Story  |  WEEK 2: Behind-Scenes  |  WEEK 3: Action CTA", fill=BLUE, font=get_font(18))
 
-draw.text((1050, 550), "Strategic. Organized. Purpose-Driven.", fill=GOLD, font=ImageFont.load_default())
+# Posts aligned
+draw.rectangle([(80, 260), (240, 320)], outline=GOLD, width=2)
+draw.text((100, 280), "Post 1", fill=GOLD, font=get_font(20))
+draw.text((100, 310), "Monday", fill=GOLD, font=get_font(14))
 
-img1.save('public/images/diagnostics/social-strategy-before.png')
-img1.save('public/images/diagnostics/social-strategy-after.png')
-print("[OK] Strategy mockup created")
+draw.rectangle([(280, 260), (440, 320)], outline=GOLD, width=2)
+draw.text((300, 280), "Post 2", fill=GOLD, font=get_font(20))
+draw.text((300, 310), "Wednesday", fill=GOLD, font=get_font(14))
 
-# ============================================================================
-# MOCKUP 2: DESIGN CONSISTENCY BEFORE VS AFTER
-# ============================================================================
+draw.rectangle([(480, 260), (640, 320)], outline=GOLD, width=2)
+draw.text((500, 280), "Post 3", fill=GOLD, font=get_font(20))
+draw.text((500, 310), "Friday", fill=GOLD, font=get_font(14))
 
-img2 = create_mockup(1400, 900)
-draw = ImageDraw.Draw(img2)
+# Caption
+draw.text((150, 420), "Purpose-driven strategy.", fill=GOLD, font=get_font(24))
+draw.text((150, 460), "Every post aligned to business goals.", fill=GOLD, font=get_font(24))
 
-# Split line
-draw.line([(700, 0), (700, 900)], fill=GRAY, width=2)
+img.save('public/images/diagnostics/social-strategy-after.png')
+print("[OK] Strategy AFTER created")
 
-# BEFORE SIDE - Chaotic feed
-draw.rectangle([(50, 50), (650, 150)], outline=GOLD, width=3)
-draw.text((250, 80), "BEFORE", fill=GOLD, font=ImageFont.load_default())
+# ===== DESIGN BEFORE: Chaotic =====
+img = create_mockup()
+draw = ImageDraw.Draw(img)
 
-# Draw mismatched Instagram posts (2x3 grid with different colors)
-colors_before = ['#FF6B6B', '#4ECDC4', '#FFE66D', '#95E1D3', '#C7CEEA', '#FF9999']
+# Border frame
+draw.rectangle([(40, 60), (760, 540)], outline=GRAY, width=2)
+
+# Title
+draw.text((120, 80), "Mismatched Designs", fill=GOLD, font=get_font(36, bold=True))
+
+# Ugly colored posts in 2x3 grid
+colors_bad = ['#FF6B6B', '#4ECDC4', '#FFE66D', '#95E1D3', '#C7CEEA', '#FF9999']
 for i in range(6):
-    x = 100 + (i % 3) * 150
-    y = 200 + (i // 3) * 150
-    draw.rectangle([(x, y), (x+120, y+120)], fill=colors_before[i])
-    draw.text((x+30, y+50), "Post", fill=WHITE, font=ImageFont.load_default())
+    x = 100 + (i % 3) * 220
+    y = 180 + (i // 3) * 130
+    draw.rectangle([(x, y), (x+180, y+110)], fill=colors_bad[i])
 
-draw.text((150, 700), "Mismatched colors", fill=LAVENDER, font=ImageFont.load_default())
-draw.text((150, 750), "No brand consistency", fill=LAVENDER, font=ImageFont.load_default())
+# Caption
+draw.text((150, 460), "Colors don't match.", fill=LAVENDER, font=get_font(24))
+draw.text((150, 500), "No visual identity.", fill=LAVENDER, font=get_font(24))
 
-# AFTER SIDE - Cohesive feed
-draw.rectangle([(750, 50), (1350, 150)], outline=GOLD, width=3)
-draw.text((1000, 80), "AFTER NICHEUX", fill=GOLD, font=ImageFont.load_default())
+img.save('public/images/diagnostics/social-consistency-before.png')
+print("[OK] Design BEFORE created")
 
-# Draw cohesive Instagram posts with brand colors
-colors_after = [GOLD, LAVENDER, BLUE, GOLD, LAVENDER, BLUE]
+# ===== DESIGN AFTER: Cohesive =====
+img = create_mockup()
+draw = ImageDraw.Draw(img)
+
+# Border frame
+draw.rectangle([(40, 60), (760, 540)], outline=GOLD, width=2)
+
+# Title
+draw.text((80, 80), "Unified Brand Design", fill=GOLD, font=get_font(36, bold=True))
+
+# Cohesive colored posts in 2x3 grid
+colors_good = [GOLD, LAVENDER, BLUE, GOLD, LAVENDER, BLUE]
 for i in range(6):
-    x = 800 + (i % 3) * 150
-    y = 200 + (i // 3) * 150
-    draw.rectangle([(x, y), (x+120, y+120)], fill=colors_after[i])
-    draw.text((x+30, y+50), "Post", fill=BLACK, font=ImageFont.load_default())
+    x = 100 + (i % 3) * 220
+    y = 180 + (i // 3) * 130
+    draw.rectangle([(x, y), (x+180, y+110)], fill=colors_good[i])
 
-draw.text((1000, 700), "Unified Brand Identity", fill=BLUE, font=ImageFont.load_default())
-draw.text((1000, 750), "Consistent Design System", fill=BLUE, font=ImageFont.load_default())
+# Caption
+draw.text((150, 460), "Consistent brand palette.", fill=GOLD, font=get_font(24))
+draw.text((150, 500), "Professional visual identity.", fill=GOLD, font=get_font(24))
 
-img2.save('public/images/diagnostics/social-consistency-before.png')
-img2.save('public/images/diagnostics/social-consistency-after.png')
-print("[OK] Design consistency mockup created")
+img.save('public/images/diagnostics/social-consistency-after.png')
+print("[OK] Design AFTER created")
 
-# ============================================================================
-# MOCKUP 3: ANALYTICS/REPORTING BEFORE VS AFTER
-# ============================================================================
+# ===== ANALYTICS BEFORE: No Data =====
+img = create_mockup()
+draw = ImageDraw.Draw(img)
 
-img3 = create_mockup(1400, 900)
-draw = ImageDraw.Draw(img3)
+# Border frame
+draw.rectangle([(40, 60), (760, 540)], outline=GRAY, width=2)
 
-# Split line
-draw.line([(700, 0), (700, 900)], fill=GRAY, width=2)
+# Title
+draw.text((100, 80), "No Insights", fill=GOLD, font=get_font(36, bold=True))
 
-# BEFORE SIDE - No data
-draw.rectangle([(50, 50), (650, 150)], outline=GOLD, width=3)
-draw.text((250, 80), "BEFORE", fill=GOLD, font=ImageFont.load_default())
+# Big question mark
+draw.text((300, 240), "?", fill=LAVENDER, font=get_font(100))
 
-# Draw phone mockup (no data)
-draw.rectangle([(120, 200), (580, 700)], outline=GRAY, width=3)
-draw.text((200, 350), "Just Posting...", fill=LAVENDER, font=ImageFont.load_default())
-draw.text((200, 400), "No insights", fill=LAVENDER, font=ImageFont.load_default())
-draw.text((200, 450), "No tracking", fill=LAVENDER, font=ImageFont.load_default())
-draw.text((200, 500), "Guessing strategy", fill=LAVENDER, font=ImageFont.load_default())
+# Caption
+draw.text((120, 420), "Just posting. No tracking.", fill=LAVENDER, font=get_font(24))
+draw.text((120, 460), "No data. Guessing strategy.", fill=LAVENDER, font=get_font(24))
+draw.text((120, 500), "Blind to what's working.", fill=LAVENDER, font=get_font(24))
 
-# AFTER SIDE - Full analytics
-draw.rectangle([(750, 50), (1350, 150)], outline=GOLD, width=3)
-draw.text((1000, 80), "AFTER NICHEUX", fill=GOLD, font=ImageFont.load_default())
+img.save('public/images/diagnostics/social-conversion-before.png')
+print("[OK] Analytics BEFORE created")
 
-# Draw dashboard elements
-draw.rectangle([(800, 200), (1300, 280)], outline=BLUE, width=1)
-draw.text((820, 210), "ENGAGEMENT RATE: 4.2%", fill=BLUE, font=ImageFont.load_default())
+# ===== ANALYTICS AFTER: Full Dashboard =====
+img = create_mockup()
+draw = ImageDraw.Draw(img)
 
-draw.rectangle([(800, 300), (1300, 380)], outline=BLUE, width=1)
-draw.text((820, 310), "REACH: 2,847 | CLICKS: 156", fill=BLUE, font=ImageFont.load_default())
+# Border frame
+draw.rectangle([(40, 60), (760, 540)], outline=GOLD, width=2)
 
-draw.rectangle([(800, 400), (1300, 480)], outline=GOLD, width=1)
-draw.text((820, 410), "FOLLOWER GROWTH: +47", fill=GOLD, font=ImageFont.load_default())
+# Title
+draw.text((120, 80), "Data Dashboard", fill=GOLD, font=get_font(36, bold=True))
 
-draw.rectangle([(800, 500), (1300, 580)], outline=LAVENDER, width=1)
-draw.text((820, 510), "MONTHLY REPORT + A/B TESTING", fill=LAVENDER, font=ImageFont.load_default())
+# Metrics boxes
+metrics = [
+    ("ENGAGEMENT: 4.2%", BLUE),
+    ("REACH: 2,847", BLUE),
+    ("CLICKS: 156", GOLD),
+    ("GROWTH: +47", GOLD),
+]
 
-draw.text((1050, 700), "Data-Driven Decisions", fill=GOLD, font=ImageFont.load_default())
-draw.text((1050, 750), "Clear Metrics & Insights", fill=GOLD, font=ImageFont.load_default())
+for i, (text, color) in enumerate(metrics):
+    x = 100 + (i % 2) * 340
+    y = 160 + (i // 2) * 110
+    draw.rectangle([(x, y), (x+300, y+90)], outline=color, width=2)
+    draw.text((x+20, y+25), text, fill=color, font=get_font(22, bold=True))
 
-img3.save('public/images/diagnostics/social-conversion-before.png')
-img3.save('public/images/diagnostics/social-conversion-after.png')
-print("[OK] Analytics/Reporting mockup created")
+# Caption
+draw.text((150, 450), "Clear metrics. Clear decisions.", fill=GOLD, font=get_font(24))
+draw.text((150, 490), "Data-driven strategy optimization.", fill=GOLD, font=get_font(24))
 
-print("[DONE] All mockup images created successfully!")
+img.save('public/images/diagnostics/social-conversion-after.png')
+print("[OK] Analytics AFTER created")
+
+print("[DONE] All elegant diagnostic mockups created!")

@@ -129,13 +129,29 @@ export default function MotionDesignAIVisualsPage() {
       <Helmet>
         <title>Motion Design & AI Visuals | NicheUX</title>
         <meta name="description" content="Traditional motion graphics excellence and cutting-edge AI innovation. Both approaches deliver exceptional results for different needs and goals." />
+        <meta property="og:title" content="Motion Design & AI Visuals | NicheUX" />
+        <meta property="og:description" content="Motion graphics and AI-generated visuals for video, social, and digital storytelling. Explainer videos, animations, and AI art direction." />
+        <meta property="og:url" content="https://www.nicheux.com/motion-design-ai-visuals" />
         <link rel="canonical" href="https://www.nicheux.com/motion-design-ai-visuals" />
+
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "NicheUX",
+          "description": "Motion Design & AI Visuals Services",
+          "areaServed": ["GB", "United Kingdom"],
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "GB",
+            "addressLocality": "London"
+          }
+        })}</script>
       </Helmet>      <main id="main-content">
 
         {/* ── HERO ── */}
         <ServiceSection withSpotlight spotlightColor={ACCENT} borderTop={false} id="hero">
           <div aria-hidden style={{ position: "absolute", inset: 0, zIndex: 0, overflow: "hidden" }}>
-            <img src="/images/MotionGraphicsAIVisualsHero.webp" alt="" loading="eager" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.18, filter: "saturate(0.45)" }} />
+            <img src="/images/MotionGraphicsAIVisualsHero.webp" alt="Motion graphics and AI-generated visual artwork featuring animated elements and creative design" loading="eager" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.18, filter: "saturate(0.45)" }} />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(130deg, rgba(19,19,19,0.98) 0%, rgba(19,19,19,0.88) 45%, rgba(19,19,19,0.5) 100%)" }} />
           </div>
           <motion.div ref={heroRef} style={{ y: heroY, opacity: heroOpacity, position: "relative", zIndex: 1 }}>

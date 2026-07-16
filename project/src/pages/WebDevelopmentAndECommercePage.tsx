@@ -110,13 +110,29 @@ export default function WebDevelopmentAndECommercePage() {
       <Helmet>
         <title>Fully Coded Web Development & E-Commerce | NicheUX</title>
         <meta name="description" content="Fully coded websites and Shopify stores built from scratch in React and custom code. No templates, no drag-and-drop, no shortcuts. Fast, secure, and built to scale." />
+        <meta property="og:title" content="Web Development & E-Commerce | NicheUX" />
+        <meta property="og:description" content="Custom-coded websites and Shopify stores. React, merchify, and performance optimization. Fast, secure, and built for conversion." />
+        <meta property="og:url" content="https://www.nicheux.com/web-development-ecommerce" />
         <link rel="canonical" href="https://www.nicheux.com/web-development-ecommerce" />
+
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "NicheUX",
+          "description": "Web Development & E-Commerce Services",
+          "areaServed": ["GB", "United Kingdom"],
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "GB",
+            "addressLocality": "London"
+          }
+        })}</script>
       </Helmet>      <main id="main-content">
 
         {/* ── HERO ── */}
         <ServiceSection withSpotlight spotlightColor={ACCENT} borderTop={false} id="hero">
           <div aria-hidden style={{ position: "absolute", inset: 0, zIndex: 0, overflow: "hidden" }}>
-            <img src="/images/WebDevelopmentECommerceHero.webp" alt="" loading="eager" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.18, filter: "saturate(0.45)" }} />
+            <img src="/images/WebDevelopmentECommerceHero.webp" alt="Custom web development and e-commerce websites built with React and modern web technologies" loading="eager" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.18, filter: "saturate(0.45)" }} />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(130deg, rgba(19,19,19,0.98) 0%, rgba(19,19,19,0.88) 45%, rgba(19,19,19,0.5) 100%)" }} />
           </div>
           <motion.div ref={heroRef} style={{ y: heroY, opacity: heroOpacity, position: "relative", zIndex: 1 }}>

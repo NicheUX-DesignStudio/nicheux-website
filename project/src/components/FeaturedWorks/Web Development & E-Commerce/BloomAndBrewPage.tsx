@@ -59,7 +59,7 @@ function DeviceMockup() {
                     <div style={{ flex: 1, background: "rgba(255,255,255,0.04)", borderRadius: 3, padding: "2px 8px", fontSize: 9, color: "rgba(255,255,255,0.18)", fontFamily: "'Source Sans Pro', sans-serif" }}>bloomandbrewcoffeecompany.ca</div>
                   </div>
                   <AnimatePresence mode="wait">
-                    <motion.img key={`l-${screen}`} src={cur.laptop} alt={cur.name} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ width: "100%", height: "auto", display: "block", maxHeight: 440, objectFit: "cover", objectPosition: "top" }} loading="lazy" onError={(e) => { (e.target as HTMLImageElement).style.opacity = "0.1"; }} />
+                    <motion.img key={`l-${screen}`} src={cur.laptop} alt={cur.name} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ width: "100%", height: "auto", display: "block", maxHeight: 440, objectFit: "cover", objectPosition: "top" }} loading="lazy" decoding="async" onError={(e) => { (e.target as HTMLImageElement).style.opacity = "0.1"; }} />
                   </AnimatePresence>
                 </div>
               </div>
@@ -71,7 +71,7 @@ function DeviceMockup() {
                 <div style={{ background: "#111", borderRadius: 14, overflow: "hidden" }}>
                   <div style={{ height: 7, background: "#0d0d0d", display: "flex", alignItems: "center", justifyContent: "center" }}><div style={{ width: 36, height: 3, background: "#222", borderRadius: 2 }} /></div>
                   <AnimatePresence mode="wait">
-                    <motion.img key={`m-${screen}`} src={cur.mobile} alt={cur.name} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ width: "100%", height: "auto", display: "block" }} loading="lazy" onError={(e) => { (e.target as HTMLImageElement).style.opacity = "0.1"; }} />
+                    <motion.img key={`m-${screen}`} src={cur.mobile} alt={cur.name} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ width: "100%", height: "auto", display: "block" }} loading="lazy" decoding="async" onError={(e) => { (e.target as HTMLImageElement).style.opacity = "0.1"; }} />
                   </AnimatePresence>
                 </div>
               </div>
@@ -223,7 +223,7 @@ export default function BloomAndBrewPage() {
                 <p className="font-sans-normal text-base mt-3 max-w-xl" style={{color:`${INK}80`}}>Before any visual design, we mapped the full site structure: how products, collections, pages, and checkout flows connect to each other and to the user's goals.</p>
               </motion.div>
               <motion.div initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,delay:0.1}} viewport={{once:true}} className="rounded-2xl overflow-hidden border" style={{borderColor:`${INK}15`}}>
-                <img src="/images/bloom-process/ia.png" alt="Bloom & Brew Information Architecture" className="w-full h-auto" loading="lazy" onError={(e)=>{(e.target as HTMLImageElement).style.opacity='0.1';}} />
+                <img src="/images/bloom-process/ia.png" alt="Bloom & Brew Information Architecture" className="w-full h-auto" loading="lazy" decoding="async" onError={(e)=>{(e.target as HTMLImageElement).style.opacity='0.1';}} />
               </motion.div>
             </div>
           </div>
@@ -341,8 +341,8 @@ export default function BloomAndBrewPage() {
             </motion.div>
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                {title:'Custom Shopify Liquid instead of a template',body:"Every template store looks exactly the same. Bloom and Brew is an artisan brand selling to buyers in three countries. That story deserves a store that feels as considered as the products inside it. Writing custom Liquid from scratch took longer. But the result is a site nobody could mistake for a template.",accent:GOLD},
-                {title:'SEO built into the structure, not added at the end',body:'A perfect 100/100 SEO score is never the result of last-minute optimisation. It comes from decisions made during the build itself. Semantic HTML, structured data, canonical URLs, image compression, and performance budgets treated as core requirements from day one.',accent:BLUE},
+                {title:'Custom Shopify Liquid instead of a template',body:"Every template store looks exactly the same. Bloom and Brew is an artisan brand selling to buyers in three countries. That story deserves a store that feels as considered as the products inside it. We built custom Liquid code from scratch. Writing custom Liquid instead of relying on pre-built Shopify themes took longer. But the result is a site nobody could mistake for a template.",accent:GOLD},
+                {title:'SEO built into the structure, not added at the end',body:'A perfect 100/100 SEO score is never the result of last-minute optimisation. It comes from decisions made during the build itself. Semantic HTML, structured data, canonical URLs, image compression, and performance budgets treated as core requirements from day one. Strategic internal links connect the store to our web development and e-commerce service pages.',accent:BLUE},
               ].map((d,i)=>(
                 <motion.div key={d.title} initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} transition={{duration:0.6,delay:i*0.1}} viewport={{once:true}} className="p-8 rounded-2xl border space-y-4" style={{background:'#fff',borderColor:`${INK}12`}}>
                   <div className="w-8 h-px" style={{backgroundColor:d.accent}} /><h3 className="font-serif-light text-xl" style={{color:INK}}>{d.title}</h3><p className="font-sans-normal text-sm leading-relaxed" style={{color:`${INK}70`}}>{d.body}</p>
@@ -352,16 +352,40 @@ export default function BloomAndBrewPage() {
           </div>
         </section>
 
-        {/* OUTCOME + TESTIMONIAL. DARK */}
+        {/* OUTCOMES. DARK */}
+        <section className="py-20 md:py-28 px-6 md:px-8" style={{background:BLACK}}>
+          <div className="max-w-6xl mx-auto">
+            <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} viewport={{once:true}} className="mb-14">
+              <span className="text-[#E9C672]/60 text-xs uppercase tracking-widest font-sans-medium block mb-3">Launch Metrics</span>
+              <h2 className="font-serif-light text-4xl md:text-5xl text-white mb-4">Verified impact from day one.</h2>
+              <p className="text-white/50 font-sans-normal text-base max-w-2xl">The site launched with measurable technical excellence and immediate business results across all three markets.</p>
+            </motion.div>
+            <div className="grid md:grid-cols-3 gap-6 mb-16">
+              {[
+                {metric:'100/100',label:'SEO Score',detail:'Google PageSpeed Insights perfect score. Semantic HTML, structured data, optimized images, and zero CLS across all pages.'},
+                {metric:'2.9s',label:'Load Time',detail:'Time to interactive on 4G networks. Custom Liquid optimization and image compression enabled sub-3-second loads on all markets.'},
+                {metric:'3',label:'Markets at Launch',detail:'Canada, UK, Ireland all went live simultaneously with localized currency, shipping, and tax handling built into day-one functionality.'},
+              ].map((item,i)=>(
+                <motion.div key={item.label} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} transition={{duration:0.6,delay:i*0.1}} viewport={{once:true}} className="p-8 rounded-2xl border border-white/5 bg-white/[0.02] space-y-3">
+                  <div className="font-serif-light text-[#E9C672] text-4xl leading-none">{item.metric}</div>
+                  <h3 className="font-sans-medium text-white text-sm uppercase tracking-widest">{item.label}</h3>
+                  <p className="text-white/60 font-sans-normal text-sm leading-relaxed">{item.detail}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* TESTIMONIAL. DARK */}
         <section className="py-20 md:py-28 px-6 md:px-8" style={{background:BLACK}}>
           <div className="max-w-4xl mx-auto text-center">
             <motion.div initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} viewport={{once:true}}>
-              <span className="text-[#E9C672]/60 text-xs uppercase tracking-widest font-sans-medium block mb-8">The Outcome</span>
+              <span className="text-[#E9C672]/60 text-xs uppercase tracking-widest font-sans-medium block mb-8">Client Testimonial</span>
               <p className="font-serif-light text-3xl md:text-4xl text-white leading-snug mb-6" style={{letterSpacing:'-0.015em'}}>
                 "Honestly one of the best companies to work with! They have helped me so much with the brand development and my website. Thank you so much NicheUX!"
               </p>
               <div className="flex items-center justify-center gap-3 mb-4"><div className="w-8 h-px bg-[#E9C672]" /><span className="text-white/65 font-sans-normal text-sm">Aishwarya · Founder, Bloom and Brew Coffee Company</span><div className="w-8 h-px bg-[#E9C672]" /></div>
-              <p className="text-white/60 font-sans-normal text-base mb-10 max-w-xl mx-auto">A custom merchify store designed and built by NicheUX. Six weeks from the first brief to a live international e-commerce site selling artisan coffee, pastries, and baked goods to customers in Canada, the UK, and Ireland.</p>
+              <p className="text-white/60 font-sans-normal text-base mb-10 max-w-xl mx-auto">A custom Shopify Liquid store designed and built by NicheUX. Six weeks from the first brief to a live international e-commerce site selling artisan coffee, pastries, and baked goods to customers in Canada, the UK, and Ireland.</p>
               <div className="grid md:grid-cols-4 gap-8 mb-12">
                 {[{v:'6',u:'weeks',l:'Concept to live'},{v:'100',u:'/100',l:'SEO score'},{v:'3',u:'markets',l:'Launched day one'},{v:'0',u:'templates',l:'Built from scratch'}].map(({v,u,l})=>(
                   <div key={l} className="text-center">
@@ -372,7 +396,7 @@ export default function BloomAndBrewPage() {
               </div>
               <div className="flex gap-4 justify-center flex-wrap">
                 <a href="https://bloomandbrewcoffeecompany.ca/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[#E9C672] text-black font-sans-medium rounded-lg hover:bg-[#B097BE] transition-colors text-sm">View Live Site <ExternalLink size={14} /></a>
-                <button onClick={()=>navigate('/contact')} className="inline-flex items-center gap-2 px-6 py-3 border border-[#E9C672]/40 text-[#E9C672] font-sans-medium rounded-lg hover:bg-[#E9C672] hover:text-black transition-all text-sm">Start an e-commerce project <ArrowRight size={14} /></button>
+                <button onClick={()=>navigate('/web-development-ecommerce')} className="inline-flex items-center gap-2 px-6 py-3 border border-[#E9C672]/40 text-[#E9C672] font-sans-medium rounded-lg hover:bg-[#E9C672] hover:text-black transition-all text-sm">Our e-commerce approach <ArrowRight size={14} /></button>
               </div>
             </motion.div>
           </div>

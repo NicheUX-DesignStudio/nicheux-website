@@ -138,13 +138,29 @@ export default function IllustrationCharacterDesignPage() {
       <Helmet>
         <title>Illustration & Character Design | NicheUX</title>
         <meta name="description" content="Professional character design, illustration, and visual storytelling. From children's books to concept art, we create artwork that captivates and communicates." />
+        <meta property="og:title" content="Illustration & Character Design | NicheUX" />
+        <meta property="og:description" content="Character design, illustration, and children's book illustration. Original artwork that brings stories to life with emotional depth." />
+        <meta property="og:url" content="https://www.nicheux.com/illustration-character-design" />
         <link rel="canonical" href="https://www.nicheux.com/illustration-character-design" />
+
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "NicheUX",
+          "description": "Illustration & Character Design Services",
+          "areaServed": ["GB", "United Kingdom"],
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "GB",
+            "addressLocality": "London"
+          }
+        })}</script>
       </Helmet>      <main id="main-content">
 
         {/* ── HERO ── */}
         <ServiceSection withSpotlight spotlightColor={ACCENT} borderTop={false} id="hero">
           <div aria-hidden style={{ position: "absolute", inset: 0, zIndex: 0, overflow: "hidden" }}>
-            <img src="/images/IllustrationsCharacterDesign.webp" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.18, filter: "saturate(0.45)" }} />
+            <img src="/images/IllustrationsCharacterDesign.webp" alt="Character illustration and design work featuring original artwork, character design, and visual storytelling" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.18, filter: "saturate(0.45)" }} />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(130deg, rgba(19,19,19,0.98) 0%, rgba(19,19,19,0.88) 45%, rgba(19,19,19,0.5) 100%)" }} />
           </div>
           <motion.div ref={heroRef} style={{ y: heroY, opacity: heroOpacity, position: "relative", zIndex: 1 }}>

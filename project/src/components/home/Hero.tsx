@@ -187,7 +187,7 @@ export default function Hero() {
 
           {/* Headline */}
           <div style={{ maxWidth: 680 }}>
-            <div style={{
+            <h1 style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontStyle: "normal",
               fontWeight: 400,
@@ -196,30 +196,31 @@ export default function Hero() {
               letterSpacing: "-0.02em",
               color: "#ffffff",
               marginBottom: "clamp(4px, 0.5vh, 8px)",
+              margin: 0,
             }}>
               {typed}
               {!typingDone && showLine1 && (
                 <span style={{ color: LAVENDER, fontStyle: "italic", animation: "blink 1s step-end infinite" }}>|</span>
               )}
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={showLine2 ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.65, ease: "easeOut" }}
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontStyle: "normal",
-                fontWeight: 400,
-                fontSize: "clamp(44px, 6.5vw, 100px)",
-                lineHeight: 0.95,
-                letterSpacing: "-0.02em",
-                color: LAVENDER,
-                marginBottom: "clamp(4px, 1vh, 12px)",
-              }}
-            >
-              a stage.
-            </motion.div>
+              <motion.span
+                initial={{ opacity: 0, x: -20 }}
+                animate={showLine2 ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.65, ease: "easeOut" }}
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  fontSize: "clamp(44px, 6.5vw, 100px)",
+                  lineHeight: 0.95,
+                  letterSpacing: "-0.02em",
+                  color: LAVENDER,
+                  display: "block",
+                  marginBottom: "clamp(4px, 1vh, 12px)",
+                }}
+              >
+                a stage.
+              </motion.span>
+            </h1>
 
             <motion.p
               initial={{ opacity: 0, y: 12 }}

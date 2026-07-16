@@ -104,7 +104,23 @@ export default function StrategyAndDesignPage() {
       <Helmet>
         <title>UI/UX Strategy & Design | NicheUX</title>
         <meta name="description" content="UI/UX strategy and design from NicheUX. Research-led, pixel-perfect interfaces engineered to convert. UX audits, complete design systems, and interfaces that turn visitors into customers." />
+        <meta property="og:title" content="UI/UX Strategy & Design | NicheUX" />
+        <meta property="og:description" content="Research-led UX strategy and pixel-perfect interface design. UX audits, design systems, and conversion-focused web design." />
+        <meta property="og:url" content="https://www.nicheux.com/strategy-design" />
         <link rel="canonical" href="https://www.nicheux.com/strategy-design" />
+
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "NicheUX",
+          "description": "UI/UX Strategy & Design Services",
+          "areaServed": ["GB", "United Kingdom"],
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "GB",
+            "addressLocality": "London"
+          }
+        })}</script>
       </Helmet>
 
       <main id="main-content">
@@ -112,7 +128,7 @@ export default function StrategyAndDesignPage() {
         {/* ── HERO ── */}
         <ServiceSection withSpotlight spotlightColor={ACCENT} borderTop={false} id="hero">
           <div aria-hidden style={{ position: "absolute", inset: 0, zIndex: 0, overflow: "hidden" }}>
-            <img src="/images/StrategyandDesignHero.webp" alt="" loading="eager" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.18, filter: "saturate(0.45)" }} />
+            <img src="/images/StrategyandDesignHero.webp" alt="UI/UX strategy and interface design work featuring research-led wireframes and pixel-perfect designs" loading="eager" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.18, filter: "saturate(0.45)" }} />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(130deg, rgba(19,19,19,0.98) 0%, rgba(19,19,19,0.88) 45%, rgba(19,19,19,0.5) 100%)" }} />
           </div>
           <motion.div ref={heroRef} style={{ y: heroY, opacity: heroOpacity, position: "relative", zIndex: 1 }}>

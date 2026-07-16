@@ -76,7 +76,7 @@ export default function HomePage() {
         })}</script>
       </Helmet>
 
-      <main className="relative">
+      <main className="relative" id="main-content">
         <Hero />
         <StatStrip />
         <MarqueeStrip />

@@ -748,7 +748,7 @@ export default function merchPage() {
             {[
               { label: 'Commission, not checkout', body: 'There is no merchping cart. You share the story, we send a custom proposal within 24 hours. Payment follows approval, never before.' },
               { label: 'Made for one person', body: 'Every commissioned artifact is built specifically for the person who sent the brief. Not a variation of something standard. Something that could only belong to them.' },
-              { label: 'Design you can trust', body: 'Six designers. Four years of client commissions. Our work ships to families and businesses across the UK, Ireland, Canada, and Malaysia.' },
+              { label: 'Design you can trust', body: 'Six designers. One year of client commissions. Our work ships to families and businesses across the UK, Ireland, Canada, and Malaysia.' },
             ].map(p => (
               <div key={p.label} style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                 <h4 style={{ fontFamily: "'Cormorant Garamond',serif", fontWeight: 400, fontSize: 'clamp(15px,1.4vw,18px)', color: INK, margin: 0, lineHeight: 1.3 }}>{p.label}</h4>
@@ -846,7 +846,7 @@ export default function merchPage() {
             <style>{`.why-g{@media(max-width:768px){grid-template-columns:repeat(2,1fr)!important}} @media(max-width:460px){.why-g{grid-template-columns:1fr!important}}`}</style>
             {[
               { icon: '❖', title: 'Six designers', body: 'A full studio behind every commission: illustration, typography, print, motion, web, brand.' },
-              { icon: '❖', title: '4 years of client work', body: 'We have built identities for businesses across the UK, Ireland, Canada, and Malaysia.' },
+              { icon: '❖', title: '1 year of client work', body: 'We have built identities for businesses across the UK, Ireland, Canada, and Malaysia.' },
               { icon: '❖', title: 'No payment before approval', body: 'You approve the creative direction first. Payment follows confirmation, never the other way.' },
               { icon: '❖', title: 'Production-ready files', body: 'Every file is built to print specification. Bleeds, CMYK, correct resolution. No reprints.' },
             ].map(w => (

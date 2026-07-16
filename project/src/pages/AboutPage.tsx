@@ -607,6 +607,30 @@ export default function AboutPage() {
         <meta property="og:description" content="Six disciplines. Zero compromise. Meet the team that builds digital stages for brands that want to be impossible to ignore." />
         <meta property="og:url" content="https://www.nicheux.com/about" />
         <link rel="canonical" href="https://www.nicheux.com/about" />
+
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "NicheUX",
+          "url": "https://www.nicheux.com/about",
+          "description": "UK-based design studio with six disciplines. UI/UX, Web Development, Brand Identity, Motion Design, AI Visuals, and Illustration.",
+          "logo": "https://www.nicheux.com/images/NicheUXLogo.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "GB",
+            "addressLocality": "London"
+          },
+          "areaServed": ["GB", "United Kingdom", "Ireland", "Canada", "Malaysia", "India"],
+          "foundingDate": "2020",
+          "team": [
+            { name: "Thevaki", jobTitle: "Creative Director & UI/UX Specialist" },
+            { name: "Indhupriya", jobTitle: "Character Illustrator & World-Builder" },
+            { name: "Isaac", jobTitle: "Print & Brand Designer" },
+            { name: "Akash", jobTitle: "AI Visuals Director" },
+            { name: "Delwin", jobTitle: "Motion Design Specialist" },
+            { name: "Kishore Aravind", jobTitle: "Sales & Marketing Lead" }
+          ]
+        })}</script>
       </Helmet>
 
       {/* ── THE EXPERIENCE: void → noise → empty seats → curtain + logo ── */}

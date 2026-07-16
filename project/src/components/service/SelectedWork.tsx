@@ -124,7 +124,7 @@ const PRINT_WORK: WorkPiece[] = [
     title: "Bloom and Brew",
     client: "Coffee and Bakery · Canada",
     category: "Brand Identity · merchify Design",
-    outcome: "The packaging alone got us picked up by two boutique stockists in the first month",
+    outcome: "Branded packaging that reflects the warmth of the product inside. Every detail considered.",
     image: "/images/bloombrewhero.webp",
     accent: BLUE,
     route: "/featured-work/bloom-brew",

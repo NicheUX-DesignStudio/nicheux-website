@@ -12,57 +12,63 @@ const EASE   = [0.25, 0.46, 0.45, 0.94] as const;
 const TEAM = [
   {
     name:       "Thevaki",
-    role:       "Creative Director",
+    role:       "Creative Director & UI/UX Specialist",
     discipline: "UI/UX · Web Development",
     bio:        "Sets the vision. Builds the systems. The first call on every project and the last eye before anything ships.",
     motto:      "Design is not decoration. It is direction.",
     accent:     GOLD,
     image:      "/images/Thevaki-uiuxdesigner-developer-web-designer-nicheux.webp",
+    credentials: "UI/UX Strategy, Web Development, Design Systems"
   },
   {
     name:       "Indhupriya",
-    role:       "Character & Illustration",
+    role:       "Character Illustrator & World-Builder",
     discipline: "World-building · Storytelling",
     bio:        "Creates characters, illustrated books, and visual worlds with emotional intelligence that makes every illustration feel lived-in.",
     motto:      "Every character carries a world.",
     accent:     LAVENDER,
     image:      "/images/Indhupriya-character-illustrator-nicheux.webp",
+    credentials: "Character Design, Illustration, Children's Books"
   },
   {
     name:       "Isaac",
-    role:       "Print & Brand Design",
+    role:       "Print & Brand Designer",
     discipline: "Identity · Print Production",
     bio:        "Handles all print and brand identity. Files go straight to print. No chasing, no corrections, no reprints.",
     motto:      "Print is permanent. Make it count.",
     accent:     BLUE,
     image:      "/images/Issac-graphic-designer-print-brand-nicheux.webp",
+    credentials: "Brand Identity, Print Design, Production Management"
   },
   {
     name:       "Akash",
-    role:       "AI Visuals",
+    role:       "AI Visuals Director",
     discipline: "Generative Art · Direction",
     bio:        "Bridges human creative intent and machine output. Produces work that feels authored, not generated.",
     motto:      "Human intent. Machine execution.",
     accent:     GOLD,
     image:      "/images/Akash-ai-visual-nicheux.webp",
+    credentials: "AI Art Direction, Generative Design, Visual Effects"
   },
   {
     name:       "Delwin",
-    role:       "Motion Design",
+    role:       "Motion Design Specialist",
     discipline: "Animation · Social Video",
     bio:        "Finds the timing that makes audiences stop scrolling. Motion graphics, animated logos, social videos.",
     motto:      "Motion is the difference between noticed and ignored.",
     accent:     LAVENDER,
     image:      "/images/Delwin-motion-design-social-media-nicheux.webp",
+    credentials: "Motion Graphics, Animation, Video Production"
   },
   {
     name:       "Kishore Aravind",
-    role:       "Sales & Marketing",
+    role:       "Sales & Marketing Lead",
     discipline: "Strategy · Client Relations",
     bio:        "Understands both the commercial reality and the creative work well enough to represent both honestly.",
     motto:      "The best product means nothing unsold.",
     accent:     BLUE,
     image:      "/images/Kishore.jpeg",
+    credentials: "Business Strategy, Client Relations, Growth"
   },
 ];
 
@@ -78,6 +84,8 @@ function MemberCard({ m, idx }: { m: typeof TEAM[number]; idx: number }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{ display: "flex", flexDirection: "column", background: "#0e0e0e" }}
+      itemScope
+      itemType="https://schema.org/Person"
     >
       {/* ── Photo area ── */}
       <div
@@ -90,8 +98,9 @@ function MemberCard({ m, idx }: { m: typeof TEAM[number]; idx: number }) {
       >
         <img
           src={m.image}
-          alt={`${m.name}, ${m.role} at NicheUX`}
+          alt={`${m.name}, ${m.role} at NicheUX design studio specializing in ${m.credentials}`}
           loading="eager"
+          itemProp="image"
           style={{
             width: "100%",
             height: "100%",
@@ -188,6 +197,7 @@ function MemberCard({ m, idx }: { m: typeof TEAM[number]; idx: number }) {
             margin: "0 0 8px",
             transition: "color 0.3s",
           }}
+          itemProp="name"
         >
           {m.name}
         </h3>
@@ -202,6 +212,7 @@ function MemberCard({ m, idx }: { m: typeof TEAM[number]; idx: number }) {
             color: m.accent,
             marginBottom: 4,
           }}
+          itemProp="jobTitle"
         >
           {m.role}
         </div>
@@ -227,9 +238,27 @@ function MemberCard({ m, idx }: { m: typeof TEAM[number]; idx: number }) {
             color: "rgba(255,255,255,0.38)",
             margin: 0,
           }}
+          itemProp="description"
         >
           {m.bio}
         </p>
+
+        {m.credentials && (
+          <p
+            style={{
+              fontFamily: "'Source Sans Pro', sans-serif",
+              fontSize: "clamp(11px,1vw,13px)",
+              lineHeight: 1.6,
+              color: "rgba(255,255,255,0.5)",
+              margin: "12px 0 0 0",
+              paddingTop: 12,
+              borderTop: "1px solid rgba(255,255,255,0.08)",
+            }}
+            itemProp="expertise"
+          >
+            <strong style={{ color: "rgba(255,255,255,0.6)" }}>Expertise:</strong> {m.credentials}
+          </p>
+        )}
       </div>
     </motion.article>
   );

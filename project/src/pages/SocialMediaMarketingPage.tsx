@@ -178,12 +178,41 @@ export default function SocialMediaMarketingPage() {
         <title>Social Media Marketing | NicheUX. Strategic Social Media Management</title>
         <meta name="description" content="Transform your social media from random posting to strategic growth engine. Building communities that drive real business results." />
         <link rel="canonical" href="https://www.nicheux.com/social-media-marketing" />
+        <meta property="og:title" content="Social Media Marketing | NicheUX" />
+        <meta property="og:description" content="Strategic social media management with design-driven content. Starter, Professional, and Enterprise plans. Month-to-month billing." />
+        <meta property="og:url" content="https://www.nicheux.com/social-media-marketing" />
+
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "NicheUX",
+          "description": "Social Media Marketing & Design Services",
+          "areaServed": ["GB", "United Kingdom"],
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "GB",
+            "addressLocality": "London"
+          }
+        })}</script>
+
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": FAQS.map(faq => ({
+            "@type": "Question",
+            "name": faq.q,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.a
+            }
+          }))
+        })}</script>
       </Helmet>      <main id="main-content">
 
         {/* ── HERO ── */}
         <ServiceSection withSpotlight spotlightColor={ACCENT} borderTop={false} id="hero">
           <div aria-hidden style={{ position: "absolute", inset: 0, zIndex: 0, overflow: "hidden" }}>
-            <img src="/images/SocialMediaGraphicsHero.webp" alt="" loading="eager" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.18, filter: "saturate(0.45)" }} />
+            <img src="/images/SocialMediaGraphicsHero.webp" alt="Social media content featuring branded designs, reels, and strategic graphics" loading="eager" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.18, filter: "saturate(0.45)" }} />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(130deg, rgba(19,19,19,0.98) 0%, rgba(19,19,19,0.88) 45%, rgba(19,19,19,0.5) 100%)" }} />
           </div>
           <motion.div ref={heroRef} style={{ y: heroY, opacity: heroOpacity, position: "relative", zIndex: 1 }}>
@@ -195,7 +224,7 @@ export default function SocialMediaMarketingPage() {
                 <span style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontWeight: 400, fontSize: "clamp(12px,1.1vw,14px)", color: "rgba(255,255,255,0.35)" }}>Design · Strategy · Growth</span>
               </motion.div>
               <motion.h1 initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.1, delay: 0.15, ease: EASE }} style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(48px,9vw,160px)", lineHeight: 0.95, letterSpacing: "-0.04em", color: "#fff", margin: 0 }}>
-                Elevate Your Social.<br /><em style={{ color: ACCENT }}>Start Connecting.</em>
+                Elevate Your Social Presence.<br /><em style={{ color: ACCENT }}>Start Connecting.</em>
               </motion.h1>
               <div className="hero-social" style={{ display: "grid", gridTemplateColumns: "minmax(0,2fr) minmax(0,1fr)", gap: "clamp(32px,5vw,80px)", marginTop: "clamp(48px,6vw,80px)", alignItems: "start" }}>
                 <style>{`@media(max-width:768px){.hero-social{grid-template-columns:1fr!important}}`}</style>
@@ -231,7 +260,7 @@ export default function SocialMediaMarketingPage() {
           <ContentContainer>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: EASE }} viewport={{ once: true, amount: 0.1 }} style={{ marginBottom: "clamp(48px,6vw,72px)" }}>
               <Eyebrow>Why Strategic Social Media Matters</Eyebrow>
-              <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(36px,5vw,68px)", lineHeight: 1.0, letterSpacing: "-0.025em", color: "#fff", margin: "20px 0 16px 0" }}>Random posting <em style={{ color: ACCENT }}>gets you nowhere.</em></h2>
+              <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(36px,5vw,68px)", lineHeight: 1.0, letterSpacing: "-0.025em", color: "#fff", margin: "20px 0 16px 0" }}>Why Strategic Social Media Matters. Random posting <em style={{ color: ACCENT }}>gets you nowhere.</em></h2>
               <p style={{ fontFamily: "'Source Sans Pro', sans-serif", fontWeight: 400, fontSize: "clamp(15px,1.5vw,18px)", lineHeight: 1.85, color: "rgba(255,255,255,0.55)", margin: 0, maxWidth: 720 }}>Strategic social media builds communities, drives revenue, and creates lasting brand loyalty.</p>
             </motion.div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1px", background: "rgba(255,255,255,0.06)", marginBottom: "clamp(48px,6vw,80px)" }} className="why-social">

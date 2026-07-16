@@ -82,9 +82,7 @@ export const articles: Article[] = [
       { type: 'paragraph', content: 'Custom Liquid was built from scratch. Every section, every component, every animation. Multi-currency for Canada, UK, and Ireland was built in before launch,not added afterwards. The SEO foundation was structural, not bolted on at the end: semantic HTML, structured data, canonical URLs, performance budgets.' },
       { type: 'image', src: '/images/Desktop-home-design.webp', alt: 'Bloom and Brew homepage desktop design by NicheUX', caption: 'Homepage,warm landing page. Rotating hero images, featured products, brand tone established in the first scroll.' },
       { type: 'heading', content: 'What happened on day one' },
-      { type: 'paragraph', content: 'The site launched simultaneously into Canada, the UK, and Ireland. SEO score: 100/100. Average load time: 2.9 seconds. Custom theme verified by merchify: zero templates.' },
-      { type: 'quote', content: 'The packaging alone got us picked up by two boutique stockists in the first month.', author: 'Priya R.,Bloom & Brew Coffee Company' },
-      { type: 'paragraph', content: 'Six weeks from brief to live. A brand that now has a digital presence as considered as its products. The Coffee Family has a home on the internet.' },
+      { type: 'paragraph', content: 'The site launched simultaneously into Canada, the UK, and Ireland. SEO score: 100/100. Average load time: 2.9 seconds. Custom theme verified by merchify: zero templates. Six weeks from brief to live. A brand that now has a digital presence as considered as its products. The Coffee Family has a home on the internet.' },
     ],
   },
   {

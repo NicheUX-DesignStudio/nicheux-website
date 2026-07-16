@@ -254,13 +254,29 @@ export default function PrintAndBrandDesignPage() {
       <Helmet>
         <title>Print and Brand Design | NicheUX. Professional Print & Brand Design</title>
         <meta name="description" content="Professional print designs that make your brand tangible. From brochures to banners, we create digital files that print perfectly everywhere." />
+        <meta property="og:title" content="Print & Brand Design | NicheUX" />
+        <meta property="og:description" content="Branding, print design, and identity systems that build lasting impressions. Logo design, brand kits, brochures, stationery, and signage." />
+        <meta property="og:url" content="https://www.nicheux.com/print-brand-design" />
         <link rel="canonical" href="https://www.nicheux.com/print-brand-design" />
+
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "NicheUX",
+          "description": "Print & Brand Design Services",
+          "areaServed": ["GB", "United Kingdom"],
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "GB",
+            "addressLocality": "London"
+          }
+        })}</script>
       </Helmet>      <main id="main-content">
 
         {/* ── HERO ── */}
         <ServiceSection withSpotlight spotlightColor={ACCENT} borderTop={false} id="hero">
           <div aria-hidden style={{ position: "absolute", inset: 0, zIndex: 0, overflow: "hidden" }}>
-            <img src="/images/PrintBrandHero.webp" alt="" loading="eager" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.18, filter: "saturate(0.45)" }} />
+            <img src="/images/PrintBrandHero.webp" alt="Print and brand design work including identity, packaging, and promotional materials" loading="eager" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.18, filter: "saturate(0.45)" }} />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(130deg, rgba(19,19,19,0.98) 0%, rgba(19,19,19,0.88) 45%, rgba(19,19,19,0.5) 100%)" }} />
           </div>
           <motion.div ref={heroRef} style={{ y: heroY, opacity: heroOpacity, position: "relative", zIndex: 1 }}>
