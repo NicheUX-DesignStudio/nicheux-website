@@ -758,7 +758,7 @@ export default function FeaturedWork() {
   return (
     <div style={{ position: "relative" }}>
       <Helmet>
-        <title>Stage Productions | NicheUX. Where Design Meets Storytelling</title>
+        <title>Featured Work | All Stages | NicheUX</title>
         <meta name="description" content={`${TOTAL} stage productions across web, brand, print, social media, illustration and motion design. NicheUX. where design meets storytelling.`} />
         <meta property="og:title" content="Stage Productions | NicheUX" />
         <meta property="og:description" content="Every brief becomes a story. Every story deserves a stage." />

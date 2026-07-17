@@ -102,7 +102,7 @@ export default function StrategyAndDesignPage() {
   return (
     <div style={{ backgroundColor: BLACK, color: "#fff" }}>
       <Helmet>
-        <title>UI/UX Strategy & Design | NicheUX</title>
+        <title>UI/UX Strategy & Design | Services | NicheUX</title>
         <meta name="description" content="UI/UX strategy and design from NicheUX. Research-led, pixel-perfect interfaces engineered to convert. UX audits, complete design systems, and interfaces that turn visitors into customers." />
         <meta property="og:title" content="UI/UX Strategy & Design | NicheUX" />
         <meta property="og:description" content="Research-led UX strategy and pixel-perfect interface design. UX audits, design systems, and conversion-focused web design." />

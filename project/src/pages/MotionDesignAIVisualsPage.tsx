@@ -127,7 +127,7 @@ export default function MotionDesignAIVisualsPage() {
   return (
     <div style={{ backgroundColor: BLACK, color: "#fff" }}>
       <Helmet>
-        <title>Motion Design & AI Visuals | NicheUX</title>
+        <title>Motion Design & AI Visuals | Services | NicheUX</title>
         <meta name="description" content="Traditional motion graphics excellence and cutting-edge AI innovation. Both approaches deliver exceptional results for different needs and goals." />
         <meta property="og:title" content="Motion Design & AI Visuals | NicheUX" />
         <meta property="og:description" content="Motion graphics and AI-generated visuals for video, social, and digital storytelling. Explainer videos, animations, and AI art direction." />

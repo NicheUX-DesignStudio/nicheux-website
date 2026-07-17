@@ -136,7 +136,7 @@ export default function IllustrationCharacterDesignPage() {
   return (
     <div style={{ backgroundColor: BLACK, color: "#fff" }}>
       <Helmet>
-        <title>Illustration & Character Design | NicheUX</title>
+        <title>Illustration & Character Design | Services | NicheUX</title>
         <meta name="description" content="Professional character design, illustration, and visual storytelling. From children's books to concept art, we create artwork that captivates and communicates." />
         <meta property="og:title" content="Illustration & Character Design | NicheUX" />
         <meta property="og:description" content="Character design, illustration, and children's book illustration. Original artwork that brings stories to life with emotional depth." />

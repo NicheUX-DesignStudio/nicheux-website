@@ -175,7 +175,7 @@ export default function SocialMediaMarketingPage() {
   return (
     <div style={{ backgroundColor: BLACK, color: "#fff" }}>
       <Helmet>
-        <title>Social Media Marketing | NicheUX. Strategic Social Media Management</title>
+        <title>Social Media Marketing | Services | NicheUX</title>
         <meta name="description" content="Transform your social media from random posting to strategic growth engine. Building communities that drive real business results." />
         <link rel="canonical" href="https://www.nicheux.com/social-media-marketing" />
         <meta property="og:title" content="Social Media Marketing | NicheUX" />
@@ -206,6 +206,25 @@ export default function SocialMediaMarketingPage() {
               "text": faq.a
             }
           }))
+        })}</script>
+
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "NicheUX",
+              "item": "https://www.nicheux.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Social Media Marketing",
+              "item": "https://www.nicheux.com/social-media-marketing"
+            }
+          ]
         })}</script>
       </Helmet>      <main id="main-content">
 

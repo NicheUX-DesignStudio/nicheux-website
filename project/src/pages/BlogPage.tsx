@@ -31,7 +31,7 @@ export default function BlogPage() {
   return (
     <>
       <Helmet>
-        <title>The Journal | NicheUX</title>
+        <title>The Journal | Blog | NicheUX</title>
         <meta name="description" content="Case studies, process notes, and studio writing from NicheUX. How we design, why we decide, and what we learn." />
         <meta property="og:title" content="The Journal | NicheUX" />
         <meta property="og:description" content="Articles on design, process, and storytelling from the NicheUX studio." />

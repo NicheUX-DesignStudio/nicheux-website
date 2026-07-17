@@ -108,7 +108,7 @@ export default function WebDevelopmentAndECommercePage() {
   return (
     <div style={{ backgroundColor: BLACK, color: "#fff" }}>
       <Helmet>
-        <title>Fully Coded Web Development & E-Commerce | NicheUX</title>
+        <title>Fully Coded Web Development & E-Commerce | Services | NicheUX</title>
         <meta name="description" content="Fully coded websites and Shopify stores built from scratch in React and custom code. No templates, no drag-and-drop, no shortcuts. Fast, secure, and built to scale." />
         <meta property="og:title" content="Web Development & E-Commerce | NicheUX" />
         <meta property="og:description" content="Custom-coded websites and Shopify stores. React, merchify, and performance optimization. Fast, secure, and built for conversion." />

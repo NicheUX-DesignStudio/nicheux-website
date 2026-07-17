@@ -252,7 +252,7 @@ export default function PrintAndBrandDesignPage() {
   return (
     <div style={{ backgroundColor: BLACK, color: "#fff" }}>
       <Helmet>
-        <title>Print and Brand Design | NicheUX. Professional Print & Brand Design</title>
+        <title>Print and Brand Design | Services | NicheUX</title>
         <meta name="description" content="Professional print designs that make your brand tangible. From brochures to banners, we create digital files that print perfectly everywhere." />
         <meta property="og:title" content="Print & Brand Design | NicheUX" />
         <meta property="og:description" content="Branding, print design, and identity systems that build lasting impressions. Logo design, brand kits, brochures, stationery, and signage." />
