@@ -43,7 +43,7 @@ export default function SSJCTournamentPage() {
   return (
     <>
       <Helmet>
-        <title>SSJC Tournament. NicheUX Case Study</title>
+        <title>SSJC Tournament | Featured Work | NicheUX</title>
         <meta name="description" content="10th redONE Mobile Selangor Super Junior Circuit. Two legs, two gaming-style identities. T-shirts, lanyards, medals, event posters designed by NicheUX." />
         <meta property="og:title" content="SSJC Tournament. NicheUX" />
         <meta property="og:description" content="GAME ON. Two legs, two visual identities, one gaming universe." />

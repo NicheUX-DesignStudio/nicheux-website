@@ -294,7 +294,7 @@ export default function NandhiniDCPage() {
   return (
     <>
       <Helmet>
-        <title>NandhiniDC. NicheUX Case Study</title>
+        <title>NandhiniDC | Featured Work | NicheUX</title>
         <meta name="description" content="Full web design and development for an Indian interior design studio. Where design meets storytelling." />
         <meta property="og:title" content="NandhiniDC. NicheUX Case Study" />
         <meta property="og:description" content="Full web design and development for NandhiniDC, an interior design studio where every space is a stage." />

@@ -92,7 +92,7 @@ export default function NicheUXNarrativePage() {
   return (
     <>
       <Helmet>
-        <title>NicheUX Narrative. Building in Public</title>
+        <title>NicheUX Narrative | Featured Work | NicheUX</title>
         <meta name="description" content="Week 1 of building NicheUX in public. Instagram, LinkedIn, and Threads. the studio origin story." />
         <meta property="og:title" content="NicheUX Narrative. Building in Public" />
         <meta property="og:description" content="Week one. A dragon. Six people. Building a studio in public." />

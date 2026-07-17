@@ -239,7 +239,7 @@ export default function KishorePortfolioPage() {
   return (
     <>
       <Helmet>
-        <title>Kishore Aravind, K29 Portfolio | NicheUX Case Study</title>
+        <title>Kishore Aravind, K29 Portfolio | Featured Work | NicheUX</title>
         <meta name="description" content="How NicheUX designed and built the K29 portfolio for Kishore Aravind — squash champion, WSF-certified coach, and brand designer. One identity for three disciplines." />
         <link rel="preload" as="image" href="/images/kishore-process/kishore-home-desktop.png" />
       </Helmet>

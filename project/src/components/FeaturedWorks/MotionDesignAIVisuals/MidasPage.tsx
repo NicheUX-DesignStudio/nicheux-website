@@ -98,7 +98,7 @@ export default function MidasPage() {
   return (
     <>
       <Helmet>
-        <title>Midas Utara Engineering. Biogas Flaring System | NicheUX Case Study</title>
+        <title>Midas Utara Engineering | Featured Work | NicheUX</title>
         <meta name="description" content="Multilingual promotional reel for Midas Utara Engineering's biogas flaring system at Carlsberg Shah Alam. English, Malay, and Tamil versions. Technical storytelling for industrial clients." />
         <meta property="og:title" content="Midas Utara Engineering. Biogas Flaring System | NicheUX" />
         <meta property="og:description" content="Three languages. One engineering standard. Raw footage elevated into a multilingual marketing asset for regional industrial clients." />

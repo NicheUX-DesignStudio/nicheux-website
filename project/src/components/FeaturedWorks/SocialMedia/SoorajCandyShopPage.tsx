@@ -43,7 +43,7 @@ export default function merchSoorajCandyshopPage() {
   return (
     <>
       <Helmet>
-        <title>Kingdom of Sweets. NicheUX</title>
+        <title>Kingdom of Sweets | Featured Work | NicheUX</title>
         <meta name="description" content="A personal memory piece for Sooraj Nikam. An arch banner designed from a notes app sketch, to go on a miniature toy merch that holds chocolates for visitors." />
         <meta property="og:title" content="Kingdom of Sweets. Sooraj Nikam × NicheUX" />
         <meta property="og:description" content="A tribute to a place that mattered. Designed from a hand-drawn sketch, made into a banner for a toy-sized merch full of chocolates." />

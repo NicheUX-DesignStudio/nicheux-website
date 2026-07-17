@@ -78,7 +78,7 @@ export default function ComicPage() {
   return (
     <>
       <Helmet>
-        <title>Sequential Art. NicheUX Case Study</title>
+        <title>Sequential Art | Featured Work | NicheUX</title>
         <meta name="description" content="Comics and sequential storytelling by NicheUX. Relatable narratives built for social media audiences." />
         <meta property="og:title" content="Sequential Art. NicheUX" />
         <meta property="og:description" content="Stories told in panels. One beat of setup, one beat of truth." />

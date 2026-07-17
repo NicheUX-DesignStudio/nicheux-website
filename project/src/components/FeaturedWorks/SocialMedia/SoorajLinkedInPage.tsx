@@ -52,7 +52,7 @@ export default function SoorajLinkedInPage() {
   return (
     <>
       <Helmet>
-        <title>Sooraj Nikam. LinkedIn Banner | NicheUX Case Study</title>
+        <title>Sooraj Nikam LinkedIn Banner | Featured Work | NicheUX</title>
         <meta name="description" content="LinkedIn banner for a Data & AI Graduate with 4x international publications, MSc University of Galway. Designed to be seen before the first connection request." />
         <meta property="og:title" content="Sooraj Nikam. LinkedIn Banner | NicheUX" />
         <meta property="og:description" content="Data & AI Graduate. 4x publications. One banner that makes the case before he says a word." />

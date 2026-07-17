@@ -35,7 +35,7 @@ export default function AadharshamPage() {
   return (
     <>
       <Helmet>
-        <title>Aadharsham Photography. NicheUX Case Study</title>
+        <title>Aadharsham Photography | Featured Work | NicheUX</title>
         <meta name="description" content="Editorial design and booklet layout for Aadharsham Photography. a photographer's body of work bound, sequenced, and presented. By NicheUX." />
         <meta property="og:title" content="Aadharsham Photography. NicheUX" />
         <meta property="og:description" content="A photographer's life's work. curated, laid out, and presented as a booklet publication." />

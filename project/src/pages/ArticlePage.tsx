@@ -206,7 +206,7 @@ export default function ArticlePage() {
   return (
     <>
       <Helmet>
-        <title>{article.title} | NicheUX Journal</title>
+        <title>{article.title} | Blog | NicheUX</title>
         <meta name="description" content={article.excerpt} />
         <meta property="og:title" content={`${article.title} | NicheUX`} />
         <meta property="og:description" content={article.excerpt} />

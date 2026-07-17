@@ -73,7 +73,7 @@ export default function SoorajNikamPage() {
   return (
     <>
       <Helmet>
-        <title>Sooraj Nikam. NicheUX Case Study</title>
+        <title>Sooraj Nikam | Featured Work | NicheUX</title>
         <meta name="description" content="Social media campaigns, event design, and brand assets for an Ireland-based entrepreneur. Ongoing work by NicheUX." />
         <meta property="og:title" content="Sooraj Nikam. NicheUX Case Study" />
         <meta property="og:description" content="Wanted posters at 4am. 29 positioning quotes overnight. A brand built in public across Galway." />

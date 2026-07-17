@@ -65,7 +65,7 @@ export default function ConceptualAnatomyPage() {
   return (
     <>
       <Helmet>
-        <title>Conceptual Art. NicheUX Case Study</title>
+        <title>Conceptual Art | Featured Work | NicheUX</title>
         <meta name="description" content="High-detail concept art and illustration by NicheUX. Characters, environments, and conceptual work for publishing, gaming, and branding." />
         <meta property="og:title" content="Conceptual Art. NicheUX" />
         <meta property="og:description" content="Technical mastery and imagination working at the same level of discipline." />

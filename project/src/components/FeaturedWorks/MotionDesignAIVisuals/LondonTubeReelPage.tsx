@@ -77,7 +77,7 @@ export default function LondonTubeReelPage() {
   return (
     <>
       <Helmet>
-        <title>London Underground Series. Behavioural Design in the Wild | NicheUX</title>
+        <title>London Underground Series | Featured Work | NicheUX</title>
         <meta name="description" content="Schema Hijacking, Disfluency, and Dual Coding deconstructed from Victoria Line advertising. Captured at King's Cross peak hours. The London Underground as the world's best UX laboratory." />
         <meta property="og:title" content="London Underground Series | NicheUX Case Study" />
         <meta property="og:description" content="The Tube as the world's best UX laboratory. Three behavioural design principles deconstructed from real advertising." />

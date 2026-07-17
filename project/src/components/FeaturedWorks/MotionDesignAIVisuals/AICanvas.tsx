@@ -38,7 +38,7 @@ export default function AICanvasPage() {
   return (
     <>
       <Helmet>
-        <title>AI Canvas. NicheUX Case Study</title>
+        <title>AI Canvas | Featured Work | NicheUX</title>
         <meta name="description" content="Generative art, AI-directed visuals, and motion design by NicheUX. Human imagination directing generative processes. not the other way around." />
         <meta property="og:title" content="AI Canvas. NicheUX" />
         <meta property="og:description" content="The prompt is a brief. The output is a starting point. The designer is always in the room." />

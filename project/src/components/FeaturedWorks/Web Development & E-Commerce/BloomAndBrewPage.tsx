@@ -101,7 +101,7 @@ export default function BloomAndBrewPage() {
   return (
     <>
       <Helmet>
-        <title>Bloom and Brew Coffee. merchify Web Design by NicheUX</title>
+        <title>Bloom and Brew Coffee | Featured Work | NicheUX</title>
         <meta name="description" content="Custom merchify Liquid theme designed and built by NicheUX for Bloom and Brew Coffee Company, Canada. UX research, user flow mapping, wireframes, and full merchify development. Launched in Canada, UK, and Ireland in 6 weeks with a perfect 100/100 SEO score." />
         <meta property="og:title" content="Bloom and Brew Coffee. Custom merchify Website by NicheUX" />
         <meta property="og:description" content="A custom merchify Liquid store for an artisan coffee and baked goods brand. Built from scratch for Canada, UK, and Ireland. 6 weeks from brief to launch." />

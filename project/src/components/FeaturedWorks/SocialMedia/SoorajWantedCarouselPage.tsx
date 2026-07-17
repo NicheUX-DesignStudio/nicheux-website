@@ -61,7 +61,7 @@ export default function SoorajWantedCarouselPage() {
   return (
     <>
       <Helmet>
-        <title>The Generation Conversation. NicheUX Case Study</title>
+        <title>The Generation Conversation | Featured Work | NicheUX</title>
         <meta name="description" content="Wanted poster LinkedIn carousel for Sooraj Nikam's attendance at the Generation Conversation event, PorterShed Galway. Designed overnight by NicheUX." />
         <meta property="og:title" content="The Generation Conversation. Sooraj Nikam × NicheUX" />
         <meta property="og:description" content="8 slides designed overnight. Sooraj attended an entrepreneurship event. NicheUX built the LinkedIn content that told the story." />

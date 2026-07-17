@@ -66,7 +66,7 @@ export default function VisualCommunicationPage() {
   return (
     <>
       <Helmet>
-        <title>Visual Communication. NicheUX Case Study</title>
+        <title>Visual Communication | Featured Work | NicheUX</title>
         <meta name="description" content="Poster design, advertising, and print collateral by NicheUX. Commercial precision meeting editorial craft." />
         <meta property="og:title" content="Visual Communication. NicheUX" />
         <meta property="og:description" content="A poster has one job: make you stop. We design for that moment." />
