@@ -47,12 +47,36 @@ const SSJCTournamentPage      = lazy(() => import('./components/FeaturedWorks/Pr
 const MidasPage               = lazy(() => import('./components/FeaturedWorks/MotionDesignAIVisuals/MidasPage'));
 const LondonTubeReelPage      = lazy(() => import('./components/FeaturedWorks/MotionDesignAIVisuals/LondonTubeReelPage'));
 
+function isStaleChunkError(err: Error) {
+  const msg = String(err.message || err);
+  return /Failed to fetch dynamically imported module|Importing a module script failed|error loading dynamically imported module|Loading chunk .* failed/i.test(msg);
+}
+
 class ErrorBoundary extends Component<{ children: ReactNode }, { error: Error | null }> {
   state = { error: null };
   static getDerivedStateFromError(error: Error) { return { error }; }
+  componentDidCatch(error: Error) {
+    if (isStaleChunkError(error)) {
+      const key = 'nx-reloaded-for-stale-chunk';
+      if (!sessionStorage.getItem(key)) {
+        sessionStorage.setItem(key, '1');
+        window.location.reload();
+      }
+    }
+  }
   render() {
     if (this.state.error) {
       const err = this.state.error as Error;
+      if (isStaleChunkError(err)) {
+        return (
+          <div style={{ position: 'fixed', inset: 0, background: '#131313', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 99999, fontFamily: "'Source Sans Pro', sans-serif" }}>
+            <div style={{ textAlign: 'center', padding: 24 }}>
+              <div style={{ color: '#E9C672', fontSize: 18, marginBottom: 12 }}>Updating the site…</div>
+              <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13 }}>This page loaded before the latest update. Refreshing now.</div>
+            </div>
+          </div>
+        );
+      }
       return (
         <div style={{ position: 'fixed', inset: 0, background: '#131313', color: '#fff', padding: 40, fontFamily: 'monospace', zIndex: 99999, overflow: 'auto' }}>
           <div style={{ color: '#E9C672', fontSize: 20, marginBottom: 16 }}>NicheUX — Runtime Error (contact dev)</div>

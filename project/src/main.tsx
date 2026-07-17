@@ -29,6 +29,7 @@ try {
     </React.StrictMode>
   );
   preloadAndReady();
+  sessionStorage.removeItem('nx-reloaded-for-stale-chunk');
 } catch (error) {
   console.error("Failed to render App:", error);
   rootElement.innerHTML = `
