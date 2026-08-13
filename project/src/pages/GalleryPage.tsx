@@ -34,6 +34,14 @@ const GALLERY_ITEMS: GalleryItem[] = [
   { id: 27, type: 'image', src: '/images/poster-leg2.jpeg',                   alt: 'SSJC Leg 2 tournament poster',           category: 'Works', caption: 'SSJC Leg 2 Tournament. Cyber Blue chapter. Same visual system, new identity.' },
   { id: 13, type: 'image', src: '/images/ssjc/medal-leg1-boys.png',               alt: 'SSJC Leg 1 Boys medal design',           category: 'Works', caption: 'SSJC Leg 1 Boys Medal. Physical medal design for the gaming-universe tournament identity.' },
   { id: 15, type: 'image', src: '/images/ssjc/medal-leg2-boys.png',               alt: 'SSJC Leg 2 Boys medal design',           category: 'Works', caption: 'SSJC Leg 2 Boys Medal. Cyber Blue chapter.' },
+  { id: 33, type: 'image', src: '/images/ssjc/real/banner_ssjc.jpeg',             alt: 'SSJC tournament event banner on site',   category: 'Works', caption: 'SSJC Event Banner. The design in its final home, printed and hung at the venue.' },
+  { id: 34, type: 'image', src: '/images/ssjc/real/bunting_ssjc.jpeg',            alt: 'SSJC bunting flags at tournament venue',  category: 'Works', caption: 'SSJC Bunting. Retro Purple and Cyber Blue flags strung across the venue, carrying the identity past the poster and into the room.' },
+  { id: 35, type: 'image', src: '/images/ssjc/real/group_ssjc.jpeg',              alt: 'SSJC tournament athletes group photo',    category: 'Works', caption: 'The SSJC athletes. The gaming-universe identity, worn by the players it was built for.' },
+  { id: 36, type: 'image', src: '/images/ssjc/real/kids_medals_peeking.jpeg',     alt: 'Young SSJC athlete peeking at medals',    category: 'Works', caption: 'First look. A young athlete gets an early peek at the medals before the podium.' },
+  { id: 37, type: 'image', src: '/images/ssjc/real/medals_curious.jpeg',          alt: 'SSJC athletes examining tournament medals', category: 'Works', caption: 'Medal check. The physical medal design, held and inspected by the kids who earned it.' },
+  { id: 38, type: 'image', src: '/images/ssjc/real/medals_girls.jpeg',            alt: 'SSJC girls squash players with medals',   category: 'Works', caption: 'SSJC Girls division. Cyan and green medals, worn by the athletes the colourway was designed for.' },
+  { id: 39, type: 'video', src: '/videos/ssjc/gold_ssjc.mp4', poster: '/images/ssjc/real/goldthumbnail.png', alt: 'SSJC gold medal reveal video',      category: 'Works', caption: 'Gold. The top medal design from the SSJC tournament identity, on camera.' },
+  { id: 40, type: 'video', src: '/videos/ssjc/medal_bronze.mp4', poster: '/images/ssjc/real/thumbnailbronze.png', alt: 'SSJC bronze medal reveal video', category: 'Works', caption: 'Bronze. Same medal system, third-place colourway.' },
 
   // ── Images (studio & creative) ──
   { id: 7,  type: 'image', src: '/images/MotherNature.jpg',                        alt: 'Mother Nature conceptual illustration',  category: 'Images', caption: 'Mother Nature. Conceptual illustration from the NicheUX studio.' },
@@ -155,7 +163,7 @@ export default function GalleryPage() {
               style={{ position: 'relative', maxWidth: 900, width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }} onClick={e => e.stopPropagation()}>
 
               {activeItem.type === 'video' ? (
-                <video src={activeItem.src} controls autoPlay preload="metadata" style={{ width: '100%', maxHeight: 'calc(100vh - 140px)', borderRadius: 8, display: 'block' }} aria-label={activeItem.alt} />
+                <video src={activeItem.src} controls autoPlay muted preload="metadata" style={{ width: '100%', maxHeight: 'calc(100vh - 140px)', borderRadius: 8, display: 'block' }} aria-label={activeItem.alt} />
               ) : (
                 <img src={activeItem.src} alt={activeItem.alt}
                   style={{ maxWidth: '100%', maxHeight: 'calc(100vh - 140px)', width: 'auto', height: 'auto', objectFit: 'contain', borderRadius: 8, display: 'block', margin: '0 auto' }} />

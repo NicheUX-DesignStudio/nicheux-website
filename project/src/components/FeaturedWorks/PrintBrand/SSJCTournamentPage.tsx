@@ -323,12 +323,49 @@ export default function SSJCTournamentPage() {
             </div>
 
             {/* Event Banner */}
-            <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} viewport={{once:true}}>
+            <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} viewport={{once:true}} className="mb-16">
               <SectionLabel step="Deliverable 05" title="Event Banner" />
-              <h3 className="font-serif-light text-3xl text-white mb-4">In production.</h3>
-              <p className="text-white/55 font-sans-normal text-base leading-relaxed mb-6">The event entrance banner is currently in production. Large-format, designed to match the GAME ON visual universe and anchor the venue's visual identity at the entry point.</p>
+              <h3 className="font-serif-light text-3xl text-white mb-4">Printed. Hung. Live at the venue.</h3>
+              <p className="text-white/55 font-sans-normal text-base leading-relaxed mb-6">The event entrance banner, large-format and matched to the GAME ON visual universe, anchoring the venue's identity at the entry point.</p>
               <div className="overflow-hidden" style={{ borderRadius: 4, border: `1px solid ${PURPLE}25` }}>
-                <img src="/images/ssjc/event-banner.png" alt="SSJC Event Banner" loading="lazy" className="w-full h-auto block" style={{ display: 'block', objectFit: 'cover', objectPosition: 'center top', maxHeight: 480 }} />
+                <img src="/images/ssjc/event-banner.png" alt="SSJC Event Banner design file" loading="lazy" className="w-full h-auto block" style={{ display: 'block', objectFit: 'cover', objectPosition: 'center top', maxHeight: 480 }} />
+              </div>
+            </motion.div>
+
+            {/* Live at the Venue */}
+            <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} viewport={{once:true}}>
+              <SectionLabel step="On the Day" title="Live at the Venue" />
+              <h3 className="font-serif-light text-3xl text-white mb-4">The identity, in the room.</h3>
+              <p className="text-white/55 font-sans-normal text-base leading-relaxed mb-8">Files on a screen are a promise. This is the delivery. Banner, bunting, medals, and the athletes who wore the identity on tournament day.</p>
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                {[
+                  { src: '/images/ssjc/real/banner_ssjc.jpeg', alt: 'SSJC tournament event banner printed and installed at the venue entrance', caption: 'The entrance banner, printed and installed. Same GAME ON identity, now full-size at the venue.' },
+                  { src: '/images/ssjc/real/bunting_ssjc.jpeg', alt: 'Retro Purple and Cyber Blue SSJC bunting flags strung across the tournament venue', caption: 'Bunting across the venue. Retro Purple and Cyber Blue carried past the poster and into every corner of the room.' },
+                  { src: '/images/ssjc/real/group_ssjc.jpeg', alt: 'SSJC tournament athletes group photo wearing the event identity', caption: 'The athletes the whole identity was built for, together on tournament day.' },
+                  { src: '/images/ssjc/real/kids_medals_peeking.jpeg', alt: 'Young SSJC athlete peeking curiously at the tournament medals', caption: 'First look at the medals, before the podium.' },
+                  { src: '/images/ssjc/real/medals_curious.jpeg', alt: 'SSJC athletes examining the physical tournament medals up close', caption: 'The physical medal design, held and inspected by the kids who earned it.' },
+                  { src: '/images/ssjc/real/medals_girls.jpeg', alt: 'SSJC girls squash division athletes wearing Cyber Blue medals', caption: 'Girls division. Cyan and green medals worn by the athletes the colourway was designed for.' },
+                ].map((item) => (
+                  <motion.div key={item.src} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{once:true}} className="space-y-3">
+                    <div className="overflow-hidden" style={{ borderRadius: 4, border: `1px solid ${CYAN}20` }}>
+                      <img src={item.src} alt={item.alt} className="w-full h-auto" loading="lazy" onError={(e)=>{(e.target as HTMLImageElement).style.opacity='0.1';}} />
+                    </div>
+                    <p className="text-white/60 font-sans-normal text-sm leading-relaxed">{item.caption}</p>
+                  </motion.div>
+                ))}
+              </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                {[
+                  { src: '/videos/ssjc/gold_ssjc.mp4', poster: '/images/ssjc/real/goldthumbnail.png', theme: 'LEG 1 · Gold', accent: PURPLE, caption: 'Gold. The top medal design from the SSJC tournament identity, on camera.' },
+                  { src: '/videos/ssjc/medal_bronze.mp4', poster: '/images/ssjc/real/thumbnailbronze.png', theme: 'LEG 1 · Bronze', accent: CYAN, caption: 'Bronze. Same medal system, third-place colourway.' },
+                ].map((item) => (
+                  <motion.div key={item.src} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{once:true}} className="space-y-3">
+                    <div className="overflow-hidden" style={{ borderRadius: 4, border: `1px solid ${item.accent}25` }}>
+                      <video src={item.src} poster={item.poster} controls muted playsInline preload="none" className="w-full h-auto block" aria-label={`SSJC ${item.theme} medal video`} />
+                    </div>
+                    <p className="text-white/60 font-sans-normal text-sm leading-relaxed">{item.caption}</p>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </div>
