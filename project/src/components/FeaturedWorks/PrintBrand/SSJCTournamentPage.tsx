@@ -340,7 +340,8 @@ export default function SSJCTournamentPage() {
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 {[
                   { src: '/images/ssjc/real/banner_ssjc.jpeg', alt: 'SSJC tournament event banner printed and installed at the venue entrance', caption: 'The entrance banner, printed and installed. Same GAME ON identity, now full-size at the venue.' },
-                  { src: '/images/ssjc/real/bunting_ssjc.jpeg', alt: 'Retro Purple and Cyber Blue SSJC bunting flags strung across the tournament venue', caption: 'Bunting across the venue. Retro Purple and Cyber Blue carried past the poster and into every corner of the room.' },
+                  { src: '/images/ssjc/real/bunting-leg1.jpg', alt: 'SSJC Leg 1 Retro Purple bunting print design', caption: 'Leg 1 bunting. Retro Purple, full-bleed print, ready for the venue.' },
+                  { src: '/images/ssjc/real/bunting-leg2.jpg', alt: 'SSJC Leg 2 Cyber Blue bunting print design', caption: 'Leg 2 bunting. Cyber Blue chapter, same full-bleed print system.' },
                   { src: '/images/ssjc/real/group_ssjc.jpeg', alt: 'SSJC tournament athletes group photo wearing the event identity', caption: 'The athletes the whole identity was built for, together on tournament day.' },
                   { src: '/images/ssjc/real/kids_medals_peeking.jpeg', alt: 'Young SSJC athlete peeking curiously at the tournament medals', caption: 'First look at the medals, before the podium.' },
                   { src: '/images/ssjc/real/medals_curious.jpeg', alt: 'SSJC athletes examining the physical tournament medals up close', caption: 'The physical medal design, held and inspected by the kids who earned it.' },

@@ -49,7 +49,7 @@ const LondonTubeReelPage      = lazy(() => import('./components/FeaturedWorks/Mo
 
 function isStaleChunkError(err: Error) {
   const msg = String(err.message || err);
-  return /Failed to fetch dynamically imported module|Importing a module script failed|error loading dynamically imported module|Loading chunk .* failed/i.test(msg);
+  return /Failed to fetch dynamically imported module|Importing a module script failed|error loading dynamically imported module|Loading chunk .* failed|Unexpected token '<'|is not a valid JavaScript MIME type/i.test(msg);
 }
 
 class ErrorBoundary extends Component<{ children: ReactNode }, { error: Error | null }> {

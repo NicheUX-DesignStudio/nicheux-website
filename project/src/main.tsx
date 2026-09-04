@@ -18,6 +18,17 @@ rootElement.innerHTML = '';
 
 const root = ReactDOM.createRoot(rootElement);
 
+// A tab left open across a redeploy holds JS chunk filenames that no longer
+// exist on the server. Vite fires this event when a dynamic import for one
+// of those stale chunks fails to load — reload once to pick up the new build.
+window.addEventListener('vite:preloadError', () => {
+  const key = 'nx-reloaded-for-stale-chunk';
+  if (!sessionStorage.getItem(key)) {
+    sessionStorage.setItem(key, '1');
+    window.location.reload();
+  }
+});
+
 function preloadAndReady() {
   if (typeof (window as any).__nxReady === 'function') (window as any).__nxReady();
 }
