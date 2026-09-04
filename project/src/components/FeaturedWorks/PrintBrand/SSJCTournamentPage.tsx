@@ -174,18 +174,18 @@ export default function SSJCTournamentPage() {
         <section style={{ background: PARCHMENT }} className="py-20 md:py-28 px-6 md:px-8">
           <div className="max-w-6xl mx-auto">
             <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} viewport={{once:true}} className="mb-12">
-              <SectionLabel step="Deliverable 01" title="Event Posters" bg="parchment" />
-              <h2 className="font-serif-light text-4xl md:text-5xl" style={{color:INK}}>GAME ON.</h2>
-              <p className="font-sans-normal text-base mt-3 max-w-xl" style={{color:`${INK}70`}}>A full-height event poster per leg. the visual centrepiece of each tournament. Gaming-style loading screens, player silhouettes on fire, stat overlays. The poster that sets the tone before a ball is hit.</p>
+              <SectionLabel step="Deliverable 01" title="Bunting" bg="parchment" />
+              <h2 className="font-serif-light text-4xl md:text-5xl" style={{color:INK}}>Strung across the venue.</h2>
+              <p className="font-sans-normal text-base mt-3 max-w-xl" style={{color:`${INK}70`}}>Full-bleed print bunting, one continuous run per leg. redONE Mobile branding repeated the length of the strand, carrying the identity everywhere the athletes look up.</p>
             </motion.div>
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { src: '/images/ssjc/poster-leg1.jpeg', leg: 'LEG 1', theme: 'Retro Purple', accent: PURPLE, desc: 'Boy silhouette. Purple and pink fire. Purple and pink are the colours convention assigns to girls. The boy silhouette wears them without hesitation. Because in this gaming universe, nobody is assigned a colour based on their gender.' },
-                { src: '/images/ssjc/poster-leg2.jpeg', leg: 'LEG 2', theme: 'Cyber Blue', accent: CYAN, desc: 'Girl silhouette. Cyan and green fire. Cyan and green are the colours convention assigns to boys. The girl silhouette owns them completely. Because a girl competing at the national level in squash deserves the palette that says precision, power, and speed.' },
+                { src: '/images/ssjc/real/bunting-leg1.jpg', leg: 'LEG 1', theme: 'Retro Purple', accent: PURPLE, desc: 'Purple and pink, the colours convention assigns to girls, carried the length of the venue.' },
+                { src: '/images/ssjc/real/bunting-leg2.jpg', leg: 'LEG 2', theme: 'Cyber Blue', accent: CYAN, desc: 'Cyan and green, the colours convention assigns to boys, in the same full-bleed print system.' },
               ].map(({ src, leg, theme, accent, desc }) => (
                 <motion.div key={leg} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} viewport={{once:true}} className="space-y-4">
                   <div className="rounded-2xl overflow-hidden border" style={{borderColor:`${INK}15`}}>
-                    <img src={src} alt={`SSJC ${leg} Poster`} className="w-full h-auto" loading="lazy" onError={(e)=>{(e.target as HTMLImageElement).style.opacity='0.1';}} />
+                    <img src={src} alt={`SSJC ${leg} bunting print design`} className="w-full h-auto" loading="lazy" onError={(e)=>{(e.target as HTMLImageElement).style.opacity='0.1';}} />
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-3 h-3 rounded-full flex-shrink-0 mt-1" style={{background:accent}} />
@@ -269,42 +269,12 @@ export default function SSJCTournamentPage() {
           </div>
         </section>
 
-        {/* BUNTING. dark */}
-        <section style={{ background: BLACK }} className="py-20 md:py-28 px-6 md:px-8">
-          <div className="max-w-6xl mx-auto">
-            <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} viewport={{once:true}} className="mb-12">
-              <SectionLabel step="Deliverable 04" title="Bunting" />
-              <h2 className="font-serif-light text-4xl md:text-5xl text-white">Strung across the venue.</h2>
-              <p className="text-white/50 font-sans-normal text-base mt-3 max-w-xl">Full-bleed print bunting, one continuous run per leg. The same colour-to-silhouette logic from the posters carried into the room, so the identity is not just seen at the entrance but experienced everywhere the athletes look up.</p>
-            </motion.div>
-            <div className="grid md:grid-cols-2 gap-8">
-              {[
-                { src: '/images/ssjc/real/bunting-leg1.jpg', leg: 'LEG 1', theme: 'Retro Purple', accent: PURPLE, desc: 'Purple and pink, the colours convention assigns to girls, carried past the poster and strung the length of the venue.' },
-                { src: '/images/ssjc/real/bunting-leg2.jpg', leg: 'LEG 2', theme: 'Cyber Blue', accent: CYAN, desc: 'Cyan and green, the colours convention assigns to boys, in the same full-bleed print system.' },
-              ].map(({ src, leg, theme, accent, desc }) => (
-                <motion.div key={leg} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} viewport={{once:true}} className="space-y-4">
-                  <div className="rounded-2xl overflow-hidden border border-white/5">
-                    <img src={src} alt={`SSJC ${leg} bunting print design`} className="w-full h-auto" loading="lazy" onError={(e)=>{(e.target as HTMLImageElement).style.opacity='0.1';}} />
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-3 h-3 rounded-full flex-shrink-0 mt-1" style={{background:accent}} />
-                    <div>
-                      <p className="text-white font-sans-medium text-sm">{leg}. {theme}</p>
-                      <p className="text-white/50 font-sans-normal text-sm leading-relaxed mt-1">{desc}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* MEDALS + BANNER. dark */}
         <section style={{ background: BLACK }} className="py-20 md:py-28 px-6 md:px-8">
           <div className="max-w-6xl mx-auto">
             {/* Medals. show actual medal designs */}
             <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} viewport={{once:true}} className="mb-14">
-              <SectionLabel step="Deliverable 05" title="Medals" />
+              <SectionLabel step="Deliverable 04" title="Medals" />
               <h2 className="font-serif-light text-4xl md:text-5xl text-white mb-3">48 medals. Every winner recognised.</h2>
               <p className="text-white/70 font-sans-normal text-base max-w-2xl">48 medals across all age categories for Boys and Girls across both legs. Every file delivered print-ready with correct bleed, resolution, and CMYK colour mode.</p>
             </motion.div>
@@ -354,7 +324,7 @@ export default function SSJCTournamentPage() {
 
             {/* Event Banner */}
             <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} viewport={{once:true}} className="mb-16">
-              <SectionLabel step="Deliverable 06" title="Event Banner" />
+              <SectionLabel step="Deliverable 05" title="Event Banner" />
               <h3 className="font-serif-light text-3xl text-white mb-4">Printed. Hung. Live at the venue.</h3>
               <p className="text-white/55 font-sans-normal text-base leading-relaxed mb-6">The event entrance banner, large-format and matched to the GAME ON visual universe, anchoring the venue's identity at the entry point.</p>
               <div className="overflow-hidden" style={{ borderRadius: 4, border: `1px solid ${PURPLE}25` }}>
