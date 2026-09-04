@@ -286,8 +286,8 @@ export default function SSJCTournamentPage() {
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 {[
-                  { src: '/images/ssjc/medal-leg1.jpg', cat: 'Boys', desc: 'Boys U9 · U11 · U13. Retro Purple colourway. Print-ready files across all three age categories.' },
-                  { src: '/images/ssjc/medal-leg1.jpg', cat: 'Girls', desc: 'Girls U9 · U11 · U13. Retro Purple colourway. Print-ready files across all three age categories.' },
+                  { src: '/images/ssjc/medal-leg1-boys.png', cat: 'Boys', desc: 'Boys U9 · U11 · U13. Retro Purple colourway. Print-ready files across all three age categories.' },
+                  { src: '/images/ssjc/medal-leg1-girls.png', cat: 'Girls', desc: 'Girls U9 · U11 · U13. Retro Purple colourway. Print-ready files across all three age categories.' },
                 ].map(({src, cat, desc}) => (
                   <motion.div key={cat} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{once:true}} className="space-y-3">
                     <div className="rounded-2xl overflow-hidden border border-white/5 bg-black/30">
@@ -308,8 +308,8 @@ export default function SSJCTournamentPage() {
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 {[
-                  { src: '/images/ssjc/medal-leg2.jpg', cat: 'Boys', desc: 'Boys U9 · U11 · U13. Cyber Blue colourway. Print-ready files across all three age categories.' },
-                  { src: '/images/ssjc/medal-leg2.jpg', cat: 'Girls', desc: 'Girls U9 · U11 · U13. Cyber Blue colourway. Print-ready files across all three age categories.' },
+                  { src: '/images/ssjc/medal-leg2-boys.png', cat: 'Boys', desc: 'Boys U9 · U11 · U13. Cyber Blue colourway. Print-ready files across all three age categories.' },
+                  { src: '/images/ssjc/medal-leg2-girls.png', cat: 'Girls', desc: 'Girls U9 · U11 · U13. Cyber Blue colourway. Print-ready files across all three age categories.' },
                 ].map(({src, cat, desc}) => (
                   <motion.div key={cat} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} transition={{duration:0.7}} viewport={{once:true}} className="space-y-3">
                     <div className="rounded-2xl overflow-hidden border border-white/5 bg-black/30">
