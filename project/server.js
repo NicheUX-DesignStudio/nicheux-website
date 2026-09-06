@@ -934,7 +934,9 @@ app.get('/api/products', async (req, res) => {
   if (!dbId) return res.json({ success: true, products: [] });
   try {
     const response = await notion.databases.query({ database_id: dbId, page_size: 50 });
-    const products = response.results.map(page => {
+    const products = response.results
+      .filter(page => page.properties['Published']?.checkbox === true)
+      .map(page => {
       const p = page.properties;
       const text  = k => p[k]?.rich_text?.[0]?.plain_text || p[k]?.title?.[0]?.plain_text || '';
       const url   = k => p[k]?.url || '';
