@@ -100,7 +100,7 @@ export const useCountryPricing = (): UseCountryPricingReturn => {
     const serviceMap: Record<string, string> = {
       'Logo Design': 'Logo Design',
       'Hand-Built Website': 'Hand-Built Website',
-      'Custom merchify Store': 'Custom merchify Store',
+      'Custom Shopify Store': 'Custom Shopify Store',
       'Social Media Starter Plan': 'Social Media Starter Plan',
       '30s Explainer Video': '30s Explainer Video',
       'Single Character Design': 'Single Character Design',

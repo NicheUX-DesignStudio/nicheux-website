@@ -2,7 +2,7 @@
 export const SERVICE_NAMES = {
   // ========== WEB DEVELOPMENT & E-COMMERCE ==========
   'Hand-Built Website': 'web-dev',
-  'Custom merchify Store': 'web-dev',
+  'Custom Shopify Store': 'web-dev',
   'Enterprise Solutions': 'web-dev',
   'Essential Care': 'web-dev',
   'Professional Care': 'web-dev',

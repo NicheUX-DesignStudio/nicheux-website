@@ -50,7 +50,7 @@ NicheUX is a design studio website — it is both a portfolio and a conversion t
 /                          — HomePage
 /about                     — AboutPage (curtain reveal entry — DO NOT REMOVE)
 /featured-work             — FeaturedWork (case study gallery)
-/featured-work/bloom-brew  — Bloom & Brew (merchify, Canada)
+/featured-work/bloom-brew  — Bloom & Brew (Shopify, Canada)
 /featured-work/nandhinidc  — NandhiniDC (Web Design, India)
 /featured-work/kishore-portfolio — Kishore Aravind (UK/Malaysia)
 /featured-work/sooraj-linkedin   — Sooraj LinkedIn Banner
@@ -146,7 +146,7 @@ const price = (id: string) => isLoading ? "Loading..." : getServicePrice(id);
 
 **Key service IDs** (exact strings required):
 - Strategy: `'UX Audit & Strategy'`, `'Complete UI/UX Design'`, `'Design System'`
-- Web: `'Custom Coded Website'`, `'Custom merchify Store'`, `'Enterprise Solutions'`, `'Essential Care'`, `'Professional Care'`, `'Enterprise Care'`
+- Web: `'Custom Coded Website'`, `'Custom Shopify Store'`, `'Enterprise Solutions'`, `'Essential Care'`, `'Professional Care'`, `'Enterprise Care'`
 - Social: `'Social Media Starter Plan'`, `'Social Media Professional Plan'`, `'Social Media Enterprise Plan'`
 - Motion: `'30s Explainer Video'`, `'Logo Animation'`, `'Social Media Video Pack'`, `'Character Animation'`, `'Motion Excellence'`, `'AI Innovation Suite'`, `'Creative Power Duo'`
 - Print: `'4-page Brochure'`, `'Poster (up to A2)'`, `'Main Menu (4 pages)'`, `'Single-sided Flyer'`, `'Starter Brand Kit'`, `'Complete Brand Launch'`, `'Marketing Pro Package'`
@@ -260,7 +260,7 @@ Once images exist, update each product's `image` field in `merchPage.tsx` from `
 **Files:** `src/data/articles.ts` (article data), `src/pages/BlogPage.tsx`, `src/pages/ArticlePage.tsx`
 
 **Current articles (5 total):**
-1. Bloom & Brew — merchify case study
+1. Bloom & Brew — Shopify case study
 2. SSJC GAME ON — tournament identity + bunting colour decisions (merged into one article)
 3. NandhiniDC — architecture website
 4. Eight Slides by 4am — Sooraj LinkedIn overnight content
@@ -337,7 +337,7 @@ If you already have a Google account and need more control:
 
 ### For merch/Products specifically
 
-If products eventually need a checkout flow: **merchify Buy SDK** embedded in the current React site, or move the merch to a dedicated merchify storefront. NicheUX already builds merchify stores, so this is a natural fit.
+If products eventually need a checkout flow: **Shopify Buy SDK** embedded in the current React site, or move the merch to a dedicated Shopify storefront. NicheUX already builds Shopify stores, so this is a natural fit.
 
 ---
 

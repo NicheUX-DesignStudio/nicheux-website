@@ -44,7 +44,7 @@ export default function merchSoorajCandyshopPage() {
     <>
       <Helmet>
         <title>Kingdom of Sweets | Featured Work | NicheUX</title>
-        <meta name="description" content="A personal memory piece for Sooraj Nikam. An arch banner designed from a notes app sketch, to go on a miniature toy merch that holds chocolates for visitors." />
+        <meta name="description" content="A personal memory piece for Sooraj Nikam. An arch banner designed from a notes app sketch, to go on a miniature toy shop that holds chocolates for visitors." />
         <meta property="og:title" content="Kingdom of Sweets. Sooraj Nikam × NicheUX" />
         <meta property="og:description" content="A tribute to a place that mattered. Designed from a hand-drawn sketch, made into a banner for a toy-sized merch full of chocolates." />
       </Helmet>
@@ -88,7 +88,7 @@ export default function merchSoorajCandyshopPage() {
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}
               className="font-sans-normal text-lg md:text-xl max-w-xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.5)' }}>
-              A place Sooraj worked. A sketch he drew on his phone. A banner for a miniature merch that lives in his home and holds chocolates for anyone who visits.
+              A place Sooraj worked. A sketch he drew on his phone. A banner for a miniature shop that lives in his home and holds chocolates for anyone who visits.
             </motion.p>
           </motion.div>
         </section>
@@ -100,7 +100,7 @@ export default function merchSoorajCandyshopPage() {
               { label: 'For', value: 'Sooraj Nikam' },
               { label: 'Type', value: 'Personal Memory Piece' },
               { label: 'Discipline', value: 'Illustration · Print Design' },
-              { label: 'Format', value: 'Arch Banner for Mini Toy merch' },
+              { label: 'Format', value: 'Arch Banner for Mini Toy Shop' },
             ].map((item) => (
               <div key={item.label}>
                 <p className="text-white/60 text-xs uppercase tracking-widest font-sans-medium mb-1">{item.label}</p>
@@ -125,7 +125,7 @@ export default function merchSoorajCandyshopPage() {
                   Sooraj Nikam worked at Kingdom of Sweets. When he left, he wanted to keep a piece of it. Not a photograph. Something you could hold.
                 </p>
                 <p className="font-sans-normal text-lg leading-relaxed" style={{ color: 'rgba(26,26,26,0.80)' }}>
-                  He has a miniature toy merch at home. A small model, the kind you put on a shelf. He fills it with chocolates. When someone visits, they can walk over and pick one. That is the Kingdom of Sweets, now.
+                  He has a miniature toy shop at home. A small model, the kind you put on a shelf. He fills it with chocolates. When someone visits, they can walk over and pick one. That is the Kingdom of Sweets, now.
                 </p>
                 <p className="font-sans-normal text-lg leading-relaxed" style={{ color: 'rgba(26,26,26,0.80)' }}>
                   He wanted a tiny arch banner for it. Something that looked real, that carried the name and the feeling. He drew the outline himself in a notes app on his phone, sent it over, and asked if we could make it into something.
@@ -139,10 +139,10 @@ export default function merchSoorajCandyshopPage() {
                   <div style={{ width: 28, height: 1, background: LAVENDER }} />
                   <h3 className="font-serif-light text-xl" style={{ color: INK }}>The brief, in full</h3>
                   <blockquote className="font-serif-light italic text-lg leading-relaxed" style={{ color: 'rgba(26,26,26,0.80)', borderLeft: `2px solid ${LAVENDER}50`, paddingLeft: 16 }}>
-                    "I used to work at Kingdom of Sweets. I have a small toy merch at home that I fill with chocolates for when people visit. I drew the arch banner shape on my phone. Can you make it look real?"
+                    "I used to work at Kingdom of Sweets. I have a small toy shop at home that I fill with chocolates for when people visit. I drew the arch banner shape on my phone. Can you make it look real?"
                   </blockquote>
                   <p className="font-sans-normal text-sm leading-relaxed" style={{ color: 'rgba(26,26,26,0.70)' }}>
-                    Sooraj Nikam, Ireland. The sketch was a notes-app outline. The toy merch was already there, waiting for its banner.
+                    Sooraj Nikam, Ireland. The sketch was a notes-app outline. The toy shop was already there, waiting for its banner.
                   </p>
                 </div>
               </motion.div>
@@ -161,7 +161,7 @@ export default function merchSoorajCandyshopPage() {
               {[
                 { step: '01', title: 'The sketch', body: 'Sooraj drew the arch shape in a phone notes app. A rough outline, the proportions of the banner he had in mind. That was the brief. That shape, made beautiful.', accent: LAVENDER },
                 { step: '02', title: 'The design', body: 'We took the arch outline and built a heritage confectionery identity inside it. Warm neutrals, display serif typography, the name Kingdom of Sweets treated as a title card. Something that looked like it had been in business for a century.', accent: GOLD },
-                { step: '03', title: 'Two finishes', body: 'A clean version and a textured version with paper grain. The texture makes it feel handmade, aged, like something from a real sweet merch window. Both delivered. Sooraj chose based on how it would look printed small.', accent: BLUE },
+                { step: '03', title: 'Two finishes', body: 'A clean version and a textured version with paper grain. The texture makes it feel handmade, aged, like something from a real sweet shop window. Both delivered. Sooraj chose based on how it would look printed small.', accent: BLUE },
               ].map((item, i) => (
                 <motion.div key={item.step} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: i * 0.1 }} viewport={{ once: true }}
                   className="p-8 rounded-2xl space-y-4 border border-white/5" style={{ background: 'rgba(255,255,255,0.02)' }}>
@@ -206,12 +206,12 @@ export default function merchSoorajCandyshopPage() {
               </motion.div>
               <div className="mt-3 inline-block px-3 py-1.5 rounded-full bg-white/5 border border-white/10">
                 <span className="text-white/50 text-xs font-sans-medium">
-                  {showTexture ? 'Paper grain. feels like a real sweet merch print' : 'Clean version. works for digital and gloss print'}
+                  {showTexture ? 'Paper grain. feels like a real sweet shop print' : 'Clean version. works for digital and gloss print'}
                 </span>
               </div>
             </div>
             <p className="text-white/35 font-sans-normal text-sm leading-relaxed mt-6 max-w-2xl">
-              The texture version adds a subtle paper grain that makes the design feel handcrafted and aged, right for a brand that is supposed to feel like a memory. The clean version is crisper for small-format print. Both were delivered; Sooraj chose based on what would look best at the scale of the toy merch banner.
+              The texture version adds a subtle paper grain that makes the design feel handcrafted and aged, right for a brand that is supposed to feel like a memory. The clean version is crisper for small-format print. Both were delivered; Sooraj chose based on what would look best at the scale of the toy shop banner.
             </p>
           </div>
         </section>
@@ -230,7 +230,7 @@ export default function merchSoorajCandyshopPage() {
                 <div className="w-8 h-px mb-6" style={{ background: LAVENDER }} />
                 <h3 className="font-serif-light text-3xl text-white mb-4">Heritage by design</h3>
                 <p className="font-sans-normal text-lg leading-relaxed mb-6 text-white/60">
-                  Kingdom of Sweets needed to feel like it had existed for a long time. Not a modern candy brand, but a sweet merch that had been on the same corner for generations. Display serif typography, warm neutrals, the name treated as a statement.
+                  Kingdom of Sweets needed to feel like it had existed for a long time. Not a modern candy brand, but a sweet shop that had been on the same corner for generations. Display serif typography, warm neutrals, the name treated as a statement.
                 </p>
                 <p className="font-sans-normal text-base leading-relaxed text-white/65">
                   The arch shape Sooraj sketched gave the layout its structure. Everything inside it was built to honour what the name meant to him: a real place, full of sweetness, that he wanted to keep forever in a small model on a shelf.
@@ -246,10 +246,10 @@ export default function merchSoorajCandyshopPage() {
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
               <span className="text-xs uppercase tracking-widest font-sans-medium block mb-4" style={{ color: `${LAVENDER}70` }}>The Outcome</span>
               <h2 className="font-serif-light text-4xl md:text-5xl mb-6 leading-tight" style={{ color: INK }}>
-                A tiny merch. A real memory.
+                A tiny shop. A real memory.
               </h2>
               <p className="font-sans-normal text-xl leading-relaxed mb-10 max-w-2xl mx-auto" style={{ color: 'rgba(26,26,26,0.80)' }}>
-                The banner lives on the miniature toy merch. The merch lives in Sooraj's home, filled with chocolates. Anyone who visits can take one. Kingdom of Sweets is still open.
+                The banner lives on the miniature toy shop. The shop lives in Sooraj's home, filled with chocolates. Anyone who visits can take one. Kingdom of Sweets is still open.
               </p>
               <button onClick={() => navigate('/contact')}
                 className="inline-flex items-center gap-2 px-6 py-3 font-sans-medium rounded-lg text-sm"

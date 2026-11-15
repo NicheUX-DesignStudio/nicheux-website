@@ -308,7 +308,7 @@ const ACCENT_MAP: Record<string, string> = {
 };
 
 const HEADLINE_MAP: Record<string, string> = {
-  design: "workmerch.", webdev: "build room.", print: "print room.",
+  design: "workshop.", webdev: "build room.", print: "print room.",
   social: "content studio.", motion: "edit suite.", illustration: "drawing board.",
 };
 
@@ -324,7 +324,7 @@ const DESC_MAP: Record<string, string> = {
 export function BehindTheScenes({ variant = "design" }: { variant?: "design" | "webdev" | "print" | "social" | "motion" | "illustration" }) {
   const frames = PROCESS_MAP[variant] ?? DESIGN_PROCESS;
   const accent = ACCENT_MAP[variant] ?? LAVENDER;
-  const headline = <><em style={{ color: accent }}>Inside the </em>{HEADLINE_MAP[variant] ?? "workmerch."}</>;
+  const headline = <><em style={{ color: accent }}>Inside the </em>{HEADLINE_MAP[variant] ?? "workshop."}</>;
   const description = DESC_MAP[variant] ?? DESC_MAP.design;
 
   return (

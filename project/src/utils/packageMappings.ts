@@ -26,7 +26,7 @@ export const isPackage = (serviceName: string): boolean => {
   const packageKeywords = [
     // WEB DEVELOPMENT PACKAGES
     'Hand-Built Website',
-    'Custom merchify Store',
+    'Custom Shopify Store',
     'Enterprise Solutions',
     'Essential Care',
     'Professional Care',
@@ -151,13 +151,13 @@ export const getServicesForPackage = (packageName: string): string[] => {
       'Contact Form Integration',
       'Training & Documentation'
     ],
-    'Custom merchify Store': [
+    'Custom Shopify Store': [
       'Custom Theme Development',
       'Product & Collection Setup',
       'Essential App Integrations',
       'Payment & Shipping Configuration',
       'Checkout Optimization',
-      'Mobile merchping Experience',
+      'Mobile shopping Experience',
       'Inventory Management Setup',
       'Launch Support & Training'
     ],
@@ -479,7 +479,7 @@ export const isFreeConsultation = (serviceName: string): boolean => {
 export const getServiceCategory = (serviceName: string): string => {
   const cleanName = serviceName.replace(/\([^)]*\)/g, '').trim();
   
-  if (cleanName.includes('Website') || cleanName.includes('merchify') || cleanName.includes('Care')) {
+  if (cleanName.includes('Website') || cleanName.includes('Shopify') || cleanName.includes('Care')) {
     return 'Web Development';
   } else if (cleanName.includes('UI/UX') || cleanName.includes('Design System') || cleanName.includes('UX Audit')) {
     return 'Strategy & Design';

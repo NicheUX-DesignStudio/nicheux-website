@@ -746,7 +746,7 @@ export default function merchPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 'clamp(20px,3vw,40px)' }} className="manifesto-inner">
             <style>{`.manifesto-inner{@media(max-width:540px){grid-template-columns:1fr!important}}`}</style>
             {[
-              { label: 'Commission, not checkout', body: 'There is no merchping cart. You share the story, we send a custom proposal within 24 hours. Payment follows approval, never before.' },
+              { label: 'Commission, not checkout', body: 'There is no shopping cart. You share the story, we send a custom proposal within 24 hours. Payment follows approval, never before.' },
               { label: 'Made for one person', body: 'Every commissioned artifact is built specifically for the person who sent the brief. Not a variation of something standard. Something that could only belong to them.' },
               { label: 'Design you can trust', body: 'Six designers. One year of client commissions. Our work ships to families and businesses across the UK, Ireland, Canada, and Malaysia.' },
             ].map(p => (

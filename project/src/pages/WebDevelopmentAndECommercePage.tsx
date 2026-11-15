@@ -57,8 +57,8 @@ const PRINCIPLES = [
 
 const TIERS = [
   { name: "Hand-Built Website", serviceId: "Hand-Built Website", tagline: "Professional Presence, No Shortcuts", timeline: "3 to 5 weeks", bestFor: "Service businesses, portfolios, brochure sites", features: ["Custom-coded design, no templates", "React or vanilla JS build for speed", "Mobile-first responsive build", "On-page SEO and performance tuning", "Contact form and CMS integration", "Training and documentation"], youGet: "A fast, fully coded website that is yours to own and grow", accent: BLUE },
-  { name: "Custom merchify Store", serviceId: "Custom merchify Store", tagline: "The Full Transformation", timeline: "4 to 6 weeks", bestFor: "Brands ready to sell with a unique store experience", features: ["Custom-coded theme development", "Product & collection setup", "Essential app integrations", "Payment & shipping configuration", "Checkout optimisation", "Mobile merchping experience", "Inventory management setup", "Launch support & training"], youGet: "A conversion-optimised store that reflects your brand", accent: LAVENDER, highlighted: true },
-  { name: "Enterprise Solutions", serviceId: "Enterprise Solutions", tagline: "The Scalable Foundation", timeline: "6 to 8+ weeks", bestFor: "Scaling businesses with advanced requirements", features: ["Everything in merchify tier", "Custom app development", "ERP/CRM integrations", "Multi-currency support", "Advanced analytics", "API development", "Dedicated support", "Ongoing optimisation"], youGet: "A fully custom solution that scales with your growth", accent: GOLD },
+  { name: "Custom Shopify Store", serviceId: "Custom Shopify Store", tagline: "The Full Transformation", timeline: "4 to 6 weeks", bestFor: "Brands ready to sell with a unique store experience", features: ["Custom-coded theme development", "Product & collection setup", "Essential app integrations", "Payment & shipping configuration", "Checkout optimisation", "Mobile shopping experience", "Inventory management setup", "Launch support & training"], youGet: "A conversion-optimised store that reflects your brand", accent: LAVENDER, highlighted: true },
+  { name: "Enterprise Solutions", serviceId: "Enterprise Solutions", tagline: "The Scalable Foundation", timeline: "6 to 8+ weeks", bestFor: "Scaling businesses with advanced requirements", features: ["Everything in Shopify tier", "Custom app development", "ERP/CRM integrations", "Multi-currency support", "Advanced analytics", "API development", "Dedicated support", "Ongoing optimisation"], youGet: "A fully custom solution that scales with your growth", accent: GOLD },
 ];
 
 const CARE_PLANS = [
@@ -68,8 +68,8 @@ const CARE_PLANS = [
 ];
 
 const FAQS = [
-  { q: "How long does a typical web development project take?", a: "Custom coded websites take 3 to 5 weeks, Custom merchify stores 4 to 6 weeks, Enterprise solutions 6 to 8 weeks or more. We provide detailed timelines during discovery." },
-  { q: "Do you work with e-commerce platforms other than merchify?", a: "Yes. We work with merchify, Webflow, WooCommerce, and custom React/Next.js builds. We recommend the platform that best fits your goals and budget." },
+  { q: "How long does a typical web development project take?", a: "Custom coded websites take 3 to 5 weeks, Custom Shopify stores 4 to 6 weeks, Enterprise solutions 6 to 8 weeks or more. We provide detailed timelines during discovery." },
+  { q: "Do you work with e-commerce platforms other than Shopify?", a: "Yes. We work with Shopify, Webflow, WooCommerce, and custom React/Next.js builds. We recommend the platform that best fits your goals and budget." },
   { q: "What's included in your website care plans?", a: "Security updates, performance optimisation, backups, monitoring, bug fixes, and ongoing support. Higher tiers include content updates, SEO monitoring, and strategy calls." },
   { q: "Can you migrate my existing website to a new platform?", a: "Yes. We specialise in website migrations, ensuring all your content, SEO rankings, and functionality are preserved during the transition." },
   { q: "Do you provide training for managing my website?", a: "Yes. Every project includes documentation and a handover session so your team can manage and update the site confidently from day one." },
@@ -111,7 +111,7 @@ export default function WebDevelopmentAndECommercePage() {
         <title>Fully Coded Web Development & E-Commerce | Services | NicheUX</title>
         <meta name="description" content="Fully coded websites and Shopify stores built from scratch in React and custom code. No templates, no drag-and-drop, no shortcuts. Fast, secure, and built to scale." />
         <meta property="og:title" content="Web Development & E-Commerce | NicheUX" />
-        <meta property="og:description" content="Custom-coded websites and Shopify stores. React, merchify, and performance optimization. Fast, secure, and built for conversion." />
+        <meta property="og:description" content="Custom-coded websites and Shopify stores. React, Shopify, and performance optimization. Fast, secure, and built for conversion." />
         <meta property="og:url" content="https://www.nicheux.com/web-development-ecommerce" />
         <link rel="canonical" href="https://www.nicheux.com/web-development-ecommerce" />
 
@@ -158,7 +158,7 @@ export default function WebDevelopmentAndECommercePage() {
                   </div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.5, ease: EASE }} style={{ display: "flex", flexDirection: "column", gap: 28, paddingLeft: "clamp(0px,2vw,32px)", borderLeft: "1px solid rgba(255,255,255,0.06)" }}>
-                  {[{ label: "Stack", value: "React · merchify · Next.js" }, { label: "Delivery", value: "2 to 8+ weeks" }, { label: "Starts From", value: price("One-Page Starter Website") }, { label: "Lighthouse", value: "95+ score" }].map(item => (
+                  {[{ label: "Stack", value: "React · Shopify · Next.js" }, { label: "Delivery", value: "2 to 8+ weeks" }, { label: "Starts From", value: price("One-Page Starter Website") }, { label: "Lighthouse", value: "95+ score" }].map(item => (
                     <div key={item.label}>
                       <div style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)", marginBottom: 6 }}>{item.label}</div>
                       <div style={{ fontFamily: "'Source Sans Pro', sans-serif", fontWeight: 600, fontSize: "clamp(14px,1.3vw,17px)", color: "#fff" }}>{item.value}</div>

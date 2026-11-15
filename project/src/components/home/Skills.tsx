@@ -23,7 +23,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     },
     {
       title: "Web Development & E-Commerce",
-      description: "Powerful, high-performing websites and merchify stores built for conversion and brand cohesion.",
+      description: "Powerful, high-performing websites and Shopify stores built for conversion and brand cohesion.",
       icon: Code,
       color: "#89B1CC",
       pastel: "#89B1CC25",

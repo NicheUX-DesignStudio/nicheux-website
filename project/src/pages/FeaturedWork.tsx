@@ -13,7 +13,7 @@ const CLIENT = [
     num: "01",
     title: "Bloom & Brew",
     sub: "Coffee Company",
-    discipline: "Web Development · merchify",
+    discipline: "Web Development · Shopify",
     country: "Canada",
     tagline: "Launched into 3 international markets on day one.",
     story: "Custom Liquid theme from scratch. A pâtissière's brand built for an international audience. every pixel earned its place on a £0-template budget.",

@@ -923,7 +923,7 @@ export default function NandhiniDCPage() {
             <div>
               <span className="text-white/60 text-xs uppercase tracking-widest font-sans-medium block mb-2">Next Case Study</span>
               <h3 className="font-serif-light text-3xl text-white">Bloom & Brew</h3>
-              <p className="text-white/65 font-sans-normal text-sm mt-1">Custom merchify store · Canada</p>
+              <p className="text-white/65 font-sans-normal text-sm mt-1">Custom Shopify store · Canada</p>
             </div>
             <div className="flex flex-wrap gap-3">
               <button

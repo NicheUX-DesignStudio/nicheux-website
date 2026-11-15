@@ -77,7 +77,7 @@ const createUKPricing = (): PricingServices => ({
   'One-Page Starter Website': { min: 495, max: 795, pricingType: 'fixed', complexityLevel: 'simple', valueTier: 'essential' },
   'Hand-Built Website': { min: 1200, max: 3500, pricingType: 'fixed', complexityLevel: 'standard', valueTier: 'professional' },
   'Custom Coded Website': { min: 1200, max: 3500, pricingType: 'fixed', complexityLevel: 'standard', valueTier: 'professional' },
-  'Custom merchify Store': { min: 1500, max: 4500, pricingType: 'fixed', complexityLevel: 'complex', valueTier: 'professional' },
+  'Custom Shopify Store': { min: 1500, max: 4500, pricingType: 'fixed', complexityLevel: 'complex', valueTier: 'professional' },
   'Enterprise Solutions': { min: 5000, max: 15000, pricingType: 'fixed', complexityLevel: 'complex', valueTier: 'enterprise' },
   'Essential Care': { min: 39, max: 59, pricingType: 'fixed', complexityLevel: 'simple', valueTier: 'essential' },
   'Professional Care': { min: 79, max: 129, pricingType: 'fixed', complexityLevel: 'standard', valueTier: 'professional' },

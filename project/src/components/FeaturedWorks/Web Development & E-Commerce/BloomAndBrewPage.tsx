@@ -20,7 +20,7 @@ function BackToTopArrow() {
 
 const SCREENS = [
   { name: 'Homepage', desc: 'Artisan coffee and baked goods. The hero says everything about the brand before you scroll.', laptop: '/images/Desktop-home-design.png', mobile: '/images/Mobile-home-design-web-ecommerce.png' },
-  { name: 'merch All Products', desc: 'Coffee, baked goods, and gifts. Clean product grid with filters and clear category hierarchy.', laptop: '/images/Desktop-products-design.png', mobile: '/images/Mobile-product-design-web-ecommerce.png' },
+  { name: 'Shop All Products', desc: 'Coffee, baked goods, and gifts. Clean product grid with filters and clear category hierarchy.', laptop: '/images/Desktop-products-design.png', mobile: '/images/Mobile-product-design-web-ecommerce.png' },
   { name: 'Our Story', desc: '"From humble beginnings to your favourite coffee spot." The brand story that earns trust after the product earns attention.', laptop: '/images/Desktop-about-design.png', mobile: '/images/Mobile-about-design-web-ecommerce.png' },
 ];
 
@@ -28,7 +28,7 @@ const FLOWS = [
   { src: '/images/bloom-process/flow-primary.png', title: 'Primary Flow', sub: 'Market Discovery → Online Purchase', desc: 'The main conversion path: how a customer discovers Bloom & Brew in a market setting, then completes a purchase online. Mapped to ensure zero friction between physical discovery and digital checkout.' },
   { src: '/images/bloom-process/flow-quote.png', title: 'Event Planner Flow', sub: 'Custom Quote Request Journey', desc: 'B2B path for event planners requesting custom orders. Separate from the direct-consumer flow. different intent, different information needs, different conversion point.' },
   { src: '/images/bloom-process/flow-edge.png', title: 'Edge Case', sub: 'Dietary Restriction → Purchase', desc: 'A user with dietary restrictions searching for suitable products. Designed so filtering and product information handle this without requiring customer support contact.' },
-  { src: '/images/bloom-process/flow-error.png', title: 'Error State', sub: 'Out of Stock Item', desc: 'What happens when a product is out of stock. The flow keeps the user engaged: notify me, browse similar, or continue merchping. never a dead end.' },
+  { src: '/images/bloom-process/flow-error.png', title: 'Error State', sub: 'Out of Stock Item', desc: 'What happens when a product is out of stock. The flow keeps the user engaged: notify me, browse similar, or continue shopping. never a dead end.' },
 ];
 
 function DeviceMockup() {
@@ -102,9 +102,9 @@ export default function BloomAndBrewPage() {
     <>
       <Helmet>
         <title>Bloom and Brew Coffee | Featured Work | NicheUX</title>
-        <meta name="description" content="Custom merchify Liquid theme designed and built by NicheUX for Bloom and Brew Coffee Company, Canada. UX research, user flow mapping, wireframes, and full merchify development. Launched in Canada, UK, and Ireland in 6 weeks with a perfect 100/100 SEO score." />
-        <meta property="og:title" content="Bloom and Brew Coffee. Custom merchify Website by NicheUX" />
-        <meta property="og:description" content="A custom merchify Liquid store for an artisan coffee and baked goods brand. Built from scratch for Canada, UK, and Ireland. 6 weeks from brief to launch." />
+        <meta name="description" content="Custom Shopify Liquid theme designed and built by NicheUX for Bloom and Brew Coffee Company, Canada. UX research, user flow mapping, wireframes, and full Shopify development. Launched in Canada, UK, and Ireland in 6 weeks with a perfect 100/100 SEO score." />
+        <meta property="og:title" content="Bloom and Brew Coffee. Custom Shopify Website by NicheUX" />
+        <meta property="og:description" content="A custom Shopify Liquid store for an artisan coffee and baked goods brand. Built from scratch for Canada, UK, and Ireland. 6 weeks from brief to launch." />
       </Helmet>
 
       <div style={{ background: BLACK, overflow: "hidden" }}>
@@ -120,7 +120,7 @@ export default function BloomAndBrewPage() {
           </div>
           <motion.div style={{ opacity: heroOpacity }} className="relative z-10 max-w-6xl mx-auto px-6 md:px-8 w-full">
             <motion.div initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} transition={{duration:0.6,delay:0.2}} className="mb-4 flex items-center gap-3">
-              <span className="inline-block px-3 py-1 bg-[#E9C672]/15 border border-[#E9C672]/30 rounded-full text-[#E9C672] text-xs font-sans-medium uppercase tracking-widest">Web Development · merchify · Canada</span>
+              <span className="inline-block px-3 py-1 bg-[#E9C672]/15 border border-[#E9C672]/30 rounded-full text-[#E9C672] text-xs font-sans-medium uppercase tracking-widest">Web Development · Shopify · Canada</span>
               <span className="text-white/20 text-xs font-sans-normal">Production № 01</span>
             </motion.div>
             <motion.h1 initial={{opacity:0,y:40}} animate={{opacity:1,y:0}} transition={{duration:1,delay:0.4}} className="font-serif-light text-white leading-[0.88] mb-6" style={{fontSize:'clamp(48px,8vw,112px)',letterSpacing:'-0.04em'}}>
@@ -128,7 +128,7 @@ export default function BloomAndBrewPage() {
               <span className="block italic text-[#E9C672]" style={{fontSize:'0.55em', marginTop:'0.15em'}}>Coffee Company</span>
             </motion.h1>
             <motion.p initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} transition={{duration:0.8,delay:0.6}} className="text-white/50 font-sans-normal text-lg md:text-xl max-w-xl leading-relaxed">
-              Custom merchify Liquid theme. A pâtissière's brand built for an international audience. launched into 3 markets on day one.
+              Custom Shopify Liquid theme. A pâtissière's brand built for an international audience. launched into 3 markets on day one.
             </motion.p>
           </motion.div>
         </section>
@@ -136,7 +136,7 @@ export default function BloomAndBrewPage() {
         {/* TITLE BLOCK */}
         <section className="py-16 md:py-20 px-6 md:px-8 border-b border-white/5">
           <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
-            {[{label:'Client',value:'Bloom & Brew Coffee Co.'},{label:'Country',value:'Canada'},{label:'Platform',value:'Custom merchify Liquid'},{label:'Live site',value:'bloomandbrewcoffeecompany.ca'}].map(item=>(
+            {[{label:'Client',value:'Bloom & Brew Coffee Co.'},{label:'Country',value:'Canada'},{label:'Platform',value:'Custom Shopify Liquid'},{label:'Live site',value:'bloomandbrewcoffeecompany.ca'}].map(item=>(
               <div key={item.label}><p className="text-white/30 text-xs uppercase tracking-widest font-sans-medium mb-1">{item.label}</p><p className="text-white font-serif-light text-lg">{item.value}</p></div>
             ))}
           </div>
@@ -148,11 +148,11 @@ export default function BloomAndBrewPage() {
             <motion.div initial={{opacity:0,x:-30}} whileInView={{opacity:1,x:0}} transition={{duration:0.8}} viewport={{once:true}}>
               <span className="text-[#E9C672]/60 text-xs uppercase tracking-widest font-sans-medium block mb-4">The Brief</span>
               <h2 className="font-serif-light text-4xl md:text-5xl text-white mb-6 leading-tight">She had a brand that people genuinely loved. She just had no website to sell from.</h2>
-              <p className="text-white/60 font-sans-normal text-lg leading-relaxed">Bloom and Brew is run by a pâtissière who puts real thought into everything she makes. Her Instagram had an engaged, loyal following that loved her. But she had nowhere to actually sell online. When she came to NicheUX, the ask was clear: build a merchify store from zero that carries the same warmth her social media had, and launch it across Canada, the UK, and Ireland in one go. No template. No shortcuts. A real brand with a real online home.</p>
+              <p className="text-white/60 font-sans-normal text-lg leading-relaxed">Bloom and Brew is run by a pâtissière who puts real thought into everything she makes. Her Instagram had an engaged, loyal following that loved her. But she had nowhere to actually sell online. When she came to NicheUX, the ask was clear: build a Shopify store from zero that carries the same warmth her social media had, and launch it across Canada, the UK, and Ireland in one go. No template. No shortcuts. A real brand with a real online home.</p>
             </motion.div>
             <motion.div initial={{opacity:0,x:30}} whileInView={{opacity:1,x:0}} transition={{duration:0.8}} viewport={{once:true}}>
               <span className="text-[#E9C672]/60 text-xs uppercase tracking-widest font-sans-medium block mb-4">The Challenge</span>
-              <p className="text-white/60 font-sans-normal text-lg leading-relaxed mb-6">merchify's template library is designed so anyone can launch quickly. The tradeoff is that every template store starts looking exactly like every other template store. Bloom and Brew deserved better than that. The brief called for custom merchify Liquid code written from scratch, three active markets at launch, and a perfect SEO score. Six weeks to pull it off.</p>
+              <p className="text-white/60 font-sans-normal text-lg leading-relaxed mb-6">Shopify's template library is designed so anyone can launch quickly. The tradeoff is that every template store starts looking exactly like every other template store. Bloom and Brew deserved better than that. The brief called for custom Shopify Liquid code written from scratch, three active markets at launch, and a perfect SEO score. Six weeks to pull it off.</p>
               <div className="space-y-3">
                 {['Zero templates. Custom Liquid from line one','SEO 100/100 across all pages','Mobile-first, fully responsive','6 weeks concept to live'].map(item=>(
                   <div key={item} className="flex items-start gap-3"><div className="w-1 h-1 rounded-full bg-[#E9C672] mt-2.5 flex-shrink-0" /><span className="text-white/50 font-sans-normal text-sm">{item}</span></div>
@@ -171,15 +171,15 @@ export default function BloomAndBrewPage() {
               <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} viewport={{once:true}} className="mb-12">
                 <div className="flex items-center gap-3 mb-3"><div className="w-8 h-px" style={{background:INK}} /><span style={{color:INK}} className="text-xs font-sans-medium uppercase tracking-widest">Social Media Analysis</span></div>
                 <h2 className="font-serif-light text-4xl md:text-5xl" style={{color:INK}}>Before building anything, we needed to understand exactly what made people feel the way they did about this brand on Instagram.</h2>
-                <p className="font-sans-normal text-lg mt-4 max-w-2xl" style={{color:`${INK}80`}}>Bloom and Brew had no website. Just a social media presence that people genuinely loved. We went through every post, every comment, every reply. People wrote things like "this feels like Sunday morning" and "I need this in my life." That emotional pull, that warmth, that sense of care. It lived entirely in the Instagram. Our job was to understand what created it, then carry it into a merchify store so it would still be there when someone went to actually buy something.</p>
+                <p className="font-sans-normal text-lg mt-4 max-w-2xl" style={{color:`${INK}80`}}>Bloom and Brew had no website. Just a social media presence that people genuinely loved. We went through every post, every comment, every reply. People wrote things like "this feels like Sunday morning" and "I need this in my life." That emotional pull, that warmth, that sense of care. It lived entirely in the Instagram. Our job was to understand what created it, then carry it into a Shopify store so it would still be there when someone went to actually buy something.</p>
               </motion.div>
               <div className="grid md:grid-cols-3 gap-6">
                 {[
                   {
                     name: 'The Instagram Follower', type: 'Loves the brand, ready to buy',
                     goals: 'They have been following Bloom and Brew for a while. They love the aesthetic, the warmth, the way every post makes them want to be in that kitchen. They are ready to order. They just need somewhere to go.',
-                    pain: 'There was nowhere to buy. No website, no online merch. They could DM, but that is friction. Impulse buys die at the moment of friction.',
-                    need: 'A merch that feels exactly like the Instagram. The same warmth, the same voice, a straightforward way to actually purchase.',
+                    pain: 'There was nowhere to buy. No website, no online shop. They could DM, but that is friction. Impulse buys die at the moment of friction.',
+                    need: 'A shop that feels exactly like the Instagram. The same warmth, the same voice, a straightforward way to actually purchase.',
                     accent: GOLD,
                   },
                   {

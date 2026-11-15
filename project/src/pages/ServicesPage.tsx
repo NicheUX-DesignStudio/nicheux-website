@@ -32,8 +32,8 @@ const SERVICES = [
   {
     title: "Custom Web Development",
     subtitle: "Hand-coded sites that load fast and convert hard",
-    description: "React, Next.js, Astro, and merchify stores built from scratch. No templates, no shortcuts. Every line of code earns its place, tuned for the metrics you actually care about.",
-    features: ["React/Next.js", "merchify", "Performance", "E-Commerce"],
+    description: "React, Next.js, Astro, and Shopify stores built from scratch. No templates, no shortcuts. Every line of code earns its place, tuned for the metrics you actually care about.",
+    features: ["React/Next.js", "Shopify", "Performance", "E-Commerce"],
     accent: BLUE,
     link: "/web-development-ecommerce",
     cta: "Explore Development Services",
