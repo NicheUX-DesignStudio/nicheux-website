@@ -158,7 +158,7 @@ export default function WebDevelopmentAndECommercePage() {
                   </div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.5, ease: EASE }} style={{ display: "flex", flexDirection: "column", gap: 28, paddingLeft: "clamp(0px,2vw,32px)", borderLeft: "1px solid rgba(255,255,255,0.06)" }}>
-                  {[{ label: "Stack", value: "React · merchify · Next.js" }, { label: "Delivery", value: "2 to 8+ weeks" }, { label: "Starts From", value: price("Custom merchify Store") }, { label: "Lighthouse", value: "95+ score" }].map(item => (
+                  {[{ label: "Stack", value: "React · merchify · Next.js" }, { label: "Delivery", value: "2 to 8+ weeks" }, { label: "Starts From", value: price("One-Page Starter Website") }, { label: "Lighthouse", value: "95+ score" }].map(item => (
                     <div key={item.label}>
                       <div style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)", marginBottom: 6 }}>{item.label}</div>
                       <div style={{ fontFamily: "'Source Sans Pro', sans-serif", fontWeight: 600, fontSize: "clamp(14px,1.3vw,17px)", color: "#fff" }}>{item.value}</div>
@@ -264,6 +264,22 @@ export default function WebDevelopmentAndECommercePage() {
               <Eyebrow>Transparent Pricing</Eyebrow>
               <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(36px,5vw,72px)", lineHeight: 1.0, letterSpacing: "-0.025em", color: "#fff", margin: "20px 0 20px 0" }}>No hidden fees, <em style={{ color: ACCENT }}>no surprises.</em></h2>
               <p style={{ fontFamily: "'Source Sans Pro', sans-serif", fontWeight: 400, fontSize: "clamp(15px,1.5vw,18px)", lineHeight: 1.85, color: "rgba(255,255,255,0.55)", margin: 0 }}>Choose the service that fits your needs and budget.</p>
+            </motion.div>
+            {/* One-Page Starter Website: the affordable way in for small local businesses */}
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: EASE }} viewport={{ once: true }} className="starter-webdev" style={{ background: PARCHMENT, borderTop: `4px solid ${GOLD}`, padding: "clamp(28px,3.5vw,48px)", marginBottom: "clamp(12px,2vw,20px)", display: "grid", gridTemplateColumns: "1.1fr 1fr auto", gap: "clamp(24px,3vw,48px)", alignItems: "center" }}>
+              <style>{`@media(max-width:900px){.starter-webdev{grid-template-columns:1fr!important}}`}</style>
+              <div>
+                <p style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: INK_MUTED, margin: "0 0 10px 0" }}>Just getting started?</p>
+                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(26px,2.8vw,36px)", lineHeight: 1.05, color: INK, margin: "0 0 10px 0" }}>One-Page Starter Website</h3>
+                <div style={{ fontFamily: "'Source Sans Pro', sans-serif", fontWeight: 600, fontSize: "clamp(18px,1.8vw,24px)", color: INK, margin: "0 0 6px 0" }}>{price("One-Page Starter Website")}</div>
+                <p style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: 13, color: INK_MUTED, margin: 0, lineHeight: 1.6 }}>About 1 to 2 weeks. Made for cafes, salons, home bakers and trades who want to be found on Google without a big first spend.</p>
+              </div>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
+                {["Your menu or services, photos and opening times", "Google map and a contact or booking button", "Mobile-first and fast to load", "Basic SEO so Google can find you", "Room to grow into a full website later"].map(f => (
+                  <li key={f} style={{ display: "flex", alignItems: "flex-start", gap: 10, fontFamily: "'Source Sans Pro', sans-serif", fontSize: 14, color: INK, lineHeight: 1.5 }}><span style={{ width: 5, height: 5, borderRadius: "50%", background: GOLD, flexShrink: 0, marginTop: 7 }} />{f}</li>
+                ))}
+              </ul>
+              <button onClick={() => go(`/contact?selection=${encodeURIComponent("One-Page Starter Website")}`)} style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.24em", textTransform: "uppercase", color: PARCHMENT, background: INK, border: `1px solid ${INK}`, padding: "14px 24px", cursor: "pointer", whiteSpace: "nowrap" }}>Start Small</button>
             </motion.div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "clamp(12px,2vw,20px)", marginBottom: "clamp(64px,8vw,112px)" }} className="tiers-webdev">
               <style>{`@media(max-width:900px){.tiers-webdev{grid-template-columns:1fr!important}}`}</style>

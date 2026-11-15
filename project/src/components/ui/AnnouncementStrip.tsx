@@ -9,7 +9,7 @@ const INK = "#0A0A0A";
 
 const MESSAGES = [
   { label: "Now Booking", body: "Q3 2026 productions · limited availability", cta: "Book a call", href: "/contact", bg: GOLD },
-  { label: "On Stage", body: "Custom-coded websites from £3,200", cta: "See packages", href: "/web-development-ecommerce", bg: LAVENDER },
+  { label: "On Stage", body: "Websites from £495, built for small businesses", cta: "See packages", href: "/web-development-ecommerce", bg: LAVENDER },
   { label: "Encore", body: "Full brand identity systems for studios and founders", cta: "Open the brief", href: "/print-brand-design", bg: BLUE },
 ];
 

@@ -24,31 +24,31 @@ const KB: { keys: string[]; answer: string }[] = [
   },
   {
     keys: ["price", "pricing", "cost", "how much", "budget", "rates", "fee", "quote", "charge", "afford"],
-    answer: "Pricing depends on your location and project scope. We adjust for purchasing power across 150+ countries.\n\nRough UK prices:\n• Logo design from £350\n• Brand identity from £750\n• Custom coded website from £1,800\n• Shopify store from £1,200\n• Brochure from £200\n• Social media starter plan from £350/month\n• Motion graphics from £450\n• Character design from £200\n\nFor an exact quote, send a brief at /contact. We respond within 24 hours.",
+    answer: "Pricing depends on your location and project scope. We adjust for purchasing power across 150+ countries.\n\nRough UK prices:\n• One-page starter website from £495\n• Logo design from £250\n• Starter brand kit from £350\n• Custom coded website from £1,200\n• Shopify store from £1,500\n• Brochure from £180\n• Social media starter plan from £349/month\n• Logo animation from £150\n• Character design from £130\n\nFor an exact quote, send a brief at /contact. We respond within 24 hours.",
   },
   {
     keys: ["strategy", "ux", "ui", "user experience", "user interface", "wireframe", "audit", "research", "design system"],
-    answer: "Strategy and UI/UX Design:\n• UX Audit and Strategy from £450\n• Complete UI/UX Design from £1,200\n• Design System from £2,500\n• Free 30-min consultation\n\nWe map every user journey before touching pixels. Most studios skip this step. We do not.\n\nWant to start with an audit or go straight to design?",
+    answer: "Strategy and UI/UX Design:\n• UX Audit and Strategy from £350\n• Complete UI/UX Design from £1,500\n• Design System from £900\n• Free 30-min consultation\n\nWe map every user journey before touching pixels. Most studios skip this step. We do not.\n\nWant to start with an audit or go straight to design?",
   },
   {
     keys: ["web", "website", "shopify", "ecommerce", "e-commerce", "react", "develop", "landing page", "care plan", "maintenance"],
-    answer: "Web Development and E-Commerce:\n• Custom coded website from £1,800\n• Custom Shopify store from £1,200\n• Enterprise solutions from £4,500\n\nCare Plans (ongoing maintenance):\n• Essential from £200/month\n• Professional from £400/month\n• Enterprise from £800/month\n\nAll sites are production-ready, mobile-first, and fast. What type of site are you building?",
+    answer: "Web Development and E-Commerce:\n• One-page starter website from £495\n• Custom coded website from £1,200\n• Custom Shopify store from £1,500\n• Enterprise solutions from £5,000\n\nCare Plans (ongoing maintenance):\n• Essential from £39/month\n• Professional from £79/month\n• Enterprise from £179/month\n\nAll sites are production-ready, mobile-first, and fast. What type of site are you building?",
   },
   {
     keys: ["print", "brand", "logo", "identity", "brochure", "flyer", "poster", "business card", "signage", "menu", "stationery", "brand kit"],
-    answer: "Print and Brand Design:\n• Logo Design from £350\n• Complete Brand Identity from £750\n• Brochure (4-page) from £200\n• Flyer from £120\n• Poster (A2) from £180\n• Business Cards from £95\n• Menu design from £200\n• Pull-up Banner from £150\n\nEvery file is built print-ready: bleeds, CMYK, correct resolution. No reprints.\n\nWhat do you need designed?",
+    answer: "Print and Brand Design:\n• Logo Design from £250\n• Complete Brand Identity from £1,200\n• Brochure (4-page) from £180\n• Flyer from £50\n• Poster (A2) from £60\n• Business Cards from £45\n• Menu design from £120\n• Pull-up Banner from £100\n\nEvery file is built print-ready: bleeds, CMYK, correct resolution. No reprints.\n\nWhat do you need designed?",
   },
   {
     keys: ["social media", "instagram", "facebook", "linkedin", "content", "management", "marketing", "tiktok", "reels", "posts"],
-    answer: "Social Media Marketing plans:\n• Starter from £350/month (8 posts, 2 reels, basic engagement)\n• Professional from £650/month (16 posts, 6 reels, full management)\n• Enterprise from £1,200/month (daily content, ads, full growth strategy)\n\nWe handle strategy, content creation, scheduling, and reporting.\n\nWhat platforms are you on?",
+    answer: "Social Media Marketing plans:\n• Starter from £349/month (8 posts, 2 reels, basic engagement)\n• Professional from £649/month (16 posts, 6 reels, full management)\n• Enterprise from £1,299/month (daily content, ads, full growth strategy)\n\nWe handle strategy, content creation, scheduling, and reporting.\n\nWhat platforms are you on?",
   },
   {
     keys: ["motion", "animation", "video", "explainer", "ai video", "ai visual", "generative", "reel", "motion graphics"],
-    answer: "Motion Design and AI Visuals:\n• 30s Explainer Video from £1,350\n• Logo Animation from £450\n• Social Media Video Pack from £1,150\n• Character Animation from £1,900\n• AI Video Generation from £400\n• AI Innovation Suite from £900\n\nWe combine traditional motion craft with AI generation.\n\nWhat is the project?",
+    answer: "Motion Design and AI Visuals:\n• 30s Explainer Video from £600\n• Logo Animation from £150\n• Social Media Video Pack from £400\n• Character Animation from £800\n• AI Video Generation from £250\n• AI Innovation Suite from £630\n\nWe combine traditional motion craft with AI generation.\n\nWhat is the project?",
   },
   {
     keys: ["illustration", "character", "comic", "drawing", "art", "book illustration", "children", "concept art", "game", "sequential"],
-    answer: "Illustration and Character Design:\n• Single Character Design from £200\n• Character Turnaround Sheet from £350\n• Children's Book Package from £800\n• Game Character Package from £600\n• Editorial Illustration from £150 per piece\n• Book Cover from £300\n\nIndhupriya leads illustration. Her work spans publishing and gaming across the UK and Asia.\n\nWhat do you need illustrated?",
+    answer: "Illustration and Character Design:\n• Single Character Design from £130\n• Character Turnaround Sheet from £120\n• Children's Book Package from £760\n• Game Character Package from £320\n• Editorial Illustration from £120 per piece\n• Book Cover from £210\n\nIndhupriya leads illustration. Her work spans publishing and gaming across the UK and Asia.\n\nWhat do you need illustrated?",
   },
   {
     keys: ["shop", "artifact", "mug", "tee", "hoodie", "frame", "book", "commission", "personalised", "custom product"],
@@ -128,7 +128,7 @@ const KB: { keys: string[]; answer: string }[] = [
   },
   {
     keys: ["minimum", "cheapest", "budget", "afford", "expensive", "cheap", "small project"],
-    answer: "Our smallest projects start from around £95 (business cards) and go up based on scope.\n\nWe adjust pricing for 150+ countries based on purchasing power. Share your budget on the Contact page and we will tell you honestly what is achievable within it.",
+    answer: "Our smallest projects start from around £45 (business cards) and go up based on scope.\n\nWe adjust pricing for 150+ countries based on purchasing power. Share your budget on the Contact page and we will tell you honestly what is achievable within it.",
   },
   {
     keys: ["nft", "crypto", "web3", "app", "mobile", "ios", "android"],
