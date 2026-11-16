@@ -2,12 +2,14 @@
 
 Only free-to-enter awards are listed as "Enter". Nothing has been submitted yet. Every answer below needs Thevaki's OK on the exact text first.
 
+> **Update 16 Nov (from Thevaki):** NicheUX isn't a registered company and turnover so far is about £300. We will **not** enter business awards (FSB, Small Awards, SME Bedfordshire) on that basis. Those judge trading results, and an entry now would be weak. Revisit them in 2027 once there are paid projects and a year of trading. Until then, recognition comes from design features, where the **work** is judged, not the turnover.
+
 ## Shortlist
 
 | # | Where | Fee | Opens / closes | Category we'd enter | Why we fit | Status |
 |---|---|---|---|---|---|---|
-| 1 | **FSB + HSBC Small Business Growth Awards** (get.fsb.org.uk/awards) | Free | Opens 1 Dec 2026, closes 22 Jan 2027 | Start-up Business (trading under 2 years, under £1m) and/or Young Entrepreneur (owner 18 to 30) | Small UK studio, clients in 3 countries, real launches | Enter on 1 Dec |
-| 2 | **The Small Awards** by Small Business Britain (thesmallawards.uk) | Free | Opens 1 Dec 2026, closes 28 Feb 2027 | New Kid On The Block (under 18 months) or At Your Service, plus Digital Star | Same as above; strong press reach for shortlisted businesses | Enter on 1 Dec |
+| 1 | **FSB + HSBC Small Business Growth Awards** (get.fsb.org.uk/awards) | Free | Opens 1 Dec 2026, closes 22 Jan 2027 | Start-up Business (trading under 2 years, under £1m) and/or Young Entrepreneur (owner 18 to 30) | Small UK studio, clients in 3 countries, real launches | On hold (see update) |
+| 2 | **The Small Awards** by Small Business Britain (thesmallawards.uk) | Free | Opens 1 Dec 2026, closes 28 Feb 2027 | New Kid On The Block (under 18 months) or At Your Service, plus Digital Star | Same as above; strong press reach for shortlisted businesses | On hold (see update) |
 | 3 | **Siteinspire** (siteinspire.com/submissions/new) | Free, account needed | Rolling | Bloom & Brew store, nicheux.com | Curated gallery read by designers and agencies | Ready to submit |
 | 4 | **Lapa Ninja** (lapa.ninja) | Free | Rolling | nicheux.com, NandhiniDC | Landing page gallery, gives a backlink | Ready to submit |
 | 5 | **Land-book** (land-book.com) | Free | Rolling | nicheux.com, Bloom & Brew | Large gallery, gives a backlink | Ready to submit |
