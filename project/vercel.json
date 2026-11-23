@@ -160,5 +160,12 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/check",
+      "destination": "/contact?selection=Free%20Website%20Check%20%28send%20your%20link%29&hint=My%20website%20link%20is%3A%20&source=Social%20Media",
+      "permanent": false
+    }
   ]
 }
