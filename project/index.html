@@ -1,26 +1,43 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google AdSense: ads load on every page with real content (home, services, work,
-         journal, gallery, about, contact, shop). Legal pages and 404s never load ads, because
-         AdSense does not allow ads on pages without publisher content. -->
+    <!-- Google AdSense (policy: no ads on screens without publisher content).
+         Ads only load on pages that are mostly written content: home, the six service pages,
+         case studies (/featured-work/...) and journal articles (/blog/...).
+         Never on: the About intro screen ("the void" curtain), contact form, list or index
+         pages (/blog, /featured-work, /gallery), the shop, legal pages, 404s or loading screens.
+         The script also waits until the page has actually rendered real text before loading,
+         so an empty SPA shell or spinner can never carry an ad. -->
     <script>
       (function() {
         var CONTENT_PREFIXES = [
-          '/about', '/services', '/featured-work', '/strategy-design', '/web-development-ecommerce',
-          '/print-brand-design', '/motion-design-ai-visuals', '/social-media-marketing',
-          '/illustration-character-design', '/contact', '/blog', '/gallery', '/merch', '/shop'
+          '/strategy-design', '/web-development-ecommerce', '/print-brand-design',
+          '/motion-design-ai-visuals', '/social-media-marketing', '/illustration-character-design',
+          '/featured-work/', '/blog/'
         ];
         var path = window.location.pathname;
         var allowed = path === '/' || CONTENT_PREFIXES.some(function(p) { return path.indexOf(p) === 0; });
         window.__nxAdsAllowed = allowed;
-        if (allowed) {
+        if (!allowed) return;
+        var tries = 0;
+        function hasContent() {
+          var main = document.getElementById('main-content') || document.querySelector('main');
+          if (!main) return false;
+          var words = (main.innerText || '').split(/\s+/).filter(Boolean).length;
+          return words >= 300 && !/404|Page Not Found/.test(document.title + (main.innerText || '').slice(0, 200));
+        }
+        function load() {
           var s = document.createElement('script');
           s.async = true;
           s.crossOrigin = 'anonymous';
           s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1611551663279106';
           document.head.appendChild(s);
         }
+        function check() {
+          if (hasContent()) { load(); return; }
+          if (++tries < 20) setTimeout(check, 500);
+        }
+        window.addEventListener('load', function() { setTimeout(check, 800); });
       })();
     </script>
     <!-- End Google AdSense -->
