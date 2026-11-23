@@ -8,6 +8,8 @@
     "dev:backend": "nodemon dev-server.js",
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "build": "vite build",
+    "prerender": "node scripts/prerender.mjs",
+    "release": "vite build && node scripts/prerender.mjs && vite build",
     "preview": "vite preview",
     "start": "node dev-server.js",
     "serve": "npm run build && npm start"
@@ -42,6 +44,7 @@
     "concurrently": "^9.2.1",
     "nodemon": "^3.0.2",
     "postcss": "^8.5.6",
+    "puppeteer-core": "^25.18.1",
     "sharp": "^0.34.5",
     "tailwindcss": "^3.4.19",
     "terser": "^5.44.1",

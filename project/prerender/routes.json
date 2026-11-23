@@ -1,0 +1,122 @@
+[
+  {
+    "route": "/",
+    "file": "index"
+  },
+  {
+    "route": "/strategy-design",
+    "file": "strategy-design"
+  },
+  {
+    "route": "/web-development-ecommerce",
+    "file": "web-development-ecommerce"
+  },
+  {
+    "route": "/print-brand-design",
+    "file": "print-brand-design"
+  },
+  {
+    "route": "/motion-design-ai-visuals",
+    "file": "motion-design-ai-visuals"
+  },
+  {
+    "route": "/social-media-marketing",
+    "file": "social-media-marketing"
+  },
+  {
+    "route": "/illustration-character-design",
+    "file": "illustration-character-design"
+  },
+  {
+    "route": "/blog",
+    "file": "blog"
+  },
+  {
+    "route": "/blog/where-design-meets-storytelling",
+    "file": "blog__where-design-meets-storytelling"
+  },
+  {
+    "route": "/blog/bloom-brew-how-we-built-it",
+    "file": "blog__bloom-brew-how-we-built-it"
+  },
+  {
+    "route": "/blog/ssjc-gaming-identity-junior-squash",
+    "file": "blog__ssjc-gaming-identity-junior-squash"
+  },
+  {
+    "route": "/blog/nandhinidc-website-architecture-storytelling",
+    "file": "blog__nandhinidc-website-architecture-storytelling"
+  },
+  {
+    "route": "/blog/eight-slides-by-4am",
+    "file": "blog__eight-slides-by-4am"
+  },
+  {
+    "route": "/blog/what-ai-actually-cant-do-for-your-brand",
+    "file": "blog__what-ai-actually-cant-do-for-your-brand"
+  },
+  {
+    "route": "/blog/why-is-my-website-not-showing-up-on-google",
+    "file": "blog__why-is-my-website-not-showing-up-on-google"
+  },
+  {
+    "route": "/blog/what-to-put-on-a-one-page-website-for-a-cafe-salon-or-trades-business",
+    "file": "blog__what-to-put-on-a-one-page-website-for-a-cafe-salon-or-trades-business"
+  },
+  {
+    "route": "/featured-work",
+    "file": "featured-work"
+  },
+  {
+    "route": "/featured-work/bloom-brew",
+    "file": "featured-work__bloom-brew"
+  },
+  {
+    "route": "/featured-work/nandhinidc",
+    "file": "featured-work__nandhinidc"
+  },
+  {
+    "route": "/featured-work/kishore-portfolio",
+    "file": "featured-work__kishore-portfolio"
+  },
+  {
+    "route": "/featured-work/ssjc-tournament",
+    "file": "featured-work__ssjc-tournament"
+  },
+  {
+    "route": "/featured-work/sooraj-linkedin",
+    "file": "featured-work__sooraj-linkedin"
+  },
+  {
+    "route": "/featured-work/sooraj-wanted",
+    "file": "featured-work__sooraj-wanted"
+  },
+  {
+    "route": "/featured-work/sooraj-candy-shop",
+    "file": "featured-work__sooraj-candy-shop"
+  },
+  {
+    "route": "/featured-work/visual-communication",
+    "file": "featured-work__visual-communication"
+  },
+  {
+    "route": "/featured-work/conceptual-art",
+    "file": "featured-work__conceptual-art"
+  },
+  {
+    "route": "/featured-work/sequential-art",
+    "file": "featured-work__sequential-art"
+  },
+  {
+    "route": "/featured-work/ai-canvas",
+    "file": "featured-work__ai-canvas"
+  },
+  {
+    "route": "/featured-work/midas",
+    "file": "featured-work__midas"
+  },
+  {
+    "route": "/featured-work/london-tube-reel",
+    "file": "featured-work__london-tube-reel"
+  }
+]

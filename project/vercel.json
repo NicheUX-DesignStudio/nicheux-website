@@ -14,8 +14,124 @@
       "destination": "/api/server"
     },
     {
+      "source": "/strategy-design",
+      "destination": "/_pre/strategy-design.html"
+    },
+    {
+      "source": "/web-development-ecommerce",
+      "destination": "/_pre/web-development-ecommerce.html"
+    },
+    {
+      "source": "/print-brand-design",
+      "destination": "/_pre/print-brand-design.html"
+    },
+    {
+      "source": "/motion-design-ai-visuals",
+      "destination": "/_pre/motion-design-ai-visuals.html"
+    },
+    {
+      "source": "/social-media-marketing",
+      "destination": "/_pre/social-media-marketing.html"
+    },
+    {
+      "source": "/illustration-character-design",
+      "destination": "/_pre/illustration-character-design.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/_pre/blog.html"
+    },
+    {
+      "source": "/blog/where-design-meets-storytelling",
+      "destination": "/_pre/blog__where-design-meets-storytelling.html"
+    },
+    {
+      "source": "/blog/bloom-brew-how-we-built-it",
+      "destination": "/_pre/blog__bloom-brew-how-we-built-it.html"
+    },
+    {
+      "source": "/blog/ssjc-gaming-identity-junior-squash",
+      "destination": "/_pre/blog__ssjc-gaming-identity-junior-squash.html"
+    },
+    {
+      "source": "/blog/nandhinidc-website-architecture-storytelling",
+      "destination": "/_pre/blog__nandhinidc-website-architecture-storytelling.html"
+    },
+    {
+      "source": "/blog/eight-slides-by-4am",
+      "destination": "/_pre/blog__eight-slides-by-4am.html"
+    },
+    {
+      "source": "/blog/what-ai-actually-cant-do-for-your-brand",
+      "destination": "/_pre/blog__what-ai-actually-cant-do-for-your-brand.html"
+    },
+    {
+      "source": "/blog/why-is-my-website-not-showing-up-on-google",
+      "destination": "/_pre/blog__why-is-my-website-not-showing-up-on-google.html"
+    },
+    {
+      "source": "/blog/what-to-put-on-a-one-page-website-for-a-cafe-salon-or-trades-business",
+      "destination": "/_pre/blog__what-to-put-on-a-one-page-website-for-a-cafe-salon-or-trades-business.html"
+    },
+    {
+      "source": "/featured-work",
+      "destination": "/_pre/featured-work.html"
+    },
+    {
+      "source": "/featured-work/bloom-brew",
+      "destination": "/_pre/featured-work__bloom-brew.html"
+    },
+    {
+      "source": "/featured-work/nandhinidc",
+      "destination": "/_pre/featured-work__nandhinidc.html"
+    },
+    {
+      "source": "/featured-work/kishore-portfolio",
+      "destination": "/_pre/featured-work__kishore-portfolio.html"
+    },
+    {
+      "source": "/featured-work/ssjc-tournament",
+      "destination": "/_pre/featured-work__ssjc-tournament.html"
+    },
+    {
+      "source": "/featured-work/sooraj-linkedin",
+      "destination": "/_pre/featured-work__sooraj-linkedin.html"
+    },
+    {
+      "source": "/featured-work/sooraj-wanted",
+      "destination": "/_pre/featured-work__sooraj-wanted.html"
+    },
+    {
+      "source": "/featured-work/sooraj-candy-shop",
+      "destination": "/_pre/featured-work__sooraj-candy-shop.html"
+    },
+    {
+      "source": "/featured-work/visual-communication",
+      "destination": "/_pre/featured-work__visual-communication.html"
+    },
+    {
+      "source": "/featured-work/conceptual-art",
+      "destination": "/_pre/featured-work__conceptual-art.html"
+    },
+    {
+      "source": "/featured-work/sequential-art",
+      "destination": "/_pre/featured-work__sequential-art.html"
+    },
+    {
+      "source": "/featured-work/ai-canvas",
+      "destination": "/_pre/featured-work__ai-canvas.html"
+    },
+    {
+      "source": "/featured-work/midas",
+      "destination": "/_pre/featured-work__midas.html"
+    },
+    {
+      "source": "/featured-work/london-tube-reel",
+      "destination": "/_pre/featured-work__london-tube-reel.html"
+    },
+    {
       "source": "/((?!api/|assets/).*)",
-      "destination": "/index.html"
+      "destination": "/spa-shell.html"
     }
   ],
   "headers": [
