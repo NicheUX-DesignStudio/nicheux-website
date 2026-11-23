@@ -75,7 +75,7 @@ export default function Footer() {
 
           <div style={{ flex: 1, minWidth: 260 }}>
             <span style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: 9, fontWeight: 700, letterSpacing: "0.36em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", display: "block", marginBottom: 28 }}>
-              Based in United Kingdom
+              Based in Luton, United Kingdom
             </span>
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(44px,6.5vw,96px)", lineHeight: 0.9, letterSpacing: "-0.04em", color: "#fff", margin: "0 0 36px" }}>
               Every story<br />
@@ -93,13 +93,13 @@ export default function Footer() {
           {/* Right: contact + social */}
           <div style={{ display: "flex", flexDirection: "column", gap: 20, alignItems: "flex-end", minWidth: 220 }}>
             <a href="mailto:hellonicheux@gmail.com"
-              style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(16px,1.8vw,22px)", color: "rgba(255,255,255,0.85)", letterSpacing: "-0.01em", textDecoration: "none", transition: "color 0.2s" }}
+              style={{ display: "inline-block", padding: "10px 0", fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(16px,1.8vw,22px)", color: "rgba(255,255,255,0.85)", letterSpacing: "-0.01em", textDecoration: "none", transition: "color 0.2s" }}
               onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = BLUE; }}
               onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.85)"; }}>
               hellonicheux@gmail.com
             </a>
             <a href="https://wa.me/447342736804" target="_blank" rel="noopener noreferrer"
-              style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: 13, fontWeight: 400, color: "rgba(255,255,255,0.7)", textDecoration: "none", letterSpacing: "0.04em", transition: "color 0.2s" }}
+              style={{ display: "inline-block", padding: "10px 0", fontFamily: "'Source Sans Pro', sans-serif", fontSize: 13, fontWeight: 400, color: "rgba(255,255,255,0.7)", textDecoration: "none", letterSpacing: "0.04em", transition: "color 0.2s" }}
               onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#25D366"; }}
               onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.7)"; }}>
               +44 7342 736804
@@ -172,7 +172,7 @@ export default function Footer() {
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-            {["24h Quote Response", "No Lock-in Contracts", "100% UK-Based Team"].map(t => (
+            {["24h Quote Response", "No Lock-in Contracts", "UK-Based Studio"].map(t => (
               <div key={t} style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "'Source Sans Pro', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.6)" }}>
                 <span style={{ width: 4, height: 4, borderRadius: "50%", background: GOLD, flexShrink: 0 }} />
                 {t}

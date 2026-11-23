@@ -150,7 +150,7 @@ export default function ContactHome() {
               letterSpacing: "0.22em", textTransform: "uppercase",
               color: GOLD,
             }}>
-              Now booking · Q3 2026 productions
+              Taking new projects · replies within 24 hours
             </span>
           </div>
         </motion.div>

@@ -34,6 +34,7 @@ const CATEGORIES = [
     accent: BLUE,
     path: '/web-development-ecommerce',
     items: [
+      'Free Website Check (send your link)',
       'One-Page Starter Website',
       'Hand-Built Website',
       'Custom Shopify Store',
@@ -206,8 +207,8 @@ export default function ContactPage() {
       `}</style>
 
       <Helmet>
-        <title>Start a Project | NicheUX</title>
-        <meta name="description" content="Tell us what you need. Get a custom proposal within 24 hours." />
+        <title>Start a Project or Get a Free Website Check | NicheUX Luton</title>
+        <meta name="description" content="Send us your website link for a free check, or tell us about your project. A small Luton design studio. Real proposal with a clear price within 24 hours." />
         <link rel="canonical" href="https://www.nicheux.com/contact" />
       </Helmet>
 
@@ -224,13 +225,13 @@ export default function ContactPage() {
             <em style={{ color: GOLD, fontStyle: 'italic' }}>worth talking about.</em>
           </h1>
           <p style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: 'clamp(15px,1.4vw,19px)', lineHeight: 1.85, color: 'rgba(255,255,255,0.6)', margin: '0 0 48px', maxWidth: 520 }}>
-            Select your services, tell us what you need in a few sentences, and we come back with a real proposal within 24 hours.
+            Not sure where to start? Send us your website link and we reply within 24 hours with 3 things to fix. Ready for a project? Pick what you need below and we come back with a real proposal, a clear price and a timeline.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 32, paddingTop: 32, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
             {[
               { icon: Mail,  label: 'Email',    val: 'hellonicheux@gmail.com', href: 'mailto:hellonicheux@gmail.com', color: BLUE },
               { icon: Phone, label: 'WhatsApp', val: '+44 7342 736804',        href: 'https://wa.me/447342736804',   color: '#25D366' },
-              { icon: MapPin,label: 'Based in', val: 'United Kingdom',         href: null,                           color: LAVENDER },
+              { icon: MapPin,label: 'Based in', val: 'Luton, United Kingdom',  href: null,                           color: LAVENDER },
             ].map(item => {
               const Icon = item.icon;
               return (
@@ -473,7 +474,10 @@ export default function ContactPage() {
           </div>
           <div style={{ borderTop: `1px solid ${INK}15`, paddingTop: 28 }}>
             <p style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic', fontWeight: 400, fontSize: 'clamp(15px,1.3vw,18px)', lineHeight: 1.6, color: INK, margin: '0 0 20px' }}>
-              "They made a website that didn't just look good. It made people feel something."
+              "Honestly one of the best companies to work with! They have helped me so much with the brand development and my website."
+            </p>
+            <p style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: INK_SOFT, margin: '-8px 0 20px' }}>
+              Aishwarya, Founder, Bloom &amp; Brew Coffee Company. Google review
             </p>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
               {['24h Quote Response', 'No Lock-in Contracts', '6 Design Disciplines'].map(t => (

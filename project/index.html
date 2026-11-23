@@ -1,9 +1,28 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1611551663279106"
-     crossorigin="anonymous"></script>
+    <!-- Google AdSense: ads load on every page with real content (home, services, work,
+         journal, gallery, about, contact, shop). Legal pages and 404s never load ads, because
+         AdSense does not allow ads on pages without publisher content. -->
+    <script>
+      (function() {
+        var CONTENT_PREFIXES = [
+          '/about', '/services', '/featured-work', '/strategy-design', '/web-development-ecommerce',
+          '/print-brand-design', '/motion-design-ai-visuals', '/social-media-marketing',
+          '/illustration-character-design', '/contact', '/blog', '/gallery', '/merch', '/shop'
+        ];
+        var path = window.location.pathname;
+        var allowed = path === '/' || CONTENT_PREFIXES.some(function(p) { return path.indexOf(p) === 0; });
+        window.__nxAdsAllowed = allowed;
+        if (allowed) {
+          var s = document.createElement('script');
+          s.async = true;
+          s.crossOrigin = 'anonymous';
+          s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1611551663279106';
+          document.head.appendChild(s);
+        }
+      })();
+    </script>
     <!-- End Google AdSense -->
 
     <!-- Google Tag Manager -->
@@ -21,7 +40,7 @@
     <!-- Primary Meta Tags -->
     <title>NicheUX | Where Design Meets Storytelling</title>
     <meta name="title" content="NicheUX | Where Design Meets Storytelling">
-    <meta name="description" content="NicheUX is a UK-based design studio specializing in web development, brand strategy, motion design, and illustration. Custom-built digital experiences for businesses across five countries.">
+    <meta data-rh="true" name="description" content="NicheUX is a small design studio in Luton. We find the story your brand should tell, then bring it to life in your brand, website and social content.">
     <meta name="keywords" content="UI/UX Design, Web Development, Brand Strategy, E-Commerce, Motion Design, AI Visuals, Print Design, Social Media Marketing, Digital Agency">
     <meta name="author" content="NicheUX">
     <meta name="theme-color" content="#121212">
@@ -29,9 +48,9 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.nicheux.com/">
-    <meta property="og:title" content="NicheUX | Where Design Meets Storytelling">
-    <meta property="og:description" content="Crafting exceptional digital experiences that transform your brand story.">
+    <meta data-rh="true" property="og:url" content="https://www.nicheux.com/">
+    <meta data-rh="true" property="og:title" content="NicheUX | Where Design Meets Storytelling">
+    <meta data-rh="true" property="og:description" content="We find the story your brand should tell, then bring it to life in your brand, website and social content.">
     <meta property="og:image" content="https://www.nicheux.com/images/BlackLogo.png">
 
     <!-- Twitter -->

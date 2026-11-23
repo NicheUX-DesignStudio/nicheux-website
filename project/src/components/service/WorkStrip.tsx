@@ -23,6 +23,29 @@ const WORK_IMAGES = [
   "/images/stage-book.png",
 ];
 
+const ALTS = [
+  "LinkedIn banner designed for Sooraj Nikam",
+  "LinkedIn carousel slide from The Generation Conversation",
+  "LinkedIn carousel slide from The Generation Conversation",
+  "Poster design, visual communication work",
+  "AI directed visual by NicheUX",
+  "AI directed brand visual by NicheUX",
+  "Illustrated dragon artwork",
+  "Illustrated mystical panda artwork",
+  "Comic strip artwork",
+  "Conceptual anatomy artwork",
+  "Website homepage design on desktop",
+  "Website homepage design on mobile",
+  "NandhiniDC website homepage",
+  "Kishore Aravind portfolio website homepage",
+  "SSJC tournament Leg 1 print design",
+  "Print and brand design work",
+  "SSJC tournament Leg 1 jersey design",
+  "Business card design",
+  "Social media graphics",
+  "Studio brand book design",
+];
+
 export default function WorkStrip() {
   return (
     <div style={{ position: "relative", overflow: "hidden", background: "#0e0e0e", borderTop: "1px solid rgba(255,255,255,0.04)", borderBottom: "1px solid rgba(255,255,255,0.04)" }}>
@@ -31,8 +54,8 @@ export default function WorkStrip() {
       <div style={{ position: "absolute", right: 0, top: 0, bottom: 0, width: 120, background: "linear-gradient(to left,#0e0e0e,transparent)", zIndex: 2, pointerEvents: "none" }} />
       <div className="work-strip-track">
         {[...WORK_IMAGES, ...WORK_IMAGES].map((src, i) => (
-          <div key={i} style={{ width: "clamp(220px,20vw,300px)", height: "clamp(160px,15vw,210px)", flexShrink: 0, overflow: "hidden" }}>
-            <img src={src} alt="" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", filter: "saturate(0.8) contrast(1.05)", display: "block" }} />
+          <div key={i} aria-hidden={i >= WORK_IMAGES.length ? true : undefined} style={{ width: "clamp(220px,20vw,300px)", height: "clamp(160px,15vw,210px)", flexShrink: 0, overflow: "hidden" }}>
+            <img src={src} alt={i < WORK_IMAGES.length ? ALTS[i] : ""} loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", filter: "saturate(0.8) contrast(1.05)", display: "block" }} />
           </div>
         ))}
       </div>

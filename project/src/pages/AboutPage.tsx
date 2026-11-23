@@ -241,7 +241,7 @@ function OriginStory() {
 
 // ── GLOBE SECTION ─────────────────────────────────────────────────────────────
 const GLOBE_CITIES = [
-  { name: "London",  country: "England",  note: "Studio home",            lat: 51.5,  lng: -0.1,  accent: GOLD    },
+  { name: "Luton",   country: "England",  note: "Studio home",            lat: 51.88, lng: -0.42,  accent: GOLD    },
   { name: "Toronto", country: "Canada",   note: "Bloom & Brew Coffee",    lat: 43.7,  lng: -79.4, accent: LAVENDER },
   { name: "Puchong", country: "Malaysia",  note: "Two clients. One city.", lat:  3.0,  lng: 101.6, accent: BLUE    },
   { name: "Chennai", country: "India",    note: "NandhiniDC Architecture",lat: 13.1,  lng:  80.3, accent: GOLD    },
@@ -618,7 +618,7 @@ export default function AboutPage() {
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "GB",
-            "addressLocality": "London"
+            "addressLocality": "Luton"
           },
           "areaServed": ["GB", "United Kingdom", "Ireland", "Canada", "Malaysia", "India"],
           "foundingDate": "2020",

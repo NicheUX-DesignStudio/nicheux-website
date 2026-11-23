@@ -2,6 +2,7 @@
 
 import { Helmet } from "react-helmet-async";
 import Hero from "@/components/home/Hero";
+import OurApproach from "@/components/home/OurApproach";
 import StatStrip from "@/components/home/StatStrip";
 import MarqueeStrip from "@/components/home/MarqueeStrip";
 import Portfolio from "@/components/home/Portfolio";
@@ -13,15 +14,15 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>NicheUX | UK Design Studio. Web, Brand, Motion & Illustration</title>
+        <title>Web Design Luton | Brand and Website Studio for Small Businesses | NicheUX</title>
         <meta
           name="description"
-          content="NicheUX is a UK-based design studio. UI/UX strategy, web development, brand identity, motion design, illustration. We build digital experiences that get you clients."
+          content="NicheUX is a small design studio in Luton. We find the story your brand should tell, then bring it to life in your brand, website and social content."
         />
-        <meta property="og:title" content="NicheUX | UK Design Studio. Web, Brand, Motion & Illustration" />
+        <meta property="og:title" content="Web Design Luton | Brand and Website Studio for Small Businesses | NicheUX" />
         <meta
           property="og:description"
-          content="NicheUX is a UK-based design studio. UI/UX strategy, web development, brand identity, motion design, illustration. We build digital experiences that get you clients."
+          content="NicheUX is a small design studio in Luton. We find the story your brand should tell, then bring it to life in your brand, website and social content."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nicheux.com" />
@@ -40,7 +41,7 @@ export default function HomePage() {
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "GB",
-            "addressLocality": "London"
+            "addressLocality": "Luton"
           },
           "contactPoint": [{
             "@type": "ContactPoint",
@@ -80,6 +81,7 @@ export default function HomePage() {
         <Hero />
         <StatStrip />
         <MarqueeStrip />
+        <OurApproach />
         <Portfolio />
         <Services />
         <WhyUs />

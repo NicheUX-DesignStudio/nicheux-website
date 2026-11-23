@@ -38,7 +38,7 @@ const PAIN_POINTS = [
   { title: "Data-Driven Optimisation", desc: "We track what works and double down on it. Real analytics showing engagement, reach, and performance so you see exactly what's driving results." },
 ];
 const PROBLEM_BULLETS = ["Posting without purpose or strategy", "No audience analysis or targeting", "Inconsistent visual identity across posts", "No measurement of what's actually working", "Content that doesn't drive action"];
-const QUOTE = "Your social media isn't just about posting. It's your direct line to customers. It should build relationships that drive your business forward.";
+const QUOTE = "Social media is your direct line to customers. We design every post to build real relationships that bring in enquiries.";
 
 const PROCESS = [
   { num: "01", accent: GOLD, title: "Strategy & Research", desc: "We analyse your audience, competitors, and goals to create a data-driven social media strategy that aligns with your business objectives.", artifacts: ["Audience Analysis", "Competitor Research", "Content Strategy", "Platform Selection"] },
@@ -47,12 +47,12 @@ const PROCESS = [
 ];
 
 const PRINCIPLES = [
-  { title: "Strategy-Driven Approach", desc: "We don't just post content. We create strategic narratives that align with your business goals and are built to perform." },
+  { title: "Strategy-Driven Approach", desc: "We create strategic narratives that match your business goals and are built to perform." },
   { title: "Visual Excellence", desc: "Our in-house motion graphics and design team creates scroll-stopping content that captures attention and drives engagement." },
   { title: "Data-First Decisions", desc: "We track engagement, reach, and performance. No vanity metrics, just actionable insights you can measure and act on." },
   { title: "Brand Protection", desc: "Professional community management and reputation monitoring ensure your brand voice stays consistent and strong." },
   { title: "Consistent Excellence", desc: "We deliver quality content on schedule, every time. Your social presence is always active and intentional." },
-  { title: "Community Building", desc: "We don't just grow followers. We build engaged communities and foster real relationships with your audience." },
+  { title: "Community Building", desc: "We build engaged communities and real relationships with your audience, and we measure the enquiries they bring." },
 ];
 
 const TIERS = [
@@ -133,7 +133,7 @@ const TIERS = [
 ];
 
 const FAQS = [
-  { q: "What makes your approach different from other agencies?", a: "We design your social presence, not just post content. Every Reel gets a branded design layer. Every caption is strategically written. Even Starter plans get AI-enhanced videos with your brand treatment. We're a design studio first, content mill second." },
+  { q: "What makes your approach different from other agencies?", a: "We design your social presence. Every Reel gets a branded design layer. Every caption is strategically written. Even Starter plans get AI-enhanced videos with your brand treatment. We are a design studio first, so the work looks like your brand." },
   { q: "How many Reels do you produce per month?", a: "Starter includes 2 AI-enhanced Reels (30–45 seconds). Professional includes 4 (45–60 seconds with custom design). Enterprise includes 6 hand-crafted Reels produced by our motion team, plus 2 custom illustrations and 2 branded motion graphics monthly. No generic content, no stock footage." },
   { q: "What's the difference between Starter and Professional Reels?", a: "Starter: AI-generated base + branded lower thirds and colour grading. Professional: AI-generated + custom transitions, animation overlays, and design elements. Enterprise: Hand-crafted motion design in After Effects, fully original, premium polish." },
   { q: "Do you manage LinkedIn as well as Instagram?", a: "Yes. Every plan covers LinkedIn. Starter has organic reach focus. Professional includes 4 thought leadership posts optimised for your audience. Enterprise includes 4 posts plus 1 article per month, written entirely in your voice." },
@@ -175,8 +175,8 @@ export default function SocialMediaMarketingPage() {
   return (
     <div style={{ backgroundColor: BLACK, color: "#fff" }}>
       <Helmet>
-        <title>Social Media Marketing | Services | NicheUX</title>
-        <meta name="description" content="Transform your social media from random posting to strategic growth engine. Building communities that drive real business results." />
+        <title>Social Media Design & Content for Small Businesses | NicheUX Luton</title>
+        <meta name="description" content="Designed Reels, carousels and captions for small businesses from £349 a month. Content built around your goals and your brand story instead of random posting." />
         <link rel="canonical" href="https://www.nicheux.com/social-media-marketing" />
         <meta property="og:title" content="Social Media Marketing | NicheUX" />
         <meta property="og:description" content="Strategic social media management with design-driven content. Starter, Professional, and Enterprise plans. Month-to-month billing." />
@@ -191,7 +191,7 @@ export default function SocialMediaMarketingPage() {
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "GB",
-            "addressLocality": "London"
+            "addressLocality": "Luton"
           }
         })}</script>
 
@@ -249,7 +249,7 @@ export default function SocialMediaMarketingPage() {
                 <style>{`@media(max-width:768px){.hero-social{grid-template-columns:1fr!important}}`}</style>
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.35, ease: EASE }}>
                   <p style={{ fontFamily: "'Source Sans Pro', sans-serif", fontWeight: 400, fontSize: "clamp(17px,1.6vw,22px)", lineHeight: 1.7, color: "rgba(255,255,255,0.7)", margin: "0 0 clamp(32px,4vw,48px) 0", maxWidth: 640 }}>
-                    We design your social presence, not just post content. Every Reel, every caption, every story is strategically crafted to build communities that drive real business results.
+                    We design your social presence. Every Reel, every caption, every story is crafted around your goals to build a community that brings in real business.
                   </p>
                   <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
                     <PrimaryButton onClick={() => go("/contact?selection=Social+Media+Marketing")}>Start Your Project</PrimaryButton>
@@ -339,7 +339,7 @@ export default function SocialMediaMarketingPage() {
           <ContentContainer>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: EASE }} viewport={{ once: true, amount: 0.1 }} style={{ marginBottom: "clamp(48px,6vw,72px)" }}>
               <Eyebrow color={INK_MUTED}>Why Work With Us</Eyebrow>
-              <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(36px,5vw,68px)", lineHeight: 1.0, letterSpacing: "-0.025em", color: INK, margin: "20px 0 0" }}>We're not just managers. <span style={{ color: ACCENT }}>We're strategic partners.</span></h2>
+              <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(36px,5vw,68px)", lineHeight: 1.0, letterSpacing: "-0.025em", color: INK, margin: "20px 0 0" }}>Content built around your goals. <span style={{ color: ACCENT }}>Designed to look like you.</span></h2>
             </motion.div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1px", background: "rgba(26,26,26,0.08)" }} className="pr-social">
               <style>{`@media(max-width:768px){.pr-social{grid-template-columns:1fr!important}}`}</style>

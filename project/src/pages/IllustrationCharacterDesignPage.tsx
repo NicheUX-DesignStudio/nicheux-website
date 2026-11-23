@@ -39,7 +39,7 @@ const PAIN_POINTS = [
   { title: "Weak Storytelling", desc: "Unclear visuals fail to communicate. Strategic illustration guides viewers through narratives with emotional impact." },
 ];
 const PROBLEM_BULLETS = ["Characters look different across pages or materials", "Varying proportions and features throughout", "Different colour palettes used inconsistently", "Mismatched art styles across deliverables", "Lack of cohesive visual identity"];
-const QUOTE = "Great illustration isn't just decoration. It's visual communication that engages, explains, and entertains. We make every image meaningful.";
+const QUOTE = "Illustration gives a story a face. We make images that engage, explain and entertain, so every image means something.";
 
 const PROCESS = [
   { num: "01", accent: LAVENDER, title: "Concept & Strategy Development", desc: "We begin by understanding your story, audience, and goals to develop a visual strategy that communicates effectively.", artifacts: ["Character Analysis", "Style Exploration", "Story Breakdown", "Visual Strategy"] },
@@ -136,8 +136,8 @@ export default function IllustrationCharacterDesignPage() {
   return (
     <div style={{ backgroundColor: BLACK, color: "#fff" }}>
       <Helmet>
-        <title>Illustration & Character Design | Services | NicheUX</title>
-        <meta name="description" content="Professional character design, illustration, and visual storytelling. From children's books to concept art, we create artwork that captivates and communicates." />
+        <title>Illustration & Character Design for Brands and Books | NicheUX</title>
+        <meta name="description" content="Character design, brand illustration and comic storytelling from £130. Original artwork that gives your brand a face people remember." />
         <meta property="og:title" content="Illustration & Character Design | NicheUX" />
         <meta property="og:description" content="Character design, illustration, and children's book illustration. Original artwork that brings stories to life with emotional depth." />
         <meta property="og:url" content="https://www.nicheux.com/illustration-character-design" />
@@ -152,7 +152,7 @@ export default function IllustrationCharacterDesignPage() {
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "GB",
-            "addressLocality": "London"
+            "addressLocality": "Luton"
           }
         })}</script>
       </Helmet>      <main id="main-content">

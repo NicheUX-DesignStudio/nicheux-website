@@ -42,6 +42,19 @@ Security Measures: Encryption in transit and at rest, access controls, regular s
 We never sell your personal data.`
     },
     {
+      icon: Shield,
+      title: "Advertising",
+      content: `Pages on this site may show ads from Google AdSense. We do not show ads on our legal pages.
+
+• Third-party vendors, including Google, use cookies to serve ads based on your previous visits to this website or other websites.
+• Google's use of advertising cookies enables it and its partners to serve ads to you based on your visits to this site and other sites on the internet.
+• You can opt out of personalised advertising by visiting Google's Ads Settings at adssettings.google.com.
+• You can opt out of some third-party vendors' use of cookies for personalised advertising at aboutads.info.
+• To learn how Google uses information from sites that use its services, visit policies.google.com/technologies/partner-sites.
+
+Where the law requires it, ads only use cookies after you give consent through the consent message shown on the site.`
+    },
+    {
       icon: Calendar,
       title: "Data Retention & Your Rights",
       content: `Retention Periods:

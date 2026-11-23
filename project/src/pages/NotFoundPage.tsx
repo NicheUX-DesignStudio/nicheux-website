@@ -3,10 +3,14 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, Home } from "lucide-react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 export default function NotFoundPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#121212] p-6">
+      <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <div className="text-center max-w-md">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}

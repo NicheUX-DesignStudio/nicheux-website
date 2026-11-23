@@ -131,7 +131,7 @@ const PAIN_POINTS = [
   { title: "Lost Opportunities", desc: "Unprofessional materials get discarded immediately. Great design makes people want to keep and share your collateral." },
 ];
 const PROBLEM_BULLETS = ["No bleeds or crop marks", "RGB instead of CMYK", "72 DPI instead of 300 DPI", "Missing fonts or embedded links", "Incorrect bleed dimensions"];
-const QUOTE = "Great print design isn't about following trends. It's about creating materials people want to keep and share.";
+const QUOTE = "Print should look like your brand and last in someone's hand. We make materials people want to keep and share.";
 
 const PROCESS = [
   { num: "01", accent: GOLD, title: "Content Strategy & Format Selection", desc: "We start by understanding your message, audience, and goals to recommend the perfect print formats that tell your story effectively.", artifacts: ["Content Audit", "Format Recommendation", "Fold Type Selection", "Paper Stock Guidance"] },
@@ -252,8 +252,8 @@ export default function PrintAndBrandDesignPage() {
   return (
     <div style={{ backgroundColor: BLACK, color: "#fff" }}>
       <Helmet>
-        <title>Print and Brand Design | Services | NicheUX</title>
-        <meta name="description" content="Professional print designs that make your brand tangible. From brochures to banners, we create digital files that print perfectly everywhere." />
+        <title>Logo, Brand Identity & Print Design Luton | NicheUX</title>
+        <meta name="description" content="Logo design from £250, brand kits, brochures, menus and signage for small businesses in Luton and across the UK. Print-ready files that look like your brand." />
         <meta property="og:title" content="Print & Brand Design | NicheUX" />
         <meta property="og:description" content="Branding, print design, and identity systems that build lasting impressions. Logo design, brand kits, brochures, stationery, and signage." />
         <meta property="og:url" content="https://www.nicheux.com/print-brand-design" />
@@ -268,7 +268,7 @@ export default function PrintAndBrandDesignPage() {
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "GB",
-            "addressLocality": "London"
+            "addressLocality": "Luton"
           }
         })}</script>
       </Helmet>      <main id="main-content">
@@ -454,7 +454,7 @@ export default function PrintAndBrandDesignPage() {
           <ContentContainer>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: EASE }} viewport={{ once: true, amount: 0.1 }} style={{ marginBottom: "clamp(48px,6vw,72px)" }}>
               <Eyebrow color={INK_MUTED}>Why Work With Us</Eyebrow>
-              <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(36px,5vw,68px)", lineHeight: 1.0, letterSpacing: "-0.025em", color: INK, margin: "20px 0 0" }}>We're not just designers. <span style={{ color: ACCENT }}>We're print production experts.</span></h2>
+              <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(36px,5vw,68px)", lineHeight: 1.0, letterSpacing: "-0.025em", color: INK, margin: "20px 0 0" }}>Made to look like you. <span style={{ color: ACCENT }}>Built to print right.</span></h2>
             </motion.div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1px", background: "rgba(26,26,26,0.08)" }} className="pr-print">
               <style>{`@media(max-width:768px){.pr-print{grid-template-columns:1fr!important}}`}</style>

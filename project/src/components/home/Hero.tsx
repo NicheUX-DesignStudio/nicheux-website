@@ -124,6 +124,7 @@ export default function Hero() {
       style={{ position: "relative", minHeight: "100vh", backgroundColor: BLACK, overflow: "hidden" }}
     >
       <style>{`
+        @media (max-width: 640px) { .hero-scroll-hint { display: none !important; } }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
         @keyframes spin { to { transform: rotate(360deg); } }
         @keyframes heroBulb { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
@@ -236,7 +237,7 @@ export default function Hero() {
                 margin: 0,
               }}
             >
-              Strategy, brand, web and motion design for businesses that want to be impossible to ignore.
+              We find the story your brand should tell, then bring it to life in your brand, website and social content, in a look you actually like.
             </motion.p>
           </div>
 
@@ -313,7 +314,7 @@ export default function Hero() {
                 }}>
                   Trusted by businesses in
                 </span>
-                {["🇬🇧 UK", "🇮🇪 Ireland", "🇮🇳 India", "🇨🇦 Canada", "🇲🇾 Malaysia"].map((loc, i, arr) => (
+                {["UK", "Ireland", "India", "Canada", "Malaysia"].map((loc, i, arr) => (
                   <span key={loc} style={{
                     fontFamily: "'Source Sans Pro', sans-serif",
                     fontSize: 10,
@@ -343,8 +344,9 @@ export default function Hero() {
             }}
           />
 
-          {/* Scroll indicator */}
+          {/* Scroll indicator (hidden on phones, where it overlapped the "Trusted by" row) */}
           <motion.div
+            className="hero-scroll-hint"
             initial={{ opacity: 0, y: 8 }}
             animate={showCTAs ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 1.2, duration: 0.6 }}

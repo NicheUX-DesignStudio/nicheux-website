@@ -38,7 +38,7 @@ const PAIN_POINTS = [
   { title: "Growth Constraints", desc: "Your business evolves, but templates don't. Need custom functionality or planning to scale? You're limited by template capabilities." },
 ];
 const PROBLEM_BULLETS = ["Your site looks like everyone else's", "Cloned design with no brand identity", "Forgettable presence that blends in", "No room to add custom features", "Can't optimise the checkout flow"];
-const QUOTE = "Custom development isn't about complexity for its own sake. It's about building exactly what your business needs to grow.";
+const QUOTE = "A website should do a job for your business. We build exactly what you need to get found, trusted and booked.";
 
 const PROCESS = [
   { num: "01", accent: BLUE, title: "Strategy & Planning", desc: "We start by understanding your business goals, technical requirements, and growth plans. The right foundation means choosing the perfect platform, mapping features, and planning architecture that scales.", artifacts: ["Technical Audit", "Platform Selection", "Feature Roadmap", "Architecture Plan"] },
@@ -108,8 +108,8 @@ export default function WebDevelopmentAndECommercePage() {
   return (
     <div style={{ backgroundColor: BLACK, color: "#fff" }}>
       <Helmet>
-        <title>Fully Coded Web Development & E-Commerce | Services | NicheUX</title>
-        <meta name="description" content="Fully coded websites and Shopify stores built from scratch in React and custom code. No templates, no drag-and-drop, no shortcuts. Fast, secure, and built to scale." />
+        <title>Web Design Luton | Small Business Websites from £495 | NicheUX</title>
+        <meta name="description" content="Web design in Luton for small businesses. One-page websites from £495, hand-coded sites and Shopify stores built so customers can find you on Google. Free website check." />
         <meta property="og:title" content="Web Development & E-Commerce | NicheUX" />
         <meta property="og:description" content="Custom-coded websites and Shopify stores. React, Shopify, and performance optimization. Fast, secure, and built for conversion." />
         <meta property="og:url" content="https://www.nicheux.com/web-development-ecommerce" />
@@ -124,7 +124,7 @@ export default function WebDevelopmentAndECommercePage() {
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "GB",
-            "addressLocality": "London"
+            "addressLocality": "Luton"
           }
         })}</script>
       </Helmet>      <main id="main-content">
@@ -240,7 +240,7 @@ export default function WebDevelopmentAndECommercePage() {
           <ContentContainer>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: EASE }} viewport={{ once: true, amount: 0.1 }} style={{ marginBottom: "clamp(48px,6vw,72px)" }}>
               <Eyebrow color={INK_MUTED}>Why Work With Us</Eyebrow>
-              <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(36px,5vw,68px)", lineHeight: 1.0, letterSpacing: "-0.025em", color: INK, margin: "20px 0 0" }}>We're not just developers. <span style={{ color: ACCENT }}>We're strategic partners.</span></h2>
+              <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(36px,5vw,68px)", lineHeight: 1.0, letterSpacing: "-0.025em", color: INK, margin: "20px 0 0" }}>Built around your goals. <span style={{ color: ACCENT }}>Shaped by your story.</span></h2>
             </motion.div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1px", background: "rgba(26,26,26,0.08)" }} className="pr-webdev">
               <style>{`@media(max-width:768px){.pr-webdev{grid-template-columns:1fr!important}}`}</style>

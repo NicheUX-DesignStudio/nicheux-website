@@ -59,7 +59,7 @@ const PAIN_POINTS = [
   { title: "Missed Conversion Moments", desc: "Unclear messaging fails to drive action. Strategic animation guides viewers toward your desired outcome with precision." },
 ];
 const PROBLEM_BULLETS = ["No clear narrative structure", "Confusing message flow", "Missing call-to-action", "Unclear value proposition", "Visuals that don't match the brand"];
-const QUOTE = "Video isn't just about looking good. It's about creating connections that drive business growth. We make every frame count.";
+const QUOTE = "Every frame should carry the story. We make video that connects people to your brand and moves your business forward.";
 
 const DUAL_APPROACH = [
   { title: "Traditional Craftsmanship", desc: "Precision animation and emotional storytelling that builds lasting brand connections", points: ["Frame-perfect timing", "Emotional storytelling", "Brand consistency", "Strategic messaging"], accent: BLUE },
@@ -127,8 +127,8 @@ export default function MotionDesignAIVisualsPage() {
   return (
     <div style={{ backgroundColor: BLACK, color: "#fff" }}>
       <Helmet>
-        <title>Motion Design & AI Visuals | Services | NicheUX</title>
-        <meta name="description" content="Traditional motion graphics excellence and cutting-edge AI innovation. Both approaches deliver exceptional results for different needs and goals." />
+        <title>Motion Design & Brand Video for Small Businesses | NicheUX Luton</title>
+        <meta name="description" content="Logo animation, short brand films and social video from £150. Traditional motion craft with AI, directed by people, from a small Luton design studio." />
         <meta property="og:title" content="Motion Design & AI Visuals | NicheUX" />
         <meta property="og:description" content="Motion graphics and AI-generated visuals for video, social, and digital storytelling. Explainer videos, animations, and AI art direction." />
         <meta property="og:url" content="https://www.nicheux.com/motion-design-ai-visuals" />
@@ -143,7 +143,7 @@ export default function MotionDesignAIVisualsPage() {
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "GB",
-            "addressLocality": "London"
+            "addressLocality": "Luton"
           }
         })}</script>
       </Helmet>      <main id="main-content">

@@ -148,7 +148,7 @@ export default function StatStrip() {
             textTransform: "uppercase",
             color: INK,
           }}>
-            The Playbill &middot; Est. MMXX &middot; London &middot; UK
+            The Playbill &middot; Est. MMXX &middot; Luton &middot; UK
           </span>
           <div style={{ width: 44, height: 1, background: `${INK}30` }} />
         </motion.div>

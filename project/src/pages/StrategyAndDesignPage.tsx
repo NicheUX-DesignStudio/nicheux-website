@@ -38,7 +38,7 @@ const PAIN_POINTS = [
   { title: "Brand Perception Suffers", desc: "A clunky experience tells users you don't care about quality. First impressions stick, and bad UX damages credibility permanently." },
 ];
 const PROBLEM_BULLETS = ["Users can't find key features", "No clear information architecture", "Buried calls-to-action", "Complex menu structures", "Missing search functionality"];
-const QUOTE = "Great UX isn't about following trends. It's about understanding people and designing for their success.";
+const QUOTE = "Good UX starts with the people who use your site and the goals your business has to hit. We design for both.";
 
 const PROCESS = [
   { num: "01", accent: BLUE, title: "Research & Discovery", desc: "We start by understanding your users, business goals, and market. Through interviews, analytics, and competitive analysis, we uncover insights that guide every design decision.", artifacts: ["User Interviews", "Analytics Review", "Competitor Analysis", "User Personas"] },
@@ -102,8 +102,8 @@ export default function StrategyAndDesignPage() {
   return (
     <div style={{ backgroundColor: BLACK, color: "#fff" }}>
       <Helmet>
-        <title>UI/UX Strategy & Design | Services | NicheUX</title>
-        <meta name="description" content="UI/UX strategy and design from NicheUX. Research-led, pixel-perfect interfaces engineered to convert. UX audits, complete design systems, and interfaces that turn visitors into customers." />
+        <title>Website UX Audit & Design for Small Businesses | NicheUX Luton</title>
+        <meta name="description" content="Find out why visitors leave your website without getting in touch. UX audits from £350 and full UI/UX design, built around your goals and your brand story." />
         <meta property="og:title" content="UI/UX Strategy & Design | NicheUX" />
         <meta property="og:description" content="Research-led UX strategy and pixel-perfect interface design. UX audits, design systems, and conversion-focused web design." />
         <meta property="og:url" content="https://www.nicheux.com/strategy-design" />
@@ -118,7 +118,7 @@ export default function StrategyAndDesignPage() {
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "GB",
-            "addressLocality": "London"
+            "addressLocality": "Luton"
           }
         })}</script>
       </Helmet>
@@ -236,7 +236,7 @@ export default function StrategyAndDesignPage() {
           <ContentContainer>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: EASE }} viewport={{ once: true, amount: 0.1 }} style={{ marginBottom: "clamp(48px,6vw,72px)" }}>
               <Eyebrow color={INK_MUTED}>Why Work With Us</Eyebrow>
-              <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(36px,5vw,68px)", lineHeight: 1.0, letterSpacing: "-0.025em", color: INK, margin: "20px 0 0" }}>We're not just designers. <span style={{ color: ACCENT }}>We're strategic partners.</span></h2>
+              <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(36px,5vw,68px)", lineHeight: 1.0, letterSpacing: "-0.025em", color: INK, margin: "20px 0 0" }}>We start with your goals. <span style={{ color: ACCENT }}>Then we design for your users.</span></h2>
             </motion.div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1px", background: "rgba(26,26,26,0.08)" }} className="pr-strat">
               <style>{`@media(max-width:768px){.pr-strat{grid-template-columns:1fr!important}}`}</style>

@@ -95,6 +95,13 @@ export default function CookiesPolicyPage() {
           duration: '3 months',
           type: 'Third-party'
         },
+        {
+          name: '__gads, __gpi',
+          provider: 'Google AdSense',
+          purpose: 'Serves and measures ads shown on this website',
+          duration: 'Up to 13 months',
+          type: 'Third-party'
+        },
         { 
           name: 'lidc', 
           provider: 'LinkedIn',
