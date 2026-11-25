@@ -1,5 +1,5 @@
 // src/App.tsx
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Navigate, BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, useLayoutEffect, useRef, useState, lazy, Suspense, Component } from 'react';
 import type { ReactNode } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
@@ -359,6 +359,7 @@ function AppContent() {
 
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/check" element={<Navigate to="/contact?selection=Free%20Website%20Check%20%28send%20your%20link%29&hint=My%20website%20link%20is%20&source=Social%20Media" replace />} />
           <Route path="/shop" element={<MerchPage />} />
           <Route path="/merch" element={<MerchPage />} />
           <Route path="/blog" element={<BlogPage />} />
