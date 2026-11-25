@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Helmet } from "react-helmet-async";
 import Hero from "@/components/home/Hero";
@@ -10,6 +10,7 @@ import Services from "@/components/home/Services";
 import AboutStrip from "@/components/home/AboutStrip";
 import WhyUs from "@/components/home/WhyUs";
 import Testimonials from "@/components/home/Testimonials";
+import "@/components/home/home-mobile.css";
 export default function HomePage() {
   return (
     <>
@@ -77,15 +78,15 @@ export default function HomePage() {
         })}</script>
       </Helmet>
 
-      <main className="relative" id="main-content">
+      <main className="relative home-page" id="main-content">
         <Hero />
         <StatStrip />
         <MarqueeStrip />
         <OurApproach />
         <Portfolio />
         <Services />
-        <WhyUs />
         <AboutStrip />
+        <WhyUs />
         <Testimonials />
       </main>
     </>

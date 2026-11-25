@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
@@ -100,7 +100,7 @@ export default function WhyUs() {
             <div style={{ width: 28, height: 1, background: GOLD }} />
             <span style={{
               fontFamily: "'Source Sans Pro', sans-serif",
-              fontSize: 11, fontWeight: 600,
+              fontSize: 13, fontWeight: 600,
               letterSpacing: "0.28em", textTransform: "uppercase",
               color: GOLD,
             }}>
@@ -130,13 +130,13 @@ export default function WhyUs() {
             <p style={{
               fontFamily: "'Source Sans Pro', sans-serif",
               fontWeight: 400,
-              fontSize: "clamp(14px, 1.3vw, 16px)",
+              fontSize: "clamp(16px,1.3vw,18px)",
               lineHeight: 1.8,
-              color: "rgba(255,255,255,0.35)",
+              color: "rgba(255,255,255,0.75)",
               maxWidth: 320,
               margin: 0,
             }}>
-              These aren't marketing bullet points. They're how we've operated since day one. and why clients keep coming back.
+              This is how we have worked since day one, and why clients keep coming back.
             </p>
           </div>
         </motion.div>
@@ -235,9 +235,9 @@ export default function WhyUs() {
               <p style={{
                 fontFamily: "'Source Sans Pro', sans-serif",
                 fontWeight: 400,
-                fontSize: "clamp(13px, 1.2vw, 15px)",
+                fontSize: "clamp(16px,1.2vw,18px)",
                 lineHeight: 1.85,
-                color: effectiveCard === i ? "rgba(255,255,255,0.55)" : "rgba(255,255,255,0.28)",
+                color: effectiveCard === i ? "rgba(255,255,255,0.88)" : "rgba(255,255,255,0.68)",
                 margin: 0,
                 transition: "color 0.4s ease",
               }}>
@@ -247,7 +247,7 @@ export default function WhyUs() {
           ))}
         </div>
         <style>{`@media(max-width:767px){.whyus-swipe-hint{display:flex!important}}`}</style>
-        <p className="whyus-swipe-hint" style={{ display: "none", alignItems: "center", gap: 6, marginTop: 10, fontFamily: "'Source Sans Pro',sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", userSelect: "none" }}>
+        <p className="whyus-swipe-hint" style={{ display: "none", alignItems: "center", gap: 6, marginTop: 10, fontFamily: "'Source Sans Pro',sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(255,255,255,0.75)", userSelect: "none" }}>
           Swipe to explore ›
         </p>
 
@@ -271,12 +271,12 @@ export default function WhyUs() {
             fontFamily: "'Cormorant Garamond', serif",
             fontStyle: "italic",
             fontWeight: 400,
-            fontSize: "clamp(15px, 1.5vw, 19px)",
+            fontSize: "clamp(16px,1.5vw,21px)",
             lineHeight: 1.6,
-            color: "rgba(255,255,255,0.35)",
+            color: "rgba(255,255,255,0.75)",
             margin: 0,
           }}>
-            These aren't differentiators. They're the baseline.
+            Every client gets all four, every time.
           </p>
 
           <motion.button
@@ -294,7 +294,7 @@ export default function WhyUs() {
             style={{
               fontFamily: "'Source Sans Pro', sans-serif",
               fontWeight: 700,
-              fontSize: 11,
+              fontSize: 13,
               letterSpacing: "0.18em",
               textTransform: "uppercase",
               padding: "14px 36px",

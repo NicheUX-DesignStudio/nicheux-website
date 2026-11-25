@@ -1,0 +1,96 @@
+/* Homepage on phones: same design, less scrolling.
+   Only applies under 768px. Desktop is untouched. */
+@media (max-width: 767px) {
+  /* Tighter vertical rhythm between sections */
+  main.home-page > section:not(#hero-section) {
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
+  }
+
+  /* Hero: no forced full-screen height, smaller video panel */
+  main.home-page #hero-section,
+  main.home-page #hero-inner { min-height: 0 !important; }
+  main.home-page #hero-video-col { height: 46vw !important; min-height: 0 !important; max-height: 220px !important; }
+
+  /* Studio at a glance: compact 2 x 2 numbers */
+  main.home-page #programme { padding-top: 32px !important; padding-bottom: 32px !important; }
+  main.home-page #programme > div > div:first-child { margin-bottom: 20px !important; }
+  main.home-page #programme > div > div:last-child { display: none !important; }
+  main.home-page #stat-grid > div { padding: 20px 16px !important; gap: 6px !important; }
+  main.home-page #stat-grid > div > span:nth-child(2) { font-size: 44px !important; }
+
+  /* The moving services ticker repeats the services list below it */
+  main.home-page section[aria-label="Our services"] { display: none !important; }
+
+  /* How we work */
+  main.home-page .approach-grid { gap: 28px !important; }
+  main.home-page #our-approach h2 { margin-bottom: 16px !important; }
+  main.home-page #our-approach p { margin-bottom: 16px !important; line-height: 1.65 !important; }
+  main.home-page .approach-grid > div:last-child > div { padding: 18px 0 !important; gap: 12px !important; grid-template-columns: 36px minmax(0, 1fr) !important; }
+
+  /* Our work */
+    main.home-page #portfolio > div > div:first-child { margin-bottom: 28px !important; }
+
+  /* What we do: every description visible, rows kept compact */
+  main.home-page [data-act-row] { padding: 16px 0 16px 40px !important; grid-template-columns: 28px 1fr auto !important; gap: 12px !important; }
+  main.home-page [data-act-row] .svc-desc + div { display: none !important; }
+
+  /* Four promises: a short list instead of a swipe carousel */
+  main.home-page #why-us-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    overflow: visible !important;
+    gap: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  main.home-page #why-us-grid > * {
+    width: auto !important;
+    max-width: none !important;
+    flex: none !important;
+    padding: 18px 0 !important;
+    gap: 6px !important;
+    background: transparent !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  main.home-page #why-us-grid > * > span[aria-hidden] { font-size: 30px !important; }
+  main.home-page #why-us-grid > * > div > div { display: none !important; }
+  main.home-page #why-us-grid > * p { line-height: 1.6 !important; color: rgba(255, 255, 255, 0.82) !important; }
+  main.home-page .whyus-swipe-hint { display: none !important; }
+
+  /* Shared: slightly smaller section headings on phones */
+  main.home-page #services h2,
+  main.home-page #why-us h2,
+  main.home-page #about-strip h2,
+  main.home-page #our-approach h2 { font-size: 38px !important; line-height: 1.05 !important; }
+
+  /* What we do: drop the extra intro line, tighten rows */
+  main.home-page #services p:not(.svc-desc) { display: none !important; }
+  main.home-page .svc-desc { font-size: 15px !important; line-height: 1.55 !important; margin-top: 4px !important; }
+
+  /* Team: heading on its own line, not beside the label */
+  main.home-page #about-strip > div:last-child > div:first-child { display: block !important; }
+  main.home-page #about-strip > div:last-child > div:first-child > div:first-child { margin-bottom: 14px !important; }
+
+  /* Promises: compact rows */
+  main.home-page #why-us-grid > * > div:first-child { display: none !important; }
+  main.home-page #why-us-grid > * p { font-size: 15px !important; line-height: 1.55 !important; }
+
+  /* What we do: use the full width for text */
+  main.home-page [data-act-row] { grid-template-columns: 1fr auto !important; padding-left: 30px !important; }
+  main.home-page [data-act-row] > span:first-child { display: none !important; }
+
+  /* Promises: numeral sits small above the title */
+  main.home-page #why-us-grid > * > span[aria-hidden] { display: none !important; }
+
+  /* How we work: the three questions say it, so skip the intro line */
+  main.home-page .approach-grid > div:first-child > p { display: none !important; }
+
+  /* Team: picture, heading and button are enough on a phone */
+  main.home-page #ensemble-bottom-grid > p { display: none !important; }
+  main.home-page #about-strip > div:last-child > div:nth-child(3) { display: none !important; }
+  main.home-page #about-strip > div:last-child > div:last-child > div:last-child:not(#ensemble-bottom-grid) { display: none !important; }
+
+  /* Featured card: the badge and title say enough on a small screen */
+  main.home-page #portfolio .featured-card { height: 380px !important; }
+  main.home-page .featured-outcome { display: none !important; }
+}

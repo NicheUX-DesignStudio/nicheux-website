@@ -1,4 +1,4 @@
-﻿// @ts-nocheck
+// @ts-nocheck
 "use client";
 
 import { useState, useRef, useEffect } from "react";
@@ -12,7 +12,7 @@ const ACTS = [
     numeral: "I",
     name: "Strategy & Design",
     discipline: "UI · UX · Research",
-    descriptor: "We map every user's journey before a single pixel is placed. No assumptions. No guesswork. Just clarity.",
+    descriptor: "We look at how people use your website or app, find what stops them, and plan the fix before we design anything.",
     tools: ["Figma", "FigJam", "Hotjar"],
     accent: GOLD,
     path: "/strategy-design",
@@ -21,7 +21,7 @@ const ACTS = [
     numeral: "II",
     name: "Web Development",
     discipline: "React · Next.js · Shopify",
-    descriptor: "Handcrafted, custom-coded. Zero templates, zero limits. Built to convert, built to last.",
+    descriptor: "Custom websites and Shopify stores, built from scratch to work on every phone and bring you enquiries.",
     tools: ["React", "TypeScript", "Shopify"],
     accent: BLUE,
     path: "/web-development-ecommerce",
@@ -30,7 +30,7 @@ const ACTS = [
     numeral: "III",
     name: "Motion & AI Visuals",
     discipline: "Animation · Generative AI",
-    descriptor: "Motion is not decoration. It is the part of the story a still frame cannot carry. We design for the pause, the second watch, the screenshot.",
+    descriptor: "Explainer videos, logo animations and social ads with a story and real sound behind them.",
     tools: ["After Effects", "Midjourney", "Lottie"],
     accent: LAVENDER,
     path: "/motion-design-ai-visuals",
@@ -39,7 +39,7 @@ const ACTS = [
     numeral: "IV",
     name: "Print & Brand Identity",
     discipline: "Identity · Collateral · Print",
-    descriptor: "Identities so precise you own the room before you speak. From logomark to brand system.",
+    descriptor: "Logo, colours, menus, flyers, banners and merch that all look like they belong to one business.",
     tools: ["Illustrator", "InDesign", "Procreate"],
     accent: GOLD,
     path: "/print-brand-design",
@@ -48,7 +48,7 @@ const ACTS = [
     numeral: "V",
     name: "Social Media & Content",
     discipline: "Strategy · Content · Growth",
-    descriptor: "Every post earns its place on the feed. Content engineered to perform, not just to exist.",
+    descriptor: "Reels, carousels and posts planned around your story, so every post has a reason to be there.",
     tools: ["Premiere Pro", "CapCut", "Buffer"],
     accent: BLUE,
     path: "/social-media-marketing",
@@ -57,7 +57,7 @@ const ACTS = [
     numeral: "VI",
     name: "Illustration & Character",
     discipline: "Editorial · Publishing · Gaming",
-    descriptor: "Technical mastery meeting narrative vision. Worlds built from imagination, executed with discipline.",
+    descriptor: "Mascots, characters and illustrated books, drawn just for your brand.",
     tools: ["Procreate", "Photoshop", "Blender"],
     accent: LAVENDER,
     path: "/illustration-character-design",
@@ -167,11 +167,11 @@ export default function Services() {
               <div style={{ width: 28, height: 1, background: GOLD }} />
               <span style={{
                 fontFamily: "'Source Sans Pro', sans-serif",
-                fontSize: 11, fontWeight: 600,
+                fontSize: 13, fontWeight: 600,
                 letterSpacing: "0.28em", textTransform: "uppercase",
                 color: GOLD,
               }}>
-                Act II. Six Disciplines
+                Act II · What we do
               </span>
             </div>
             <h2 style={{
@@ -191,9 +191,9 @@ export default function Services() {
           <p style={{
             fontFamily: "'Source Sans Pro', sans-serif",
             fontWeight: 400,
-            fontSize: "clamp(14px, 1.4vw, 16px)",
+            fontSize: "clamp(16px,1.4vw,18px)",
             lineHeight: 1.75,
-            color: "rgba(255,255,255,0.4)",
+            color: "rgba(255,255,255,0.75)",
             maxWidth: 340,
             margin: 0,
           }}>
@@ -310,7 +310,7 @@ function ServiceRow({
         padding: "clamp(20px, 3vw, 36px) 0 clamp(20px, 3vw, 36px) 56px",
         borderBottom: "1px solid rgba(255,255,255,0.06)",
         cursor: "pointer",
-        opacity: isAnyActive && !isActive ? 0.32 : 1,
+        opacity: 1,
         transition: "opacity 0.25s ease",
         position: "relative",
       }}
@@ -320,7 +320,7 @@ function ServiceRow({
         fontFamily: "'Cormorant Garamond', serif",
         fontStyle: "italic",
         fontWeight: 400,
-        fontSize: "clamp(13px, 1.4vw, 16px)",
+        fontSize: "clamp(16px,1.4vw,18px)",
         color: isActive ? act.accent : "rgba(255,255,255,0.3)",
         letterSpacing: "0.05em",
         transition: "color 0.25s ease",
@@ -333,14 +333,14 @@ function ServiceRow({
       <div style={{ overflow: "hidden" }}>
         <div style={{ display: "flex", alignItems: "baseline", gap: "clamp(16px, 2.5vw, 32px)" }}>
           <motion.span
-            animate={{ fontSize: isActive ? "clamp(36px, 5vw, 64px)" : "clamp(22px, 3vw, 36px)" }}
+            animate={{ fontSize: "clamp(26px, 3.2vw, 44px)" }}
             transition={{ duration: 0.25, ease: EASE }}
             style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontWeight: 400,
               lineHeight: 1.1,
               letterSpacing: "-0.02em",
-              color: isActive ? "#ffffff" : "rgba(255,255,255,0.78)",
+              color: isActive ? "#ffffff" : "rgba(255,255,255,0.9)",
               display: "block",
               transition: "color 0.25s ease",
             }}
@@ -350,39 +350,33 @@ function ServiceRow({
         </div>
 
         {/* Descriptor — collapses completely when inactive so no gap on mobile */}
-        <AnimatePresence initial={false}>
-          {isActive && (
-            <motion.p
-              key="desc"
-              initial={{ opacity: 0, height: 0, marginTop: 0 }}
-              animate={{ opacity: 1, height: "auto", marginTop: 8 }}
-              exit={{ opacity: 0, height: 0, marginTop: 0 }}
-              transition={{ duration: 0.22, ease: EASE }}
+        {(
+            <p
+              className="svc-desc"
               style={{
                 fontFamily: "'Source Sans Pro', sans-serif",
                 fontWeight: 400,
-                fontSize: "clamp(13px, 1.3vw, 15px)",
+                fontSize: "clamp(16px,1.3vw,18px)",
                 lineHeight: 1.7,
-                color: "rgba(255,255,255,0.55)",
-                maxWidth: 420,
-                margin: 0,
-                overflow: "hidden",
+                color: "rgba(255,255,255,0.75)",
+                maxWidth: 520,
+                margin: "8px 0 0",
               }}
             >
               {act.descriptor}
-            </motion.p>
+            </p>
           )}
-        </AnimatePresence>
+        
 
         {/* Tools */}
         <div style={{ display: "flex", gap: 12, marginTop: isActive ? 14 : 8, flexWrap: "wrap", transition: "margin 0.25s ease" }}>
           {act.tools.map(tool => (
             <span key={tool} style={{
               fontFamily: "'Source Sans Pro', sans-serif",
-              fontSize: 10,
+              fontSize: 12,
               letterSpacing: "0.18em",
               textTransform: "uppercase",
-              color: isActive ? act.accent : "rgba(255,255,255,0.25)",
+              color: isActive ? act.accent : "rgba(255,255,255,0.6)",
               transition: "color 0.25s ease",
             }}>
               {tool}
@@ -394,7 +388,7 @@ function ServiceRow({
       {/* Right arrow */}
       <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 8, flexShrink: 0 }}>
         <motion.div
-          animate={{ rotate: isActive ? 45 : 0, color: isActive ? act.accent : "rgba(255,255,255,0.25)" }}
+          animate={{ rotate: isActive ? 45 : 0, color: isActive ? act.accent : "rgba(255,255,255,0.6)" }}
           transition={{ duration: 0.22, ease: EASE }}
         >
           <ArrowUpRight size={20} />

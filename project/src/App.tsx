@@ -10,7 +10,6 @@ import { Play, Pause, X } from 'lucide-react';
 import Navigation from './components/ui/Navigation';
 import Footer from './components/ui/Footer';
 import AnnouncementStrip from './components/ui/AnnouncementStrip';
-import StagePresence from './components/ui/StagePresence';
 
 // Lazy-loaded pages — each becomes its own JS chunk
 const HomePage                       = lazy(() => import('./pages/HomePage'));
@@ -330,7 +329,6 @@ function AppContent() {
       <a href="#main-content" style={{ position: "absolute", left: -9999, top: "auto", width: 1, height: 1, overflow: "hidden" }} onFocus={e => { e.currentTarget.style.cssText = "position:fixed;top:0;left:0;padding:12px 24px;background:#EBC773;color:#131313;z-index:99999;font-family:'Source Sans Pro',sans-serif;font-weight:700;font-size:14px;"; }} onBlur={e => { e.currentTarget.style.cssText = "position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;"; }}>Skip to main content</a>
       <AnnouncementStrip />
       <Navigation />
-      {pathname === "/" && <StagePresence />}
 
       <div id="main-content">
         <Suspense fallback={<div style={{ minHeight: '100vh' }} />}>

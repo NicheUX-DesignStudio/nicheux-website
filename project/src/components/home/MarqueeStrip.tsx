@@ -1,4 +1,4 @@
-﻿// @ts-nocheck
+// @ts-nocheck
 "use client";
 
 import { motion } from "framer-motion";
@@ -53,7 +53,7 @@ function MarqueeItems() {
             fontFamily: "'Cormorant Garamond', serif",
             fontStyle: "italic",
             fontWeight: 400,
-            fontSize: "clamp(11px, 1.1vw, 13px)",
+            fontSize: "clamp(16px,1.1vw,18px)",
             color: GOLD,
             opacity: 0.55,
             marginRight: 14,
@@ -96,7 +96,7 @@ function MarqueeItems() {
 export default function MarqueeStrip() {
   return (
     <section
-      aria-label="Tonight's programme"
+      aria-label="Our services"
       style={{
         width: "100%",
         background: BLACK,
@@ -125,13 +125,13 @@ export default function MarqueeStrip() {
         <div style={{ width: 36, height: 1, background: `${GOLD}50` }} />
         <span style={{
           fontFamily: "'Source Sans Pro', sans-serif",
-          fontSize: 9,
+          fontSize: 12,
           fontWeight: 700,
           letterSpacing: "0.42em",
           textTransform: "uppercase",
           color: GOLD,
         }}>
-          Tonight's Programme
+          Our services
         </span>
         <div style={{ width: 36, height: 1, background: `${GOLD}50` }} />
       </div>

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -29,8 +29,8 @@ export default function Hero() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const t1 = setTimeout(() => setPhase("curtain"), 200);
-    const t2 = setTimeout(() => { setPhase("text"); setShowLine1(true); }, 900);
+    const t1 = setTimeout(() => setPhase("curtain"), 80);
+    const t2 = setTimeout(() => { setPhase("text"); setShowLine1(true); }, 350);
     return () => { clearTimeout(t1); clearTimeout(t2); };
   }, []);
 
@@ -41,15 +41,15 @@ export default function Hero() {
       i++;
       setTyped(LINE1.slice(0, i));
       if (i >= LINE1.length) { clearInterval(id); setTypingDone(true); }
-    }, 48);
+    }, 24);
     return () => clearInterval(id);
   }, [showLine1]);
 
   useEffect(() => {
     if (!typingDone) return;
-    const t1 = setTimeout(() => setShowLine2(true), 300);
-    const t2 = setTimeout(() => setShowSub(true), 600);
-    const t3 = setTimeout(() => { setPhase("full"); setShowCTAs(true); }, 1000);
+    const t1 = setTimeout(() => setShowLine2(true), 80);
+    const t2 = setTimeout(() => setShowSub(true), 160);
+    const t3 = setTimeout(() => { setPhase("full"); setShowCTAs(true); }, 300);
     return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
   }, [typingDone]);
 
@@ -124,7 +124,7 @@ export default function Hero() {
       style={{ position: "relative", minHeight: "100vh", backgroundColor: BLACK, overflow: "hidden" }}
     >
       <style>{`
-        @media (max-width: 640px) { .hero-scroll-hint { display: none !important; } }
+        @media (max-width: 1100px), (max-height: 760px) { .hero-scroll-hint { display: none !important; } }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
         @keyframes spin { to { transform: rotate(360deg); } }
         @keyframes heroBulb { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
@@ -230,8 +230,8 @@ export default function Hero() {
               style={{
                 fontFamily: "'Source Sans Pro', sans-serif",
                 fontWeight: 400,
-                fontSize: "clamp(15px, 1.5vw, 18px)",
-                color: "rgba(255,255,255,0.72)",
+                fontSize: "clamp(16px,1.5vw,20px)",
+                color: "rgba(255,255,255,0.86)",
                 maxWidth: 420,
                 lineHeight: 1.75,
                 margin: 0,
@@ -256,7 +256,7 @@ export default function Hero() {
                   whileTap={{ scale: 0.97 }}
                   style={{
                     fontFamily: "'Source Sans Pro', sans-serif",
-                    fontWeight: 700, fontSize: 11,
+                    fontWeight: 700, fontSize: 13,
                     letterSpacing: "0.16em", textTransform: "uppercase",
                     padding: "14px 36px",
                     border: "none", borderRadius: 2, cursor: "pointer",
@@ -269,21 +269,21 @@ export default function Hero() {
                 </motion.button>
 
                 <motion.button
-                  onClick={() => navigate("/featured-work")}
+                  onClick={() => navigate("/contact?selection=Free%20Website%20Check%20%28send%20your%20link%29&hint=My%20website%20link%20is%3A%20")}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
                   style={{
                     fontFamily: "'Source Sans Pro', sans-serif",
-                    fontWeight: 600, fontSize: 11,
+                    fontWeight: 600, fontSize: 13,
                     letterSpacing: "0.16em", textTransform: "uppercase",
                     padding: "14px 36px",
                     borderRadius: 2, cursor: "pointer",
                     background: "transparent",
                     border: "1px solid rgba(255,255,255,0.18)",
-                    color: "rgba(255,255,255,0.65)",
+                    color: "rgba(255,255,255,0.75)",
                   }}
                 >
-                  View Our Work
+                  Free Website Check
                 </motion.button>
               </motion.div>
             )}
@@ -295,30 +295,30 @@ export default function Hero() {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.9, duration: 0.7 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: "clamp(6px, 1vw, 10px)",
+                  gap: "clamp(16px,1vw,18px)",
                   marginTop: "clamp(18px, 2.5vh, 24px)",
                   flexWrap: "wrap",
                 }}
               >
                 <span style={{
                   fontFamily: "'Source Sans Pro', sans-serif",
-                  fontSize: 10,
+                  fontSize: 12,
                   fontWeight: 600,
                   letterSpacing: "0.2em",
                   textTransform: "uppercase",
-                  color: "rgba(255,255,255,0.2)",
+                  color: "rgba(255,255,255,0.75)",
                 }}>
                   Trusted by businesses in
                 </span>
                 {["UK", "Ireland", "India", "Canada", "Malaysia"].map((loc, i, arr) => (
                   <span key={loc} style={{
                     fontFamily: "'Source Sans Pro', sans-serif",
-                    fontSize: 10,
-                    color: "rgba(255,255,255,0.35)",
+                    fontSize: 12,
+                    color: "rgba(255,255,255,0.75)",
                     letterSpacing: "0.05em",
                   }}>
                     {loc}{i < arr.length - 1 ? " ·" : ""}
@@ -360,7 +360,7 @@ export default function Hero() {
           >
             <span style={{
               fontFamily: "'Source Sans Pro', sans-serif",
-              fontSize: 10, fontWeight: 700,
+              fontSize: 12, fontWeight: 700,
               letterSpacing: "0.3em", textTransform: "uppercase",
               color: "rgba(255,255,255,0.7)",
             }}>
@@ -421,8 +421,8 @@ export default function Hero() {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              padding: "0 clamp(12px, 2vw, 20px)",
-              marginBottom: "clamp(8px, 1.2vw, 14px)",
+              padding: "0 clamp(16px,2vw,22px)",
+              marginBottom: "clamp(16px,1.2vw,18px)",
               position: "relative",
               zIndex: 2,
             }}
@@ -473,7 +473,7 @@ export default function Hero() {
               color: GOLD,
               fontSize: 18,
               lineHeight: 1,
-              marginBottom: "clamp(10px, 1.5vw, 18px)",
+              marginBottom: "clamp(16px,1.5vw,20px)",
               position: "relative",
               zIndex: 2,
               textShadow: `0 0 14px ${GOLD}60`,
@@ -572,7 +572,7 @@ export default function Hero() {
                     <VolumeX style={{ width: 12, height: 12, color: GOLD }} />
                     <span style={{
                       fontFamily: "'Source Sans Pro', sans-serif",
-                      fontSize: 9, fontWeight: 700,
+                      fontSize: 12, fontWeight: 700,
                       letterSpacing: "0.2em", textTransform: "uppercase",
                       color: GOLD,
                     }}>
@@ -650,14 +650,14 @@ export default function Hero() {
               display: "flex",
               alignItems: "center",
               gap: 14,
-              marginTop: "clamp(4px, 1vw, 16px)",
+              marginTop: "clamp(16px,1vw,18px)",
               position: "relative",
               zIndex: 2,
             }}
           >
             <span style={{
               fontFamily: "'Source Sans Pro', sans-serif",
-              fontSize: 9,
+              fontSize: 12,
               fontWeight: 700,
               letterSpacing: "0.42em",
               textTransform: "uppercase",
@@ -671,8 +671,8 @@ export default function Hero() {
               fontFamily: "'Cormorant Garamond', serif",
               fontStyle: "italic",
               fontWeight: 400,
-              fontSize: 13,
-              color: "rgba(255,255,255,0.55)",
+              fontSize: 15,
+              color: "rgba(255,255,255,0.75)",
             }}>
               A NicheUX production
             </span>

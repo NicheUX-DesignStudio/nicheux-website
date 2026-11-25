@@ -22,9 +22,9 @@ export default function AnnouncementStrip() {
     document.documentElement.style.setProperty("--strip-h", dismissed ? "0px" : "40px");
   }, [dismissed]);
 
-  // Auto-rotate every 5s
+  // No auto-rotate: moving text is hard to read. Visitors use the arrows.
   useEffect(() => {
-    if (dismissed || MESSAGES.length <= 1) return;
+    if (true || dismissed || MESSAGES.length <= 1) return;
     const t = setInterval(() => {
       setFading(true);
       setTimeout(() => {

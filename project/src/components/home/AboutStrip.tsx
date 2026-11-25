@@ -1,4 +1,4 @@
-﻿// @ts-nocheck
+// @ts-nocheck
 "use client";
 
 import { useRef, useState } from "react";
@@ -79,11 +79,11 @@ export default function AboutStrip() {
             <div style={{ width: 28, height: 1, background: INK }} />
             <span style={{
               fontFamily: "'Source Sans Pro', sans-serif",
-              fontSize: 11, fontWeight: 700,
+              fontSize: 13, fontWeight: 700,
               letterSpacing: "0.32em", textTransform: "uppercase",
               color: INK,
             }}>
-              Act III &middot; The Ensemble
+              Act III &middot; Our team
             </span>
           </div>
 
@@ -97,9 +97,9 @@ export default function AboutStrip() {
             margin: 0,
             textAlign: "right",
           }}>
-            We're not an agency.{" "}
+            A small studio.{" "}
             <em style={{ color: LAVENDER }}>
-              We're an ensemble.
+              A close team.
             </em>
           </h2>
         </motion.div>
@@ -137,7 +137,7 @@ export default function AboutStrip() {
             textAlign: "center",
             marginBottom: "clamp(56px, 7vw, 96px)",
             fontFamily: "'Source Sans Pro', sans-serif",
-            fontSize: 10,
+            fontSize: 12,
             fontWeight: 600,
             letterSpacing: "0.32em",
             textTransform: "uppercase",
@@ -157,7 +157,7 @@ export default function AboutStrip() {
             id="ensemble-bottom-grid"
             style={{
               display: "grid",
-              gridTemplateColumns: "1.4fr 1fr auto",
+              gridTemplateColumns: "1.6fr auto",
               gap: "clamp(32px, 5vw, 80px)",
               alignItems: "start",
             }}
@@ -175,7 +175,7 @@ export default function AboutStrip() {
             <p style={{
               fontFamily: "'Source Sans Pro', sans-serif",
               fontWeight: 400,
-              fontSize: "clamp(15px, 1.5vw, 18px)",
+              fontSize: "clamp(16px,1.5vw,20px)",
               lineHeight: 1.85,
               color: INK_SOFT,
               margin: 0,
@@ -194,49 +194,12 @@ export default function AboutStrip() {
               }}>
                 H
               </span>
-              and-picked specialists &mdash; no bloat, no shortcuts.
+              and-picked specialists. No bloat, no shortcuts.
               Skilled craftspeople, perfectly orchestrated to tell your story.
               Each project is staged by people who have spent years mastering
               their craft, and we treat your brand like a performance that
               deserves its own spotlight.
             </p>
-
-            {/* Inline facts */}
-            <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-              {[
-                { stat: "40+", label: "Project Deliverables" },
-                { stat: "6",   label: "Disciplines" },
-                { stat: "4+",  label: "Countries" },
-              ].map(({ stat, label }, i) => (
-                <div key={label} style={{
-                  display: "flex",
-                  alignItems: "baseline",
-                  gap: 14,
-                  paddingBottom: i === 2 ? 0 : 12,
-                  borderBottom: i === 2 ? "none" : "1px solid rgba(26,26,26,0.12)",
-                }}>
-                  <span style={{
-                    fontFamily: "'Cormorant Garamond', serif",
-                    fontStyle: "italic",
-                    fontWeight: 400,
-                    fontSize: "clamp(22px, 2.4vw, 30px)",
-                    color: INK,
-                    minWidth: 48,
-                  }}>
-                    {stat}
-                  </span>
-                  <span style={{
-                    fontFamily: "'Source Sans Pro', sans-serif",
-                    fontSize: 11,
-                    letterSpacing: "0.2em",
-                    textTransform: "uppercase",
-                    color: INK_MUTED,
-                  }}>
-                    {label}
-                  </span>
-                </div>
-              ))}
-            </div>
 
             {/* CTA */}
             <button
@@ -257,7 +220,7 @@ export default function AboutStrip() {
               <span style={{
                 fontFamily: "'Source Sans Pro', sans-serif",
                 fontWeight: 700,
-                fontSize: 11,
+                fontSize: 13,
                 letterSpacing: "0.24em",
                 textTransform: "uppercase",
                 color: ctaHovered ? LAVENDER : INK,
@@ -265,7 +228,7 @@ export default function AboutStrip() {
                 borderBottom: `1px solid ${ctaHovered ? LAVENDER : INK}`,
                 transition: "color 0.25s ease, border-color 0.25s ease",
               }}>
-                Meet the ensemble
+                Meet the team
               </span>
               <div style={{
                 width: 32, height: 32,
@@ -292,11 +255,11 @@ export default function AboutStrip() {
             fontFamily: "'Cormorant Garamond', serif",
             fontStyle: "italic",
             fontWeight: 400,
-            fontSize: "clamp(16px, 1.6vw, 20px)",
+            fontSize: "clamp(16px,1.6vw,22px)",
             color: LAVENDER,
             letterSpacing: "0.01em",
           }}>
-            &mdash; the ensemble, with love.
+            With love, the NicheUX team.
           </div>
         </motion.div>
       </div>

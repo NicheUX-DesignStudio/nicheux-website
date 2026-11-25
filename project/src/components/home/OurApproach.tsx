@@ -61,7 +61,7 @@ export default function OurApproach() {
         >
           <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 28 }}>
             <div style={{ width: 28, height: 1, background: GOLD }} />
-            <span style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.32em", textTransform: "uppercase", color: GOLD }}>
+            <span style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.32em", textTransform: "uppercase", color: GOLD }}>
               How we work
             </span>
           </div>
@@ -72,12 +72,12 @@ export default function OurApproach() {
             Your goals. Your story.{" "}
             <em style={{ fontStyle: "italic", color: LAVENDER }}>Your taste.</em>
           </h2>
-          <p style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: "clamp(15px,1.3vw,18px)", lineHeight: 1.85, color: "rgba(255,255,255,0.62)", margin: "0 0 36px", maxWidth: 460 }}>
+          <p style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: "clamp(16px,1.3vw,20px)", lineHeight: 1.85, color: "rgba(255,255,255,0.75)", margin: "0 0 36px", maxWidth: 460 }}>
             Most studios start with a template. We start with three questions, and the answers become your brand and your website.
           </p>
           <Link
             to="/contact?selection=Free%20Website%20Check%20%28send%20your%20link%29&hint=My%20website%20link%20is%3A%20"
-            style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: GOLD, textDecoration: "none", borderBottom: `1px solid ${GOLD}`, display: "inline-block", padding: "14px 0 6px" }}
+            style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: GOLD, textDecoration: "none", borderBottom: `1px solid ${GOLD}`, display: "inline-block", padding: "14px 0 6px" }}
           >
             Send us your website link
           </Link>
@@ -106,7 +106,7 @@ export default function OurApproach() {
                 <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(24px,2.4vw,34px)", lineHeight: 1.15, color: "#fff", margin: "0 0 10px" }}>
                   {r.q}
                 </h3>
-                <p style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.6)", margin: 0 }}>
+                <p style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", margin: 0 }}>
                   {r.a}
                 </p>
               </div>

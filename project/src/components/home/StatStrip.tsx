@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
@@ -54,7 +54,7 @@ function Cell({ stat, index, inView }: { stat: typeof STATS[0]; index: number; i
         fontFamily: "'Cormorant Garamond', serif",
         fontStyle: "italic",
         fontWeight: 400,
-        fontSize: 11,
+        fontSize: 13,
         letterSpacing: "0.16em",
         color: LAVENDER,
         opacity: 0.7,
@@ -77,7 +77,7 @@ function Cell({ stat, index, inView }: { stat: typeof STATS[0]; index: number; i
 
       <span style={{
         fontFamily: "'Source Sans Pro', sans-serif",
-        fontSize: 10,
+        fontSize: 12,
         fontWeight: 600,
         letterSpacing: "0.24em",
         textTransform: "uppercase",
@@ -142,7 +142,7 @@ export default function StatStrip() {
           <div style={{ width: 44, height: 1, background: `${INK}30` }} />
           <span style={{
             fontFamily: "'Source Sans Pro', sans-serif",
-            fontSize: 10,
+            fontSize: 12,
             fontWeight: 700,
             letterSpacing: "0.42em",
             textTransform: "uppercase",

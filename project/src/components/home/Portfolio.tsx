@@ -1,4 +1,4 @@
-﻿// @ts-nocheck
+// @ts-nocheck
 "use client";
 
 import { useRef, useState } from "react";
@@ -105,11 +105,11 @@ export default function Portfolio() {
               <div style={{ width: 28, height: 1, background: INK }} />
               <span style={{
                 fontFamily: "'Source Sans Pro', sans-serif",
-                fontSize: 11, fontWeight: 700,
+                fontSize: 13, fontWeight: 700,
                 letterSpacing: "0.32em", textTransform: "uppercase",
                 color: INK,
               }}>
-                Act I. Selected Performances
+                Act I · Our work
               </span>
             </motion.div>
 
@@ -142,10 +142,10 @@ export default function Portfolio() {
               fontFamily: "'Cormorant Garamond', serif",
               fontStyle: "italic",
               fontWeight: 400,
-              fontSize: "clamp(14px, 1.3vw, 16px)",
+              fontSize: "clamp(16px,1.3vw,18px)",
               color: INK_MUTED,
             }}>
-              11 productions. Clients across five countries.
+              11 projects. Clients across five countries.
             </span>
             <button
               onClick={() => navigate("/featured-work")}
@@ -160,7 +160,7 @@ export default function Portfolio() {
               style={{
                 fontFamily: "'Source Sans Pro', sans-serif",
                 fontWeight: 700,
-                fontSize: 11,
+                fontSize: 13,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
                 color: INK,
@@ -242,7 +242,7 @@ export default function Portfolio() {
           }}>
             <span style={{
               fontFamily: "'Source Sans Pro', sans-serif",
-              fontSize: 9,
+              fontSize: 12,
               fontWeight: 700,
               letterSpacing: "0.42em",
               textTransform: "uppercase",
@@ -251,7 +251,7 @@ export default function Portfolio() {
               border: `1px solid ${FEATURED.accent}50`,
               background: `${FEATURED.accent}10`,
             }}>
-              Featured Production
+              Featured project
             </span>
           </div>
 
@@ -268,7 +268,7 @@ export default function Portfolio() {
               display: "flex",
               alignItems: "center",
               gap: 10,
-              marginBottom: "clamp(12px, 1.5vw, 20px)",
+              marginBottom: "clamp(16px,1.5vw,22px)",
             }}>
               <span style={{
                 width: 6,
@@ -278,9 +278,9 @@ export default function Portfolio() {
                 boxShadow: `0 0 8px ${FEATURED.accent}`,
                 flexShrink: 0,
               }} />
-              <span style={{
+              <span className="featured-outcome" style={{
                 fontFamily: "'Source Sans Pro', sans-serif",
-                fontSize: 10,
+                fontSize: 12,
                 fontWeight: 600,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
@@ -291,7 +291,7 @@ export default function Portfolio() {
             </div>
 
             {/* Index + title */}
-            <div style={{ display: "flex", alignItems: "baseline", gap: "clamp(12px, 2vw, 24px)", marginBottom: "clamp(10px, 1.5vw, 16px)", flexWrap: "wrap" }}>
+            <div style={{ display: "flex", alignItems: "baseline", gap: "clamp(12px, 2vw, 24px)", marginBottom: "clamp(16px,1.5vw,18px)", flexWrap: "wrap" }}>
               <span style={{
                 fontFamily: "'Cormorant Garamond', serif",
                 fontStyle: "italic",
@@ -322,16 +322,16 @@ export default function Portfolio() {
               justifyContent: "space-between",
               flexWrap: "wrap",
               gap: 16,
-              paddingTop: "clamp(14px, 2vw, 20px)",
+              paddingTop: "clamp(16px,2vw,22px)",
               borderTop: "1px solid rgba(255,255,255,0.1)",
             }}>
               <span style={{
                 fontFamily: "'Source Sans Pro', sans-serif",
-                fontSize: 10,
+                fontSize: 12,
                 fontWeight: 600,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
-                color: "rgba(255,255,255,0.4)",
+                color: "rgba(255,255,255,0.75)",
               }}>
                 {FEATURED.category}
               </span>
@@ -340,7 +340,7 @@ export default function Portfolio() {
                 style={{
                   fontFamily: "'Source Sans Pro', sans-serif",
                   fontWeight: 700,
-                  fontSize: 11,
+                  fontSize: 13,
                   letterSpacing: "0.22em",
                   textTransform: "uppercase",
                   color: "#ffffff",
@@ -352,7 +352,7 @@ export default function Portfolio() {
                   transition: "opacity 0.35s ease, transform 0.35s ease",
                 }}
               >
-                Read the production
+                See the project
                 <ArrowUpRight size={14} />
               </span>
             </div>
@@ -380,7 +380,7 @@ export default function Portfolio() {
           ))}
         </div>
         <style>{`@media(max-width:767px){.portfolio-swipe-hint{display:flex!important}}`}</style>
-        <p className="portfolio-swipe-hint" style={{ display: "none", alignItems: "center", gap: 6, marginTop: 10, fontFamily: "'Source Sans Pro',sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: "0.22em", textTransform: "uppercase", color: `${INK_MUTED}`, userSelect: "none" }}>
+        <p className="portfolio-swipe-hint" style={{ display: "none", alignItems: "center", gap: 6, marginTop: 10, fontFamily: "'Source Sans Pro',sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: "0.22em", textTransform: "uppercase", color: `${INK_MUTED}`, userSelect: "none" }}>
           Swipe to explore ›
         </p>
 
@@ -412,7 +412,7 @@ export default function Portfolio() {
             style={{
               fontFamily: "'Source Sans Pro', sans-serif",
               fontWeight: 700,
-              fontSize: 11,
+              fontSize: 13,
               letterSpacing: "0.26em",
               textTransform: "uppercase",
               color: INK,
@@ -427,7 +427,7 @@ export default function Portfolio() {
               transition: "color 0.25s ease, border-color 0.25s ease",
             }}
           >
-            View All 11 Productions
+            See all 11 projects
             <ArrowUpRight size={13} />
           </button>
           <div style={{ width: 44, height: 1, background: `${INK}25` }} />
@@ -496,7 +496,7 @@ function GridCard({
           fontFamily: "'Cormorant Garamond', serif",
           fontStyle: "italic",
           fontWeight: 400,
-          fontSize: 13,
+          fontSize: 15,
           color: INK,
           letterSpacing: "0.05em",
         }}>
@@ -526,7 +526,7 @@ function GridCard({
           }} />
           <span style={{
             fontFamily: "'Source Sans Pro', sans-serif",
-            fontSize: 10,
+            fontSize: 12,
             fontWeight: 600,
             letterSpacing: "0.18em",
             textTransform: "uppercase",
@@ -563,7 +563,7 @@ function GridCard({
         }}>
           <span style={{
             fontFamily: "'Source Sans Pro', sans-serif",
-            fontSize: 10,
+            fontSize: 12,
             letterSpacing: "0.18em",
             textTransform: "uppercase",
             color: INK_MUTED,
@@ -573,7 +573,7 @@ function GridCard({
           <span style={{
             fontFamily: "'Source Sans Pro', sans-serif",
             fontWeight: 700,
-            fontSize: 10,
+            fontSize: 12,
             letterSpacing: "0.2em",
             textTransform: "uppercase",
             color: hovered ? project.accent : INK_SOFT,
@@ -582,7 +582,7 @@ function GridCard({
             gap: 6,
             transition: "color 0.25s ease",
           }}>
-            Read <ArrowUpRight size={11} />
+            See project <ArrowUpRight size={11} />
           </span>
         </div>
       </div>

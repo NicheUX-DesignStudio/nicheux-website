@@ -65,14 +65,14 @@ function ReviewClipping({ t, index, inView }: { t: any; index: number; inView: b
           fontFamily: "'Cormorant Garamond', serif",
           fontStyle: "italic",
           fontWeight: 400,
-          fontSize: 14,
+          fontSize: 16,
           color: LAVENDER,
         }}>
           ★★★★★
         </span>
         <span style={{
           fontFamily: "'Source Sans Pro', sans-serif",
-          fontSize: 9,
+          fontSize: 12,
           fontWeight: 700,
           letterSpacing: "0.28em",
           textTransform: "uppercase",
@@ -86,7 +86,7 @@ function ReviewClipping({ t, index, inView }: { t: any; index: number; inView: b
         fontFamily: "'Cormorant Garamond', serif",
         fontWeight: 400,
         fontStyle: "italic",
-        fontSize: "clamp(17px, 1.5vw, 20px)",
+        fontSize: "clamp(17px,1.5vw,22px)",
         lineHeight: 1.55,
         letterSpacing: "-0.005em",
         color: INK,
@@ -115,7 +115,7 @@ function ReviewClipping({ t, index, inView }: { t: any; index: number; inView: b
         <div style={{
           fontFamily: "'Cormorant Garamond', serif",
           fontWeight: 500,
-          fontSize: "clamp(15px, 1.4vw, 17px)",
+          fontSize: "clamp(16px,1.4vw,19px)",
           color: INK,
           marginBottom: 4,
         }}>
@@ -123,7 +123,7 @@ function ReviewClipping({ t, index, inView }: { t: any; index: number; inView: b
         </div>
         <div style={{
           fontFamily: "'Source Sans Pro', sans-serif",
-          fontSize: 10,
+          fontSize: 12,
           fontWeight: 600,
           letterSpacing: "0.22em",
           textTransform: "uppercase",
@@ -210,7 +210,7 @@ export default function Testimonials() {
             <div style={{ width: 44, height: 1, background: `${INK}30` }} />
             <span style={{
               fontFamily: "'Source Sans Pro', sans-serif",
-              fontSize: 11, fontWeight: 700,
+              fontSize: 13, fontWeight: 700,
               letterSpacing: "0.34em", textTransform: "uppercase",
               color: INK,
             }}>
@@ -270,8 +270,8 @@ export default function Testimonials() {
                 </button>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 8, fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", color: INK }}>
                   <span style={{ fontWeight: 400, fontSize: 22 }}>{String(page + 1).padStart(2, "0")}</span>
-                  <span style={{ fontSize: 14, color: INK_MUTED }}>/</span>
-                  <span style={{ fontSize: 14, color: INK_MUTED }}>{String(totalPages).padStart(2, "0")}</span>
+                  <span style={{ fontSize: 16, color: INK_MUTED }}>/</span>
+                  <span style={{ fontSize: 16, color: INK_MUTED }}>{String(totalPages).padStart(2, "0")}</span>
                 </div>
                 <button onClick={() => goTo(page + 1, 1)} style={{ width: 40, height: 40, borderRadius: "50%", border: `1px solid ${INK}40`, background: "transparent", cursor: "pointer", color: INK, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                   <ChevronRight size={16} />
